@@ -1,0 +1,14 @@
+.detail {
+	padding: 0 0 32px 0;
+	background-color: #fff;
+
+	&__category-wrapper,
+	.post__content__details,
+	&__excerpt,
+	&__thumbnail__wrapper,
+	&__content__wrapper img {
+		position: relative;
+		display: block;
+		@include _(limited-full-width);
+	}
+}

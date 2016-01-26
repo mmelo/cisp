@@ -1,0 +1,38 @@
+@import "_components/_reset",
+		"_components/_media",
+		"_components/_variables",
+		"_components/_colors",
+		"_components/_text",
+		"_components/_icons";
+
+html,body,header{
+	@include _(full-width);
+	margin:0;
+}
+html, body {
+	height: 100%;
+}
+body {
+	background-color: #fff;
+	font-family: 'Roboto',sans-serif;
+	font-size: 16px;
+	color: $text-color;
+	text-rendering: optimizelegibility;
+	a {
+		-webkit-font-smoothing: antialiased!important;
+	}
+}
+
+.app {
+	position: relative;
+	min-height: calc(100% - 104px);
+	margin-top: $header_height;
+	z-index: 1;
+	@include breakpoint(medium) {
+		margin-top: 56px;
+	}
+}
+
+@import "_components/_header/_header",
+		"_components/_spinner",
+		"_components/_posts/_posts";

@@ -1,0 +1,23 @@
+<div class="detail__thumbnail" style="background-image: url({{thumbnail_images.full.url}})">
+	<div class="detail__thumbnail__wrapper">
+		<h1 class="detail__title">{{{title}}}</h1>
+	</div>
+</div>
+
+<div class="detail__category-wrapper">
+	<div class="post__category">{{categories.0.title}}</div>
+</div>
+
+<div class="post__content__details">
+	<a href="#" class="post__content__details__author">{{author.nickname}}</a>
+
+	<time datetime="{{date}}" class="post__content__details__date">{{date}}</time>
+
+	<a href="#" class="post__content__details__social">56 shares</a>
+</div>
+
+<div id="excerpt" class="detail__excerpt">
+	<div class="detail__excerpt__wrapper">
+		{{{excerpt}}}
+	</div>
+</div>

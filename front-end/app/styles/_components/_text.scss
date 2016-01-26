@@ -1,0 +1,43 @@
+@include placeholder('display4') {
+	font-size: 112px;
+	font-weight: 300;
+}
+@include placeholder('display3') {
+	font-size: 56px;
+}
+@include placeholder('display2') {
+	font-size: 44px;
+}
+@include placeholder('display1') {
+	font-size: 35px;
+}
+@include placeholder('headline') {
+	font-size: 24px;
+}
+@include placeholder('title') {
+	font-size: 20px;
+	font-weight: 500;
+}
+@include placeholder('subheading') {
+	font-size: 15px;
+}
+@include placeholder('body2') {
+	font-size: 13px;
+	font-weight: 500;
+}
+@include placeholder('body') {
+	font-size: 18px;
+}
+@include placeholder('caption') {
+	font-size: 12px;
+}
+@include placeholder('button') {
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}

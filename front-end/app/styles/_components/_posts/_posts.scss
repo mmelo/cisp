@@ -1,0 +1,36 @@
+.posts-list {
+	@include _(flex);
+	@include _(flex-wrap);
+	@include _(limited-full-width);
+	padding: 16px 0 32px 0;
+
+	.subtitle {
+		@include _(limited-full-width);
+		@include _(subheading);
+		padding: 16px 0 16px 0;
+		text-transform: uppercase;
+	}
+}
+
+.post {
+	position: relative;
+	width: 33.33333%;
+	padding: 8px;
+	background-color: #fff;
+
+	@include breakpoint(medium) {
+		width: 100%;
+	}
+
+	.more-link {
+		display: none;
+	}
+}
+
+.no-results {
+	@include _(display1);
+	padding: 32px;
+	text-align: center;
+}
+
+@import "_detail";

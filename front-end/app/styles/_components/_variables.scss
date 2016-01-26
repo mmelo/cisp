@@ -1,0 +1,68 @@
+// VARIABLES
+$cubic-bezier: cubic-bezier(0,0,0.21,1);
+$swiftOut: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+$header_height: 64px;
+
+// MIXINS
+@include placeholder('padding') {
+	padding: 16px;
+}
+@include placeholder('full-screen') {
+	width: 100%;
+	height: 100%;
+}
+@include placeholder('full-width') {
+	width: 100%;
+}
+@include placeholder('limited-full-width') {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+@include placeholder('flex') {
+	display: flex;
+}
+@mixin flex($values) {
+	flex:  $values;
+}
+@mixin order($val) {
+	order: $val;
+}
+@mixin flex-grow($val) {
+	flex-grow: $val;
+}
+@include placeholder('flex-column') {
+	flex-direction: column;
+}
+@include placeholder('justify-content-center') {
+	justify-content: center;
+}
+@include placeholder('space-between') {
+	justify-content: space-between;
+}
+@include placeholder('justify-content-start') {
+	justify-content: flex-start;
+}
+@include placeholder('justify-content-end') {
+	justify-content: flex-end;
+}
+@include placeholder('align-items-center') {
+	align-items: center;
+}
+@include placeholder('align-items-top') {
+	align-items: flex-start;
+}
+@include placeholder('align-items-baseline') {
+	align-items: baseline;
+}
+@include placeholder('align-items-bottom') {
+	align-items: flex-end;
+}
+@include placeholder('flex-wrap') {
+	flex-wrap: wrap;
+}
+// hack - improve scrolling performance on mobile android browsers and mobile safari
+@include placeholder('backface-hack') {
+	backface-visibility: hidden;
+}
