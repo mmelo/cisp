@@ -25,7 +25,7 @@ define([
 		Models: {},
 		Header: $('#header'),
 		Container: $('#app'),
-		BaseUrl: 'http://localhost:8888/personal/cisp2/back-end/'//EDITA ISTO PARA APONTAR PARA A TUA INSTALAÇÃO DE WP
+		BaseUrl: 'http://www.aasilva.com/cisp/back-end/'//EDITA ISTO PARA APONTAR PARA A TUA INSTALAÇÃO DE WP
 	};
 
 	// Setup DOM manipulation "entry-points"
