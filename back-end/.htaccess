@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /personal/cisp2/back-end/
+RewriteBase /cisp/cisp/back-end/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /personal/cisp2/back-end/index.php [L]
+RewriteRule . /cisp/cisp/back-end/index.php [L]
 </IfModule>
 
 # END WordPress
