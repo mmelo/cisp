@@ -25,7 +25,8 @@ body {
 
 .app {
 	position: relative;
-	min-height: calc(100% - 104px);
+	// min-height: calc(100% - 104px);
+	min-height: 100%;
 	margin-top: $header_height;
 	z-index: 1;
 	@include breakpoint(medium) {
@@ -34,5 +35,6 @@ body {
 }
 
 @import "_components/_header/_header",
+		"_components/_footer",
 		"_components/_spinner",
 		"_components/_posts/_posts";

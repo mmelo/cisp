@@ -48,6 +48,10 @@ define([
 			if ( !App.Views.Footer ) {
 				this._footer();
 			}
+
+			if ( !App.Views.heroSection ) {
+				this._heroSection();
+			}
 			window.scrollTo(0,0);
 		},
 
@@ -72,6 +76,16 @@ define([
 		*/
 		_footer: function () {
 			App.Vent.trigger('pages:footer');
+		},
+
+		/**
+		*	_heroSection - render hero section (with available pages)
+		*
+		*	@private
+		*	@function
+		*/
+		_heroSection: function () {
+			App.Vent.trigger('pages:heroSection');
 		},
 
 		/**

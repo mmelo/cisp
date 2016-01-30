@@ -25,6 +25,7 @@ define([
 		Models: {},
 		Header: $('#header'),
 		Container: $('#app'),
+		Footer: $('#footer'),
 		BaseUrl: 'http://www.aasilva.com/cisp/back-end/'//EDITA ISTO PARA APONTAR PARA A TUA INSTALAÇÃO DE WP
 	};
 

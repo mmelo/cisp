@@ -14,9 +14,7 @@ define([
 
 		tagName: 'footer',
 
-		id: 'footer',
-
-		className: 'footer',
+		className: 'footer__container',
 
 		events: {}
 	});

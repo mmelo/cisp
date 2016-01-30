@@ -7,8 +7,9 @@ define([
 	'models/page',
 	'views/pages/index',
 	'views/pages/item',
-	'views/pages/detail'
-], function ($, Backbone, PageCollection, PageModel, PageListView, PageItemView, PageDetailView) {
+	'views/pages/detail',
+	'views/footer/footer'
+], function ($, Backbone, PageCollection, PageModel, PageListView, PageItemView, PageDetailView, FooterView) {
 	'use strict';
 
 	var PageController = Backbone.Router.extend({
@@ -16,6 +17,7 @@ define([
 			App.Vent.on('pages:index', this._index, this);
 			App.Vent.on('pages:detail', this._detail, this);
 			App.Vent.on('pages:footer', this._footer, this);
+			App.Vent.on('pages:heroSection', this._heroSection, this);
 		},
 
 		/**
@@ -89,8 +91,20 @@ define([
 		*	@function
 		*/
 		_footer: function () {
-			
+			App.Views.Footer = new FooterView();
+			App.Footer.html(App.Views.Footer.render().el);
+		},
+
+		/**
+		*	_footer
+		*
+		*	@private
+		*	@function
+		*/
+		_heroSection: function () {
+			console.debug('Hero Section');
 		}
+
 	});
 
 	return PageController;

@@ -1,0 +1,38 @@
+.footer {
+	padding: 16px 32px;
+
+	&__container {
+		padding: 8px;
+		text-align: center;
+	}
+
+	&__partners {
+		@include _(flex);
+		@include _(space-between)
+		
+		svg {
+			width: 260px;
+			height: 60px;
+		}
+
+		&__ensp,
+		&__unl,
+		&__fct {
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 90px;
+			height: 90px;
+		}
+
+		&__ensp {
+			background-image: url(../images/footer/logo_ensp.png);
+		}
+		&__unl {
+			background-image: url(../images/footer/logo_unl.png);
+		}
+		&__fct {
+			background-image: url(../images/footer/logo_fct.png);
+			width: 463px;
+		}
+	}
+}

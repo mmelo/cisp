@@ -42,8 +42,11 @@ html, body, header {
   max-width: 1200px;
   margin: 0 auto; }
 
-.header__wrapper, .posts-list {
+.header__wrapper, .footer__partners, .posts-list {
   display: flex; }
+
+.footer__partners {
+  justify-content: space-between; }
 
 .header__wrapper {
   align-items: center; }
@@ -89,7 +92,7 @@ body {
 
 .app {
   position: relative;
-  min-height: calc(100% - 104px);
+  min-height: 100%;
   margin-top: 64px;
   z-index: 1; }
   @media (max-width: 900px) {
@@ -148,6 +151,27 @@ body {
       color: #fff; }
     .header.subheader .nav a:hover:after {
       background-color: #fff; }
+
+.footer {
+  padding: 16px 32px; }
+  .footer__container {
+    padding: 8px;
+    text-align: center; }
+  .footer__partners svg {
+    width: 260px;
+    height: 60px; }
+  .footer__partners__ensp, .footer__partners__unl, .footer__partners__fct {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px; }
+  .footer__partners__ensp {
+    background-image: url(../images/footer/logo_ensp.png); }
+  .footer__partners__unl {
+    background-image: url(../images/footer/logo_unl.png); }
+  .footer__partners__fct {
+    background-image: url(../images/footer/logo_fct.png);
+    width: 463px; }
 
 .spinner {
   position: relative;
