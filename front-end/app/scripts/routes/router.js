@@ -32,18 +32,6 @@ define([
 			if ( !App.Controllers.Page ) {
 				App.Controllers.Page = new PageController;
 			}
-
-			window.addEventListener('scroll', function() {
-				clearTimeout(_this.enableTimer);
-				_this.enableTimer = setTimeout(function () {
-					if ( $(window).scrollTop() >= 72 ) {
-						$('#subheader').addClass('active');
-					} else {
-						$('#subheader').removeClass('active');
-					}
-					App.Vent.trigger('global:scroll');
-				}, 100);
-			}, false);
 		},
 
 		/**
