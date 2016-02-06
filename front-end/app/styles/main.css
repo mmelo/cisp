@@ -42,16 +42,16 @@ html, body, header {
   max-width: 1200px;
   margin: 0 auto; }
 
-.header__wrapper, .footer__partners, .posts-list {
+.header__wrapper, .footer__container, .footer__partners, .posts-list {
   display: flex; }
 
-.footer__partners {
+.footer__container, .footer__partners {
   justify-content: space-between; }
 
-.header__wrapper {
+.header__wrapper, .footer__container, .footer__partners {
   align-items: center; }
 
-.header__wrapper, .posts-list {
+.header__wrapper, .footer__container, .posts-list {
   flex-wrap: wrap; }
 
 .header__title, .no-results {
@@ -83,7 +83,7 @@ html, body {
 
 body {
   background-color: #fff;
-  font-family: 'Roboto',sans-serif;
+  font-family: 'Raleway',sans-serif;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.87);
   text-rendering: optimizelegibility; }
@@ -157,21 +157,28 @@ body {
   .footer__container {
     padding: 8px;
     text-align: center; }
-  .footer__partners svg {
-    width: 260px;
-    height: 60px; }
+  .footer__logo {
+    margin: 0 24px 8px 24px;
+    width: 260px; }
+    .footer__logo svg {
+      width: 260px;
+      height: 60px; }
+  .footer p {
+    font-size: 12px;
+    margin-bottom: 8px; }
   .footer__partners__ensp, .footer__partners__unl, .footer__partners__fct {
     background-size: cover;
     background-repeat: no-repeat;
-    width: 90px;
-    height: 90px; }
+    width: 60px;
+    height: 60px;
+    margin: 0 24px 8px 24px; }
   .footer__partners__ensp {
     background-image: url(../images/footer/logo_ensp.png); }
   .footer__partners__unl {
     background-image: url(../images/footer/logo_unl.png); }
   .footer__partners__fct {
     background-image: url(../images/footer/logo_fct.png);
-    width: 463px; }
+    width: 182px; }
 
 .spinner {
   position: relative;

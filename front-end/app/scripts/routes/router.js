@@ -4,9 +4,10 @@ define([
 	'jquery',
 	'backbone',
 	'templates',
+	'controllers/home',
 	'controllers/post',
 	'controllers/page'
-], function ($, Backbone, JST, PostController, PageController) {
+], function ($, Backbone, JST, HomeController, PostController, PageController) {
 	'use strict';
 
 	var Router = Backbone.Router.extend({
@@ -26,6 +27,9 @@ define([
 		initialize: function () {
 			var _this = this;
 
+			if ( !App.Controllers.Home ) {
+				App.Controllers.Home = new HomeController;
+			}
 			if ( !App.Controllers.Post ) {
 				App.Controllers.Post = new PostController;
 			}
@@ -49,8 +53,8 @@ define([
 				this._footer();
 			}
 
-			if ( !App.Views.heroSection ) {
-				this._heroSection();
+			if ( !App.Views.header ) {
+				this._header();
 			}
 			window.scrollTo(0,0);
 		},
@@ -79,13 +83,13 @@ define([
 		},
 
 		/**
-		*	_heroSection - render hero section (with available pages)
+		*	_header - render hero section (with available pages)
 		*
 		*	@private
 		*	@function
 		*/
-		_heroSection: function () {
-			App.Vent.trigger('pages:heroSection');
+		_header: function () {
+			App.Vent.trigger('pages:header');
 		},
 
 		/**
@@ -96,7 +100,8 @@ define([
 		*/
 		_index: function () {
 			this._common();
-			App.Vent.trigger('posts:index');
+			App.Vent.trigger('home:index');
+			// App.Vent.trigger('posts:index');
 		},
 
 		/**

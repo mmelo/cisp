@@ -2,26 +2,41 @@
 	padding: 16px 32px;
 
 	&__container {
+		@include _(flex);
+		@include _(space-between);
+		@include _(align-items-center);
+		@include _(flex-wrap);
 		padding: 8px;
 		text-align: center;
 	}
-
-	&__partners {
-		@include _(flex);
-		@include _(space-between)
-		
+	
+	&__logo {
+		margin: 0 24px 8px 24px;
+		width: 260px;
 		svg {
 			width: 260px;
 			height: 60px;
 		}
+	}
+
+	p {
+		font-size: 12px;
+		margin-bottom: 8px;
+	}
+
+	&__partners {
+		@include _(flex);
+		@include _(space-between);
+		@include _(align-items-center);
 
 		&__ensp,
 		&__unl,
 		&__fct {
 			background-size: cover;
 			background-repeat: no-repeat;
-			width: 90px;
-			height: 90px;
+			width: 60px;
+			height: 60px;
+			margin: 0 24px 8px 24px ;
 		}
 
 		&__ensp {
@@ -32,7 +47,7 @@
 		}
 		&__fct {
 			background-image: url(../images/footer/logo_fct.png);
-			width: 463px;
+			width: 182px;
 		}
 	}
 }

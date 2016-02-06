@@ -8,16 +8,18 @@ define([
 	'views/pages/index',
 	'views/pages/item',
 	'views/pages/detail',
-	'views/footer/footer'
-], function ($, Backbone, PageCollection, PageModel, PageListView, PageItemView, PageDetailView, FooterView) {
+	'views/footer/footer',
+	'views/header/index',
+	'views/header/heroSection'
+], function ($, Backbone, PageCollection, PageModel, PageListView, PageItemView, PageDetailView, FooterView, HeaderView, HeroSectionView) {
 	'use strict';
 
 	var PageController = Backbone.Router.extend({
 		initialize: function () {
+			App.Vent.on('pages:footer', this._footer, this);
+			App.Vent.on('pages:header', this._header, this);
 			App.Vent.on('pages:index', this._index, this);
 			App.Vent.on('pages:detail', this._detail, this);
-			App.Vent.on('pages:footer', this._footer, this);
-			App.Vent.on('pages:heroSection', this._heroSection, this);
 		},
 
 		/**
@@ -92,17 +94,37 @@ define([
 		*/
 		_footer: function () {
 			App.Views.Footer = new FooterView();
-			App.Footer.html(App.Views.Footer.render().el);
+			requestAnimationFrame(function () {
+				App.Footer.html(App.Views.Footer.render().el);
+			});
 		},
 
 		/**
-		*	_footer
+		*	_header
+		*
+		*	@private
+		*	@function
+		*/
+		_header: function () {
+			App.Views.Header = new HeaderView();
+			requestAnimationFrame(function () {
+				App.Header.html(App.Views.Header.render().el);
+			});
+			this._heroSection();
+		},
+		
+		/**
+		*	_heroSection
 		*
 		*	@private
 		*	@function
 		*/
 		_heroSection: function () {
-			console.debug('Hero Section');
+			console.log('!');
+			App.Views.HeroSection = new HeroSectionView();
+			requestAnimationFrame(function () {
+				App.Header.append(App.Views.HeroSection.render().el);
+			});
 		}
 
 	});
