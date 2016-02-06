@@ -6,8 +6,10 @@ define([
 	'templates',
 	'controllers/home',
 	'controllers/post',
-	'controllers/page'
-], function ($, Backbone, JST, HomeController, PostController, PageController) {
+	'controllers/page',
+	'controllers/publication',
+	'controllers/project'
+], function ($, Backbone, JST, HomeController, PostController, PageController, PublicationController, ProjectController) {
 	'use strict';
 
 	var Router = Backbone.Router.extend({
@@ -35,6 +37,12 @@ define([
 			}
 			if ( !App.Controllers.Page ) {
 				App.Controllers.Page = new PageController;
+			}
+			if ( !App.Controllers.Publication ) {
+				App.Controllers.Publication = new PublicationController;
+			}
+			if ( !App.Controllers.Project ) {
+				App.Controllers.Project = new ProjectController;
 			}
 		},
 
@@ -114,7 +122,15 @@ define([
 		_category: function (catg) {
 			this._common();
 			this._loading();
-			App.Vent.trigger('posts:index', catg);
+
+			if ( catg === 'publications' ) {
+				App.Vent.trigger('publications:index');
+			} else
+			if ( catg === 'projects' ) {
+				App.Vent.trigger('projects:index');
+			} else {
+				App.Vent.trigger('posts:index', catg);
+			}
 		},
 
 		/**
