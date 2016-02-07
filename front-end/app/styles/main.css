@@ -39,7 +39,7 @@ blockquote, q {
 html, body, header, .post__thumbnail, .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn {
   width: 100%; }
 
-.header__wrapper, .hero-section__claim, .spinner, .posts-list, .posts-list .subtitle, .detail__category-wrapper,
+.header__wrapper, .hero-section, .spinner, .posts-list, .posts-list .subtitle, .detail__category-wrapper,
 .detail .post__content__details, .detail__excerpt, .detail__thumbnail__wrapper,
 .detail__content__wrapper img {
   width: 100%;
@@ -61,20 +61,16 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 .no-results {
   font-size: 35px; }
 
+.post__content__title {
+  font-size: 20px;
+  font-weight: 500; }
+
 .hero-section__claim {
   font-size: 36px;
   font-weight: 500;
   color: #fff; }
 
-<<<<<<< HEAD
-.posts-list .subtitle {
-=======
-.post__content__title {
-  font-size: 20px;
-  font-weight: 500; }
-
-.header .nav__item, .posts-list .subtitle, .post__content__author {
->>>>>>> 2c1a8cbe8ae3360ad6273c817455e684f35b00a1
+.posts-list .subtitle, .post__content__author {
   font-size: 15px; }
 
 .post__content__excerpt {

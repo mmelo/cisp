@@ -1,7 +1,8 @@
 .hero-section {
+	@include _(limited-full-width);
 	
 	&__claim {
-		@include _(limited-full-width);
+		
 		@include _(title-about);
 		position: relative;
 		display: flex;
