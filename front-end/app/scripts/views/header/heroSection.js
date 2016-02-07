@@ -14,7 +14,7 @@ define([
 
 		tagName: 'section',
 
-		className: 'header__hero-section',
+		className: 'hero-section',
 
 		events: {}
 	});

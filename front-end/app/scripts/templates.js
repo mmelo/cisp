@@ -30,16 +30,20 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<p>this is the hero section</p>";
+  return "<h2 class=\"hero-section__claim\">From research<br>to action <span class=\"hero-section__claim__underline\"></span></h2>\n";
   });
 
 this["JST"]["app/scripts/templates/header/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing;
 
 
-  return "<p>here should go logo and menu button</p>";
+  buffer += "<div id=\"logo\" class=\"header__wrapper__logo\">\n";
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_logo-v01", options) : helperMissing.call(depth0, "view", "icons/ic_logo-v01", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n<p>Centro de Investicação Saúde Publica</p>\n</div>\n\n<div id=\"menu\" class=\"header__wrapper__menu\">MENU</div>";
+  return buffer;
   });
 
 this["JST"]["app/scripts/templates/home/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -104,15 +108,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/scripts/templates/posts/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing;
+  
 
 
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_organogram_thematic", options) : helperMissing.call(depth0, "view", "icons/ic_organogram_thematic", options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_logo-v01", options) : helperMissing.call(depth0, "view", "icons/ic_logo-v01", options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  return buffer;
+  return "<p>this is post index view</p>";
   });
 
 this["JST"]["app/scripts/templates/posts/item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

@@ -18,6 +18,19 @@
 	font-size: 20px;
 	font-weight: 500;
 }
+@include placeholder('title-home') {
+	font-size: 36px;
+	font-weight: 500;
+}
+@include placeholder('title-pages') {
+	font-size: 36px;
+	font-weight: 500;
+}
+@include placeholder('title-about') {
+	font-size: 36px;
+	font-weight: 500;
+	color: $white;
+}
 @include placeholder('subheading') {
 	font-size: 15px;
 }
