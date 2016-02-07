@@ -30,7 +30,7 @@
 		display: block;
 		height: 160px;
 		margin-bottom: 16px;
-		border-bottom: 2px solid $accent-color;
+		border-bottom: 3px solid $accent-color;
 		background-size: cover;
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
@@ -75,11 +75,11 @@
 
 		&__btn {
 			@include _(button);
-			height: 32px;
+			height: 40px;
 			background-color: #000;
 			color: $primary-text-color;
 			text-align: center;
-			line-height: 32px;
+			line-height: 40px;
 		}
 	}
 
