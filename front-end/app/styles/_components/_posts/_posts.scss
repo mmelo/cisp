@@ -46,6 +46,7 @@
 			background-color: $accent-color;
 			color: $primary-text-color;
 			text-transform: uppercase;
+			text-align: center;
 			@include _(caption);
 		}
 

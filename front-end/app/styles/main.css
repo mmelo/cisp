@@ -255,7 +255,8 @@ body {
     padding: 4px;
     background-color: #3F51B5;
     color: #fff;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: center; }
   .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn {
     display: block;
     margin-bottom: 8px; }
