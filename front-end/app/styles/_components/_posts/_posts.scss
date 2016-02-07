@@ -15,15 +15,77 @@
 .post {
 	position: relative;
 	width: 33.33333%;
-	padding: 8px;
 	background-color: #fff;
 
 	@include breakpoint(medium) {
-		width: 100%;
+		@include _(full-width);
 	}
 
 	.more-link {
 		display: none;
+	}
+
+	&__thumbnail {
+		@include _(full-width);
+		display: block;
+		height: 160px;
+		margin-bottom: 16px;
+		border-bottom: 2px solid $accent-color;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	&__content {
+		&__date {
+			position: absolute;
+			display: block;
+			top: 48px;
+			right: 32px;
+			padding: 4px;
+			background-color: $accent-color;
+			color: $primary-text-color;
+			text-transform: uppercase;
+			@include _(caption);
+		}
+
+		&__author,
+		&__title,
+		&__excerpt,
+		&__btn {
+			@include _(full-width);
+			display: block;
+			margin-bottom: 8px;
+		}
+
+		&__author {
+			@include _(subheading);
+		}
+
+		&__title {
+			@include _(title);
+			font-weight: bold;
+		}
+
+		&__excerpt {
+			@include _(body);
+			margin-bottom: 16px;
+			color: $content-text-color;
+		}
+
+		&__btn {
+			@include _(button);
+			height: 32px;
+			background-color: #000;
+			color: $primary-text-color;
+			text-align: center;
+			line-height: 32px;
+		}
+	}
+
+
+	&--project-item {
+		padding: 40px;
 	}
 }
 

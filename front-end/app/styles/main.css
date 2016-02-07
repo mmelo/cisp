@@ -32,7 +32,11 @@ blockquote, q {
 .header {
   padding: 16px; }
 
-html, body, header {
+@media (max-width: 900px) {
+  .post {
+    width: 100%; } }
+
+html, body, header, .post__thumbnail, .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn {
   width: 100%; }
 
 .header__wrapper, .hero-section__claim, .spinner, .posts-list, .posts-list .subtitle, .detail__category-wrapper,
@@ -62,8 +66,27 @@ html, body, header {
   font-weight: 500;
   color: #fff; }
 
+<<<<<<< HEAD
 .posts-list .subtitle {
+=======
+.post__content__title {
+  font-size: 20px;
+  font-weight: 500; }
+
+.header .nav__item, .posts-list .subtitle, .post__content__author {
+>>>>>>> 2c1a8cbe8ae3360ad6273c817455e684f35b00a1
   font-size: 15px; }
+
+.post__content__excerpt {
+  font-size: 16px; }
+
+.post__content__date {
+  font-size: 12px; }
+
+.post__content__btn {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase; }
 
 a {
   color: inherit;
@@ -208,13 +231,42 @@ body {
 .post {
   position: relative;
   width: 33.33333%;
-  padding: 8px;
   background-color: #fff; }
-  @media (max-width: 900px) {
-    .post {
-      width: 100%; } }
   .post .more-link {
     display: none; }
+  .post__thumbnail {
+    display: block;
+    height: 160px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #3F51B5;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat; }
+  .post__content__date {
+    position: absolute;
+    display: block;
+    top: 48px;
+    right: 32px;
+    padding: 4px;
+    background-color: #3F51B5;
+    color: #fff;
+    text-transform: uppercase; }
+  .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn {
+    display: block;
+    margin-bottom: 8px; }
+  .post__content__title {
+    font-weight: bold; }
+  .post__content__excerpt {
+    margin-bottom: 16px;
+    color: rgba(85, 85, 85, 0.9); }
+  .post__content__btn {
+    height: 32px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 32px; }
+  .post--project-item {
+    padding: 40px; }
 
 .no-results {
   padding: 32px;

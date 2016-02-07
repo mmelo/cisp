@@ -18,10 +18,7 @@ define([
 			return 'project-' + this.model.get('id');
 		},
 
-		className: function () {
-			var projectspan = this.model.get('custom_fields')['project-span'];
-			return 'project' + (projectspan ? '--' + projectspan[0] : '');
-		},
+		className: 'post post--project-item',
 
 		events: {},
 
