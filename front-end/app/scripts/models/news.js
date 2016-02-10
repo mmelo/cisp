@@ -6,9 +6,9 @@ define([
 ], function (_, Backbone) {
 	'use strict';
 
-	var NewsModel = Backbone.Model.extend({
+	var PostModel = Backbone.Model.extend({
 		url: function () {
-			return App.BaseUrl + '?json=get_post&post_type=publication&slug=' + this.get('slug');
+			return App.BaseUrl + '?json=get_post&post_type=news&slug=' + this.get('slug');
 		},
 
 		initialize: function() {
@@ -29,5 +29,5 @@ define([
 		}
 	});
 
-	return NewsModel;
+	return PostModel;
 });

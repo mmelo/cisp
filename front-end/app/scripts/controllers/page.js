@@ -120,7 +120,6 @@ define([
 		*	@function
 		*/
 		_heroSection: function () {
-			console.log('!');
 			App.Views.HeroSection = new HeroSectionView();
 			requestAnimationFrame(function () {
 				App.Header.append(App.Views.HeroSection.render().el);
