@@ -46,7 +46,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
   max-width: 1200px;
   margin: 0 auto; }
 
-.header__wrapper, .footer__container, .footer__partners, .posts-list {
+.header__wrapper, .hero-section__claim, .footer__container, .footer__partners, .posts-list {
   display: flex; }
 
 .header__wrapper, .footer__container, .footer__partners {
@@ -151,7 +151,6 @@ body {
 
 .hero-section__claim {
   position: relative;
-  display: flex;
   margin-left: 32px;
   text-align: right; }
   .hero-section__claim__underline {
@@ -161,6 +160,18 @@ body {
     left: 0;
     background-color: #fff;
     border-bottom: 1px solid #fff; }
+
+.hero-section__block {
+  display: block;
+  float: left;
+  margin-top: 56px;
+  max-width: 300px; }
+  .hero-section__block__title {
+    color: #404040; }
+  .hero-section__block__text {
+    color: #fff;
+    font-weight: 400;
+    line-height: 18px; }
 
 .footer {
   padding: 16px 32px; }

@@ -30,7 +30,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<h2 class=\"hero-section__claim\">From research<br>to action <span class=\"hero-section__claim__underline\"></span></h2>\n";
+  return "<h2 class=\"hero-section__claim\">From research<br>to action <span class=\"hero-section__claim__underline\"></span> </h2>\n\n<div class=\"hero-section__block\">\n	<div class=\"hero-section__block__title\">Centro de Investigação Saúde Pública</div>\n	<div class=\"hero-section__block__text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>\n</div>\n";
   });
 
 this["JST"]["app/scripts/templates/header/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
