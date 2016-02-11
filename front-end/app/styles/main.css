@@ -33,13 +33,13 @@ blockquote, q {
   padding: 16px; }
 
 @media (max-width: 900px) {
-  .post {
+  .post--project-item {
     width: 100%; } }
 
 html, body, header, .post__thumbnail, .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn {
   width: 100%; }
 
-.header__wrapper, .spinner, .posts-list, .posts-list .subtitle, .detail__category-wrapper,
+.header__wrapper, .hero-section, .spinner, .posts-list, .posts-list .subtitle, .detail__category-wrapper,
 .detail .post__content__details, .detail__excerpt, .detail__thumbnail__wrapper,
 .detail__content__wrapper img {
   width: 100%;
@@ -49,7 +49,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 .header__wrapper, .footer__container, .footer__partners, .posts-list {
   display: flex; }
 
-.footer__container, .footer__partners {
+.header__wrapper, .footer__container, .footer__partners {
   justify-content: space-between; }
 
 .header__wrapper, .footer__container, .footer__partners {
@@ -58,19 +58,19 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 .header__wrapper, .footer__container, .posts-list {
   flex-wrap: wrap; }
 
-.header__title, .no-results {
+.no-results {
   font-size: 35px; }
-
-@media (max-width: 900px) {
-  .header__title {
-    font-size: 20px;
-    font-weight: 500; } }
 
 .post__content__title {
   font-size: 20px;
   font-weight: 500; }
 
-.header .nav__item, .posts-list .subtitle, .post__content__author {
+.hero-section__claim {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff; }
+
+.posts-list .subtitle, .post__content__author {
   font-size: 15px; }
 
 .post__content__excerpt {
@@ -112,7 +112,7 @@ body {
 .app {
   position: relative;
   min-height: 100%;
-  margin-top: 64px;
+  margin-top: 500px;
   z-index: 1; }
   @media (max-width: 900px) {
     .app {
@@ -121,55 +121,46 @@ body {
 .header {
   position: absolute;
   width: 100%;
-  height: 64px;
+  height: 500px;
   top: 0;
   left: 0;
   z-index: 2;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #fff; }
+  background-color: #BFBEBE; }
   @media (max-width: 900px) {
     .header {
       height: 64px; } }
   .header__wrapper {
-    height: 100%; }
-  .header__title {
-    margin-right: auto;
-    color: #333333; }
-  .header .nav__item {
-    position: relative;
-    padding: 0 4px;
-    margin-right: 4px;
-    letter-spacing: 1px; }
-    .header .nav__item:last-child {
-      margin-right: 0; }
-    .header .nav__item:hover {
-      color: #3F51B5; }
-      .header .nav__item:hover:after {
-        content: " ";
-        position: absolute;
-        display: block;
-        width: calc(100% - 8px);
-        height: 2px;
-        bottom: -4px;
-        left: 4px;
-        background-color: #3F51B5; }
-  @media (max-width: 900px) {
-    .header .nav {
-      display: none; } }
-  .header.subheader {
-    position: fixed;
-    height: 64px;
-    background-color: #111;
-    z-index: 3;
-    transform: translate3d(0%, -100%, 0);
-    transition: 0.3s transform cubic-bezier(0, 0, 0.21, 1); }
-    .header.subheader.active {
-      transform: translate3d(0%, 0%, 0); }
-    .header.subheader .header__title,
-    .header.subheader .nav a {
-      color: #fff; }
-    .header.subheader .nav a:hover:after {
-      background-color: #fff; }
+    height: 60px;
+    z-index: 1;
+    margin-bottom: 48px; }
+    .header__wrapper__logo svg {
+      width: 150px;
+      height: 35px; }
+      .header__wrapper__logo svg rect,
+      .header__wrapper__logo svg path {
+        fill: #fff; }
+    .header__wrapper__logo p {
+      font-size: 13px;
+      color: white; }
+    .header__wrapper__menu {
+      background-color: #446CB3;
+      color: #fff;
+      text-decoration: underline;
+      padding: 6px; }
+
+.hero-section__claim {
+  position: relative;
+  display: flex;
+  margin-left: 32px;
+  text-align: right; }
+  .hero-section__claim__underline {
+    position: absolute;
+    width: 90px;
+    bottom: 4px;
+    left: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #fff; }
 
 .footer {
   padding: 16px 32px; }

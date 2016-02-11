@@ -8,7 +8,7 @@
 	left: 0;
 	z-index: 2;
 	border: 1px solid $divider-color;
-	background-color: #fff;
+	background-color: $light-gray;
 
 	@include breakpoint(medium) {
 		height: 64px;
@@ -18,74 +18,35 @@
 		@include _(flex);
 		@include _(flex-wrap);
 		@include _(align-items-center);
+		@include _(space-between);
 		@include _(limited-full-width);
-		height: 100%;
-	}
+		height: 60px;
+		z-index: 1;
+		margin-bottom: 48px;
 
-	&__title {
-		@include _(display1);
-		@include _(header-text);
-		margin-right: auto;
-		color: $primary-color;
+		&__logo {
+			
+			svg {
+				width: 150px;
+				height: 35px;
 
-		@include breakpoint(medium) {
-			@include _(title);
-		}
-	}
-
-	.nav {
-		&__item {
-			position: relative;
-			@include _(header-text);
-			@include _(subheading);
-			padding: 0 4px;
-			margin-right: 4px;
-			letter-spacing: 1px;
-
-			&:last-child {
-				margin-right: 0;
-			}
-
-			&:hover {
-				color: $accent-color;
-
-				&:after {
-					content: " ";
-					position: absolute;
-					display: block;
-					width: calc(100% - 8px);
-					height: 2px;
-					bottom: -4px;
-					left: 4px;
-					background-color: $accent-color;
+				rect,
+				path {
+					fill: $white;
 				}
 			}
+
+			p {
+				font-size: 13px;
+				color: white;
+			}
 		}
 
-		@include breakpoint(medium) {
-			display: none;
-		}
-	}
-
-	&.subheader {
-		position: fixed;
-		height: $header_height;
-		background-color: #111;
-		z-index: 3;
-		transform: translate3d(0%,-100%,0);
-
-		transition: .3s transform $cubic-bezier;
-
-		&.active {
-			transform: translate3d(0%,0%,0);
-		}
-
-		.header__title,
-		.nav a {
-			color: $primary-text-color;
-		}
-		.nav a:hover:after {
-			background-color: $primary-text-color;
+		&__menu {
+			background-color: $blue;
+			color: $white;
+			text-decoration: underline;
+			padding: 6px;
 		}
 	}
 }

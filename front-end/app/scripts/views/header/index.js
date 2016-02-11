@@ -16,7 +16,19 @@ define([
 
 		className: 'header__wrapper',
 
-		events: {}
+		events: {
+			'click #logo': '_returnHome',
+		},
+		
+		/**
+		*	_returnHome - navigate to home
+		*
+		*	@private
+		*	@function
+		*/
+		_returnHome: function () {
+			App.Router.navigate('#', { trigger: true });
+		}
 	});
 
 	return FooterView;
