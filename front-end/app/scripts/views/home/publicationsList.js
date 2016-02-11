@@ -9,10 +9,10 @@ define([
 ], function ($, _, Backbone, JST) {
     'use strict';
 
-    var NewsListView = Backbone.CollectionView.extend({
-        template: JST['app/scripts/templates/home/newsList.hbs'],
+    var PublicationsListView = Backbone.CollectionView.extend({
+        template: JST['app/scripts/templates/home/publicationsList.hbs'],
 
     });
 
-    return NewsListView;
+    return PublicationsListView;
 });

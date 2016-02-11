@@ -1,0 +1,45 @@
+.menu {
+	display: none;
+
+	&__wrapper {
+		@include _(flex);
+		@include _(flex-column);
+		position: absolute;
+		padding: 48px;
+		width: 50%;
+		height: 100%;
+		top: -1px;
+		right: -1px;
+		background-color: $black;
+		opacity: 0.8;
+		color: $white;
+		font-size: 24px;
+		z-index: 6;
+		
+		&__close {
+			margin-bottom: auto;
+			margin-left: auto;
+			svg {
+				fill: $white;
+				width: 40px;
+				height: 40px;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+
+		ul {
+			margin-bottom: auto;
+			li {
+				text-align: right;
+				margin: 8px 0;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

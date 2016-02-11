@@ -10,7 +10,7 @@ html,body,header{
 	margin:0;
 }
 html, body {
-	height: 100%;
+	// height: 100%;
 }
 body {
 	background-color: #fff;
@@ -37,8 +37,23 @@ body {
 
 @import "_components/_header/_header",
 		"_components/_header/_heroSection",
+		"_components/_header/_menu",
 		"_home/_index",
 		"_home/_news",
+		"_home/_publications",
 		"_components/_footer",
 		"_components/_spinner",
 		"_components/_posts/_posts";
+
+
+.invisible {
+	display: none;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.active {
+	display: block;
+}

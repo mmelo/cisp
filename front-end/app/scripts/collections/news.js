@@ -19,6 +19,7 @@ define([
 		},
 
 		parse: function (res) {
+
 			return res.posts;
 		}
 	});

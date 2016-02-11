@@ -2,8 +2,5 @@
 	<h4>{{title}}</h4>
 	<p>{{{excerpt}}}</p>
 	<a href="#">{{{view 'icons/ic_arrow-right'}}} See more</a>
+	<time datetime="{{date}}">{{{prettyDate}}}</time>
 </div>
-
-{{#ifCond thumbnail '&&' isLarge}}
-<div class="home__section__new__image" style="background-image: url({{thumbnail}})"> </div>
-{{/ifCond}}

@@ -5,21 +5,22 @@ define([
 	'views/home/index',
 	'views/home/newsList',
 	'views/home/newsItem',
-	'views/projects/index',
+	'views/home/publicationsList',
+	'views/home/publicationsItem',
 	'collections/news',
-	'collections/projects',
-], function ($, Backbone, HomeView, NewsListView, NewsItemView, ProjectListView, NewsCollection, ProjectCollection) {
+	'collections/publications',
+], function ($, Backbone, HomeView, NewsListView, NewsItemView, PublicationsListView, PublicationsItemView, NewsCollection, PublicationsCollection) {
 	'use strict';
 	/**
-	*	Header module.
+	*	HomeController module.
 	*	@module HomeController
 	*	@see module:HomeController
 	*
-	*	@author Andre Silva
 	*	@version 1.0.0
 	*	@summary: handle home view creation and behaviour handling
 	*/
 	var HomeController = Backbone.Router.extend({
+		
 		/**
 		*	initialize - setup alert event listeners and handlers
 		*
@@ -47,21 +48,42 @@ define([
 			});
 
 			this._news();
-			// this._projects();
+			this._publications();
 		},
 
 		/**
-		*	_toggleHover - create and render projects section @ home page
+		*	_news - create and render _news section @ home page
 		*
 		*	@private
 		*	@function
 		*/
 		_news: function () {
 			App.Collections.News = new NewsCollection;
+			App.Collections.News.count = 3;
 			App.Collections.News.fetch({
 				remove: false,
 				success: function () {
-					console.log(App.Collections.News.toJSON());
+
+					// setting isLarge attribute to n'th model of the collection to stylize.
+					var index = App.Collections.News.indexOf(App.Collections.News.model);
+					var indexSelected = App.Collections.News.at(index-2);
+					
+					if ( indexSelected.get('thumbnail') ) {
+						indexSelected.set('isLarge', true);
+					} else {
+						indexSelected = App.Collections.News.at(index-1);
+
+						if ( indexSelected.get('thumbnail') ) {
+							indexSelected.set('isLarge', true);
+						} else {
+							indexSelected = App.Collections.News.at(index);
+							if ( indexSelected.get('thumbnail') ) {
+								indexSelected.set('isLarge', true);
+							}
+						}
+
+					}
+					
 					requestAnimationFrame(function () {
 						App.Views.News = new NewsListView({
 							el: '#home-news',
@@ -80,27 +102,29 @@ define([
 		},
 
 		/**
-		*	_toggleHover - create and render projects section @ home page
+		*	_publications - create and render publications section @ home page
 		*
 		*	@private
 		*	@function
 		*/
-		_projects: function () {
-			App.Collections.Project = new ProjectCollection;
-			App.Views.Projects = new ProjectListView({
-				collection: App.Collections.Project
-			});
-			App.Collections.Project.fetch({
+		_publications: function () {
+			App.Collections.Publications = new PublicationsCollection;
+			App.Collections.Publications.count = 3;
+			App.Collections.Publications.fetch({
 				remove: false,
-				success: function (res) {
+				success: function () {
 					requestAnimationFrame(function () {
-						$('#home-publications').html(App.Views.Projects.render().el);
+						App.Views.Publications = new PublicationsListView({
+							el: '#home-publications',
+							subview: PublicationsItemView,
+							collection: App.Collections.Publications
+						}).render();
 						App.Vent.trigger('global:scroll');
 					});
 				},
 				error: function (res, err) {
 					requestAnimationFrame(function () {
-						$('#home-publications').html(App.Views.Projects.render().el);
+						$('#home-publications').html(App.Views.Publications.render().el);
 					});
 				}
 			});

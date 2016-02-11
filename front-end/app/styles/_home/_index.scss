@@ -1,0 +1,16 @@
+.home__section {
+	@include _(flex);
+	@include _(flex-wrap);
+	padding: 32px 100px;
+	width: 100%;
+	min-height: 250px;
+
+	&__title {
+		width: 100%;
+		margin-bottom: 8px;
+		font-size: 34px;
+		text-decoration: underline;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+}

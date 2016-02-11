@@ -10,14 +10,16 @@ define([
 	'views/pages/detail',
 	'views/footer/footer',
 	'views/header/index',
-	'views/header/heroSection'
-], function ($, Backbone, PageCollection, PageModel, PageListView, PageItemView, PageDetailView, FooterView, HeaderView, HeroSectionView) {
+	'views/header/heroSection',
+	'views/header/menu'
+], function ($, Backbone, PageCollection, PageModel, PageListView, PageItemView, PageDetailView, FooterView, HeaderView, HeroSectionView, MenuView) {
 	'use strict';
 
 	var PageController = Backbone.Router.extend({
 		initialize: function () {
 			App.Vent.on('pages:footer', this._footer, this);
 			App.Vent.on('pages:header', this._header, this);
+			App.Vent.on('pages:header:menu', this._menu, this);
 			App.Vent.on('pages:index', this._index, this);
 			App.Vent.on('pages:detail', this._detail, this);
 		},
@@ -111,6 +113,23 @@ define([
 				App.Header.html(App.Views.Header.render().el);
 			});
 			this._heroSection();
+		},
+
+		/**
+		*	_menu
+		*
+		*	@private
+		*	@function
+		*/
+		_menu: function () {
+			console.log('!!!');
+			// if (!App.Views.Menu ) {
+				requestAnimationFrame(function () {
+					App.Views.Menu = new MenuView({
+						el: '#menu-container'
+					}).render();
+				});
+			// }
 		},
 		
 		/**

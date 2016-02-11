@@ -9,23 +9,21 @@ define([
 ], function ($, _, Backbone, JST) {
 	'use strict';
 
-	var NewsItemView = Backbone.BaseView.extend({
-		template: JST['app/scripts/templates/home/newsItem.hbs'],
+	var PublicationsItemView = Backbone.BaseView.extend({
+		template: JST['app/scripts/templates/home/publicationsItem.hbs'],
 
 		tagName: 'article',
 
 		id: function () {
-			return 'new-' + this.model.get('id');
+			return 'publication-' + this.model.get('id');
 		},
 
-		className: function () {
-			
-			return this.model.get('isLarge') && this.model.get('thumbnail') ? 'home__section__new home__section__new--large' : 'home__section__new';
-		},
+		className: 'home__section__publication',
 
 		events: {},
 
 		initialize: function () {
+			console.log(this.model.toJSON());
 			this.listenTo(this.model, 'change', this.render);
 			App.Vent.on('global:scroll', this._lazyLoadImage, this);
 		},
@@ -44,5 +42,5 @@ define([
 		}
 	});
 
-	return NewsItemView;
+	return PublicationsItemView;
 });

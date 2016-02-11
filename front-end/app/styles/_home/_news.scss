@@ -1,56 +1,70 @@
-.home__section {
+.home__section__new {
 	@include _(flex);
-	@include _(flex-wrap);
-	padding: 32px 100px;
+	@include flex(1);
+	position: relative;
+	margin: 0 24px 16px 0;
+	padding-right: 8px;
+	padding-bottom: 8px;
+	min-width: 190px;
+	border-bottom: 2px solid $light-gray;
+	
+	&:after {
+		content:'';
+		position: absolute; 
+		bottom: 0; 
+		right: 0; 
+		height: 10%; 
+		width: 2px;
+		background: $light-gray; 
+	}
+	
+	&--large {
+		@include flex(2);
+		min-width: 300px;
+		border-bottom: 3px solid $blue;
 
-	&__title {
-		width: 100%;
-		margin-bottom: 8px;
-		font-size: 34px;
-		text-decoration: underline;
-		text-transform: uppercase;
-		font-weight: 600;
+		&:after {
+			width: 3px;
+			background: $blue; 
+		}
 	}
 
-	&__item {
-		position: relative;
-		margin: 0 24px 0 0;
-		padding-right: 8px;
-		padding-bottom: 8px;
-		max-width: 300px;
-		border-bottom: 2px solid $light-gray;
-		
-		&:after {
-		  content:''; 
-		  position: absolute; 
-		  bottom: 0; 
-		  right: 0; 
-		  height: 10%; 
-		  width: 2px;
-		  background: $light-gray; 
-		}
+	&__content {
+		@include flex-grow(1);
+	}
 
-		h4 {
-			margin: 8px 0;
-		}
+	&__image {
+		@include flex-grow(1);
+		min-width: 50%;
+		background-position: center;
+		background-size: cover;
+	}
 
-		p {
-			color: $dark-gray;
+	h4 {
+		margin: 8px 0;
+	}
 
-			a {
-				display: none;
-			}
-		}
+	p {
+		color: $dark-gray;
 
 		a {
-			@include _(flex);
-			@include _(align-items-center);
-			margin-top: 16px;
-			padding-left: 8px;
-
-			svg {
-				margin-right: 16px;
-			}
+			display: none;
 		}
+	}
+
+	a {
+		@include _(flex);
+		@include _(align-items-center);
+		margin-top: 16px;
+		padding-left: 8px;
+
+		svg {
+			margin-right: 16px;
+		}
+	}
+
+	img {
+		width: 250px;
+		height: 180px;
 	}
 }
