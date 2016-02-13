@@ -462,11 +462,6 @@ body {
     display: block; }
 
 .project__detail {
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  z-index: 9999;
   height: 100%;
   background-color: #fff; }
   .project__detail__wrapper {
