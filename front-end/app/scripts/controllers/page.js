@@ -139,6 +139,7 @@ define([
 		*	@function
 		*/
 		_heroSection: function () {
+			console.log('render hero section');
 			requestAnimationFrame(function () {
 				App.Views.HeroSection = new HeroSectionView({
 					el: '#hero-section'

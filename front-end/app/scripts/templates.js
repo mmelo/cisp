@@ -107,7 +107,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"home__section__title\">News</div>";
+  return "<div class=\"home__section__title\"><a href=\"#news\">News</a></div>";
   });
 
 this["JST"]["app/scripts/templates/home/publicationsItem.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -145,7 +145,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"home__section__title\">Publications</div>";
+  return "<div class=\"home__section__title\"><a href=\"#publications\">Publications</a></div>";
   });
 
 this["JST"]["app/scripts/templates/icons/ic_arrow-right.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
