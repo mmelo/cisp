@@ -513,7 +513,8 @@ body {
   .publication__item__column {
     position: relative;
     width: 50%;
-    height: 100%; }
+    height: 100%;
+    flex-grow: 2; }
     .publication__item__column--right {
       padding-left: 64px; }
   .publication__item__thumbnail {
