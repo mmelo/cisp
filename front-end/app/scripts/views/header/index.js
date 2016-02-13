@@ -38,7 +38,6 @@ define([
 		*	@function
 		*/
 		_openMenu: function (ev) {
-			console.log('!');
 			App.Views.Header.$('#menu-button').toggleClass('active');
 			App.Views.Header.$('#menu').toggleClass('active');
 			App.Views.Header.$('#menu-wrapper').toggleClass('active');

@@ -19,7 +19,6 @@ define([
 		initialize: function () {
 			App.Vent.on('pages:footer', this._footer, this);
 			App.Vent.on('pages:header', this._header, this);
-			App.Vent.on('pages:header:menu', this._menu, this);
 			App.Vent.on('pages:index', this._index, this);
 			App.Vent.on('pages:detail', this._detail, this);
 		},
@@ -106,13 +105,16 @@ define([
 		*
 		*	@private
 		*	@function
+		*	@param {string} catg - page context
 		*/
-		_header: function () {
-			App.Views.Header = new HeaderView();
+		_header: function (catg) {
+			App.Views.Header = new HeaderView({
+				catg: catg
+			});
 			requestAnimationFrame(function () {
 				App.Header.html(App.Views.Header.render().el);
 			});
-			this._heroSection();
+			this._heroSection(catg);
 			this._menu();
 		},
 
@@ -123,13 +125,11 @@ define([
 		*	@function
 		*/
 		_menu: function () {
-			// if (!App.Views.Menu ) {
-				requestAnimationFrame(function () {
-					App.Views.Menu = new MenuView({
-						el: '#menu'
-					}).render();
-				});
-			// }
+			requestAnimationFrame(function () {
+				App.Views.Menu = new MenuView({
+					el: '#menu'
+				}).render();
+			});
 		},
 		
 		/**
@@ -137,12 +137,28 @@ define([
 		*
 		*	@private
 		*	@function
+		*	@param {string} catg - page context
 		*/
-		_heroSection: function () {
-			console.log('render hero section');
+		_heroSection: function (catg) {
+			var lastClass = $('#header').attr('class').split(' ')[1];
+			
+			if ( lastClass ) {
+				$('#header').removeClass(lastClass);
+			}
+
+			$('#header').addClass(catg);
+
+			if ( !catg ) {
+				catg = 'home';
+				$('#hero-section').addClass('active');
+			} else {
+				$('#hero-section').removeClass('active');
+			}
+			
 			requestAnimationFrame(function () {
 				App.Views.HeroSection = new HeroSectionView({
-					el: '#hero-section'
+					el: '#hero-section',
+					catg: catg
 				}).render();
 			});
 		}

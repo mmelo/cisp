@@ -22,9 +22,13 @@ define([
 	*/
 	Backbone.BaseView = Backbone.View.extend({
 		subviews: [],
-		initialize: function () {
+		initialize: function (data) {
 			if ( !this.model ) {
 				this.model = new Backbone.Model;
+			}
+			if ( data ) { //AS - adicionei para poder passar parametros extra para dentro da view (não tenho a certeza se é a forma correcta)
+				this.data = data;
+				this.model.set('data', this.data, {silent: true});
 			}
 			this.listenTo(this.model, 'change', this.render);
 		},

@@ -138,14 +138,27 @@ body {
   @media (max-width: 900px) {
     .header {
       height: 64px; } }
+  .header.about {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7); }
+  .header.members {
+    box-shadow: inset 0 0 0 1000px rgba(17, 64, 117, 0.7); }
+  .header.projects {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7); }
+  .header.events {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7); }
+  .header.publications {
+    box-shadow: inset 0 0 0 1000px rgba(18, 43, 143, 0.7); }
+  .header.news {
+    box-shadow: inset 0 0 0 1000px rgba(16, 53, 129, 0.7); }
   .header__container {
     height: 100%; }
 
 .hero-section {
   width: 100%;
-  height: 100%;
-  background-color: #00156A;
-  opacity: 0.8; }
+  height: 100%; }
+  .hero-section.active {
+    background-color: #00156A;
+    opacity: 0.8; }
   .hero-section__container {
     color: #fff;
     width: 100%;
@@ -154,8 +167,7 @@ body {
     margin-left: auto;
     padding: 32px 0 0 16px; }
   .hero-section__logo {
-    display: block;
-    float: left; }
+    display: block; }
     .hero-section__logo:hover {
       cursor: pointer; }
     .hero-section__logo svg {
@@ -171,7 +183,7 @@ body {
     position: relative;
     margin-left: 32px;
     text-align: right;
-    margin-top: 120px; }
+    margin-top: 72px; }
     .hero-section__claim__underline {
       position: absolute;
       width: 90px;
@@ -190,6 +202,11 @@ body {
       color: #fff;
       font-weight: 400;
       line-height: 18px; }
+  .hero-section__page-identifier {
+    margin-top: 340px;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-decoration: underline; }
 
 .menu {
   width: 100%;

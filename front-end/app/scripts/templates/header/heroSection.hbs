@@ -1,15 +1,21 @@
 <div class="hero-section__container">
-	
+
 	<div id="logo" class="hero-section__logo">
 		{{{view 'icons/ic_logo-v01'}}}
 		<p>Centro de Investicação Saúde Publica</p>
 	</div>
 
+{{#ifCond data.catg '===' 'home'}}
 	<h2 class="hero-section__claim">From research<br>to action <span class="hero-section__claim__underline"></span> </h2>
 	
 	<div class="hero-section__block">
 		<div class="hero-section__block__title">Centro de Investigação Saúde Pública</div>
 		<div class="hero-section__block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 	</div>
+{{else}}
+	<div class="hero-section__page-identifier">
+		<p>{{data.catg}}</p>
+	</div>
 
+{{/ifCond}}
 </div>

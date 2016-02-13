@@ -52,7 +52,7 @@ define([
 		*   @private
 		*   @function
 		*/
-		_common: function () {
+		_common: function (catg) {
 			if ( App.Views.Active ) {
 				App.Views.Active.close();
 				App.Views.Active = null;
@@ -62,7 +62,7 @@ define([
 			}
 
 			if ( !App.Views.header ) {
-				this._header();
+				this._header(catg);
 			}
 			window.scrollTo(0,0);
 		},
@@ -96,8 +96,8 @@ define([
 		*	@private
 		*	@function
 		*/
-		_header: function () {
-			App.Vent.trigger('pages:header');
+		_header: function (catg) {
+			App.Vent.trigger('pages:header', catg);
 		},
 
 		/**
@@ -120,7 +120,7 @@ define([
 		*   @param {string} catg - category name/slug
 		*/
 		_category: function (catg) {
-			this._common();
+			this._common(catg);
 			this._loading();
 
 			if ( catg === 'publications' ) {
@@ -142,7 +142,7 @@ define([
 		*   @param {string} slug
 		*/
 		_detail: function (catg, slug) {
-			this._common();
+			this._common(catg);
 			this._loading();
 
 			if ( catg === 'projects' ) {
