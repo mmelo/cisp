@@ -1,11 +1,12 @@
 .footer {
+	margin-top: 80px;
 	padding: 16px 32px;
 
 	&__container {
 		@include _(flex);
 		@include _(space-between);
 		@include _(align-items-center);
-		@include _(flex-wrap);
+		// @include _(flex-wrap);
 		padding: 8px;
 		text-align: center;
 	}
@@ -19,7 +20,7 @@
 		}
 	}
 
-	p {
+	&__copy-right {
 		font-size: 12px;
 		margin-bottom: 8px;
 	}

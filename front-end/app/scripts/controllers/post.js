@@ -26,6 +26,7 @@ define([
 		*	@param {string} catg (optional)
 		*/
 		_index: function (catg) {
+			console.log('posts');
 			App.Collections.Post = new PostCollection;
 			App.Collections.Post.catg = catg;
 			App.Views.Active = new PostListView({

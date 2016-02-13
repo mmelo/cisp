@@ -8,8 +8,10 @@
 	left: 0;
 	z-index: 2;
 	border: 1px solid $divider-color;
-	background-color: $light-gray;
-
+	background-image: url(../images/hero/01_overlay.jpeg);
+	background-position: center;
+	background-size: cover;
+	
 	@include breakpoint(medium) {
 		height: 64px;
 	}
@@ -25,6 +27,10 @@
 		margin-bottom: 48px;
 
 		&__logo {
+			
+			&:hover {
+				cursor: pointer;
+			}
 			
 			svg {
 				width: 150px;
@@ -47,6 +53,10 @@
 			color: $white;
 			text-decoration: underline;
 			padding: 6px;
+
+			&:hover {
+				cursor: pointer;
+			}
 		}
 	}
 }

@@ -18,6 +18,7 @@ define([
 
 		events: {
 			'click #logo': '_returnHome',
+			"click #menu-button": '_openMenu'
 		},
 		
 		/**
@@ -28,6 +29,18 @@ define([
 		*/
 		_returnHome: function () {
 			App.Router.navigate('#', { trigger: true });
+		},
+
+		/**
+		*	_openMenu - open menu
+		*
+		*	@private
+		*	@function
+		*/
+		_openMenu: function (ev) {
+			App.Vent.trigger('pages:header:menu');
+			this.$('#menu-container').addClass('active');
+			this.$('#menu-button').addClass('invisible');
 		}
 	});
 
