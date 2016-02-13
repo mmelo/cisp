@@ -113,6 +113,7 @@ define([
 				App.Header.html(App.Views.Header.render().el);
 			});
 			this._heroSection();
+			this._menu();
 		},
 
 		/**
@@ -122,11 +123,10 @@ define([
 		*	@function
 		*/
 		_menu: function () {
-			console.log('!!!');
 			// if (!App.Views.Menu ) {
 				requestAnimationFrame(function () {
 					App.Views.Menu = new MenuView({
-						el: '#menu-container'
+						el: '#menu'
 					}).render();
 				});
 			// }
@@ -139,9 +139,10 @@ define([
 		*	@function
 		*/
 		_heroSection: function () {
-			App.Views.HeroSection = new HeroSectionView();
 			requestAnimationFrame(function () {
-				App.Header.append(App.Views.HeroSection.render().el);
+				App.Views.HeroSection = new HeroSectionView({
+					el: '#hero-section'
+				}).render();
 			});
 		}
 

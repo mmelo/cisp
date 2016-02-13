@@ -17,12 +17,9 @@ define([
 		},
 
 		_dismiss: function (){
-			console.log('!');
-			App.Views.Header.$('#menu-container').removeClass('active');
-			App.Views.Header.$('#menu-button').removeClass('invisible');
-			// App.Views.Menu.close();
-			// App.Views.Menu = null;
-
+			App.Views.Header.$('#menu-button').toggleClass('active');
+			App.Views.Header.$('#menu').toggleClass('active');
+			App.Views.Header.$('#menu-wrapper').toggleClass('active');
 		}
 	});
 

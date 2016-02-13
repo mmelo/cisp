@@ -27,23 +27,23 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/scripts/templates/header/heroSection.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing;
 
 
-  return "<h2 class=\"hero-section__claim\">From research<br>to action <span class=\"hero-section__claim__underline\"></span> </h2>\n\n<div class=\"hero-section__block\">\n	<div class=\"hero-section__block__title\">Centro de Investigação Saúde Pública</div>\n	<div class=\"hero-section__block__text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>\n</div>\n";
+  buffer += "<div class=\"hero-section__container\">\n	\n	<div id=\"logo\" class=\"hero-section__logo\">\n		";
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_logo-v01", options) : helperMissing.call(depth0, "view", "icons/ic_logo-v01", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n		<p>Centro de Investicação Saúde Publica</p>\n	</div>\n\n	<h2 class=\"hero-section__claim\">From research<br>to action <span class=\"hero-section__claim__underline\"></span> </h2>\n	\n	<div class=\"hero-section__block\">\n		<div class=\"hero-section__block__title\">Centro de Investigação Saúde Pública</div>\n		<div class=\"hero-section__block__text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>\n	</div>\n\n</div>\n";
+  return buffer;
   });
 
 this["JST"]["app/scripts/templates/header/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing;
+  
 
 
-  buffer += "<div id=\"logo\" class=\"header__wrapper__logo\">\n";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_logo-v01", options) : helperMissing.call(depth0, "view", "icons/ic_logo-v01", options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n<p>Centro de Investicação Saúde Publica</p>\n</div>\n\n<div id=\"menu-button\" class=\"header__wrapper__menu\">MENU</div>\n<div id=\"menu-container\" class=\"menu\"></div>";
-  return buffer;
+  return "<div id=\"hero-section\" class=\"hero-section\"></div>\n<div id=\"menu\" class=\"menu\"></div>";
   });
 
 this["JST"]["app/scripts/templates/header/menu.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -52,10 +52,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing;
 
 
-  buffer += "<div class=\"menu__wrapper\">\n	<div class=\"menu__wrapper__close\" id=\"menu-close\">";
+  buffer += "<div class=\"menu__container\">\n	<div id=\"menu-button\" class=\"menu__button active\">MENU</div>\n\n	<div id=\"menu-wrapper\" class=\"menu__wrapper\">\n		<div class=\"menu__wrapper__close\" id=\"menu-close\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_close", options) : helperMissing.call(depth0, "view", "icons/ic_close", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</div>\n	<ul>\n		<li><a href=\"#about\">About us.</a></li>\n		<li><a href=\"#members\">Members.</a></li>\n		<li><a href=\"#projects\">Projects.</a></li>\n		<li><a href=\"#events\">Events.</a></li>\n		<li><a href=\"#publications\">Publications.</a></li>\n		<li><a href=\"#news\">News.</a></li>\n	</ul>\n</div>";
+  buffer += "</div>\n		<ul>\n			<li><a href=\"#about\">About us.</a></li>\n			<li><a href=\"#members\">Members.</a></li>\n			<li><a href=\"#projects\">Projects.</a></li>\n			<li><a href=\"#events\">Events.</a></li>\n			<li><a href=\"#publications\">Publications.</a></li>\n			<li><a href=\"#news\">News.</a></li>\n		</ul>\n	</div>\n</div>";
   return buffer;
   });
 

@@ -29,9 +29,6 @@ ul {
 blockquote, q {
   quotes: none; }
 
-.header {
-  padding: 16px; }
-
 @media (max-width: 900px) {
   .post {
     width: 100%; } }
@@ -39,26 +36,29 @@ blockquote, q {
 html, body, header, .post__thumbnail, .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn {
   width: 100%; }
 
-.app, .header__wrapper, .hero-section, .spinner, .posts-list, .posts-list .subtitle, .detail__category-wrapper,
+.app, .spinner, .posts-list, .posts-list .subtitle, .detail__category-wrapper,
 .detail .post__content__details, .detail__excerpt, .detail__thumbnail__wrapper,
 .detail__content__wrapper img {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto; }
 
-.header__wrapper, .hero-section__claim, .menu__wrapper, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list {
+.header__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list {
   display: flex; }
 
-.menu__wrapper {
-  flex-direction: column; }
+.header__container {
+  justify-content: center; }
 
-.header__wrapper, .footer__container, .footer__partners {
+.footer__container, .footer__partners {
   justify-content: space-between; }
 
-.header__wrapper, .home__section__new a, .home__section__publication a, .footer__container, .footer__partners {
+.menu__container {
+  justify-content: flex-end; }
+
+.home__section__new a, .home__section__publication a, .footer__container, .footer__partners {
   align-items: center; }
 
-.header__wrapper, .home__section, .posts-list {
+.home__section, .posts-list {
   flex-wrap: wrap; }
 
 .no-results {
@@ -100,6 +100,9 @@ a {
 html, body, header {
   margin: 0; }
 
+html, body {
+  height: 100%; }
+
 body {
   background-color: #fff;
   font-family: 'Raleway',sans-serif;
@@ -126,89 +129,111 @@ body {
   left: 0;
   z-index: 2;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-image: url(../images/hero/01_overlay.jpeg);
+  background-image: url(../images/hero/01.jpeg);
   background-position: center;
   background-size: cover; }
   @media (max-width: 900px) {
     .header {
       height: 64px; } }
-  .header__wrapper {
-    height: 60px;
-    z-index: 1;
-    margin-bottom: 48px; }
-    .header__wrapper__logo:hover {
+  .header__container {
+    height: 100%; }
+
+.hero-section {
+  width: 100%;
+  height: 100%;
+  background-color: #00156A;
+  opacity: 0.8; }
+  .hero-section__container {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    padding: 32px 0 0 16px; }
+  .hero-section__logo {
+    display: block;
+    float: left; }
+    .hero-section__logo:hover {
       cursor: pointer; }
-    .header__wrapper__logo svg {
+    .hero-section__logo svg {
       width: 150px;
       height: 35px; }
-      .header__wrapper__logo svg rect,
-      .header__wrapper__logo svg path {
+      .hero-section__logo svg rect,
+      .hero-section__logo svg path {
         fill: #fff; }
-    .header__wrapper__logo p {
+    .hero-section__logo p {
       font-size: 13px;
       color: white; }
-    .header__wrapper__menu {
-      background-color: #446CB3;
+  .hero-section__claim {
+    position: relative;
+    margin-left: 32px;
+    text-align: right;
+    margin-top: 120px; }
+    .hero-section__claim__underline {
+      position: absolute;
+      width: 90px;
+      bottom: 4px;
+      left: 0;
+      background-color: #fff;
+      border-bottom: 1px solid #fff; }
+  .hero-section__block {
+    display: block;
+    float: left;
+    margin-top: 80px;
+    max-width: 300px; }
+    .hero-section__block__title {
+      color: #BFBEBE; }
+    .hero-section__block__text {
       color: #fff;
-      text-decoration: underline;
-      padding: 6px; }
-      .header__wrapper__menu:hover {
-        cursor: pointer; }
-
-.hero-section__claim {
-  position: relative;
-  margin-left: 32px;
-  text-align: right; }
-  .hero-section__claim__underline {
-    position: absolute;
-    width: 90px;
-    bottom: 4px;
-    left: 0;
-    background-color: #fff;
-    border-bottom: 1px solid #fff; }
-
-.hero-section__block {
-  display: block;
-  float: left;
-  margin-top: 56px;
-  max-width: 300px; }
-  .hero-section__block__title {
-    color: #BFBEBE; }
-  .hero-section__block__text {
-    color: #fff;
-    font-weight: 400;
-    line-height: 18px; }
+      font-weight: 400;
+      line-height: 18px; }
 
 .menu {
-  display: none; }
-  .menu__wrapper {
-    position: absolute;
-    padding: 48px;
-    width: 50%;
-    height: 100%;
-    top: -1px;
-    right: -1px;
-    background-color: #000;
-    opacity: 0.8;
+  width: 100%;
+  height: 100%; }
+  .menu__button {
+    display: none;
+    width: 80px;
+    height: 28px;
+    padding: 6px;
+    text-align: center;
+    text-decoration: underline;
+    background-color: #446CB3;
+    color: #fff; }
+    .menu__button:hover {
+      cursor: pointer; }
+    .menu__button.active {
+      display: block; }
+  .menu.active {
+    background-color: black;
+    opacity: 0.8; }
+  .menu__container {
     color: #fff;
-    font-size: 24px;
-    z-index: 6; }
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    padding: 32px 16px 0 0; }
+  .menu__wrapper {
+    display: none; }
     .menu__wrapper__close {
-      margin-bottom: auto;
-      margin-left: auto; }
+      margin-bottom: 64px; }
       .menu__wrapper__close svg {
+        margin-left: auto;
         fill: #fff;
         width: 40px;
         height: 40px; }
         .menu__wrapper__close svg:hover {
           cursor: pointer; }
     .menu__wrapper ul {
-      margin-bottom: auto; }
+      margin-bottom: auto;
+      font-size: 24px;
+      font-weight: 600; }
       .menu__wrapper ul li {
         text-align: right;
         margin: 8px 0; }
         .menu__wrapper ul li:hover {
-          cursor: pointer; }
+          cursor: pointer;
+          text-decoration: underline; }
 
 .home__section {
   padding: 32px 100px;
