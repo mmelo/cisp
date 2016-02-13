@@ -19,8 +19,7 @@ define([
 		},
 
 		className: function () {
-			var publicationspan = this.model.get('custom_fields')['publication-span'];
-			return 'publication' + (publicationspan ? '--' + publicationspan[0] : '');
+			return 'home__section__publication';
 		},
 
 		events: {},

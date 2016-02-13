@@ -1,17 +1,15 @@
-<a href="#{{categories.0.slug}}/{{slug}}" class="publication__thumbnail" {{#if inCache}}style="background-image: url({{thumbnail_images.post-thumbnail.url}})"{{/if}} alt="{{{title}}}"></a>
-
-<section class="publication__content">
-	<section class="publication__content__details">
-		<time datetime="{{date}}" class="publication__content__details__date">{{date}}</time>
-	</section>
-
-	<a href="#{{categories.0.slug}}/{{slug}}" class="publication__content__title">{{{title}}}</a>
-
-	<a href="#{{categories.0.slug}}/{{slug}}" class="publication__content__excerpt">{{{excerpt}}}</a>
-
-	<section class="publication__content__details bottom">
-		<a href="#" class="publication__content__details__author">{{author.nickname}}</a>
-	</section>
-</section>
-
-<a href="#{{categories.0.slug}}" class="publication__category">{{categories.0.title}}</a>
+<div class="home__section__publication__content">
+	<div class="publication__item">
+		<div class="publication__item__column">
+			<h4>{{title}}</h4>
+			<p>{{{excerpt}}}</p>
+			<a href="{{custom_fields.url}}" target="_blank">{{{view 'icons/ic_arrow-right'}}} See more</a>
+			<time datetime="{{date}}">{{{prettyDate}}}</time>
+		</div>
+		{{#if thumbnail_images.post-thumbnail}}
+		<div class="publication__item__column publication__item__column--right">
+			<div class="publication__item__thumbnail" style="background-image:url({{thumbnail_images.post-thumbnail.url}})" alt="{{{title}}}"></div>
+		</div>
+		{{/if}}
+	</div>
+</div>

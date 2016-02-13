@@ -15,9 +15,9 @@ define([
 
         tagName: 'section',
 
-        id: 'publications-list',
+        id: 'publication-list',
 
-        className: 'publications-list',
+        className: 'publication-list',
 
         events: {},
 
