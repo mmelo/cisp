@@ -23,7 +23,6 @@ define([
 		events: {},
 
 		initialize: function () {
-			console.log(this.model.toJSON());
 			this.listenTo(this.model, 'change', this.render);
 			App.Vent.on('global:scroll', this._lazyLoadImage, this);
 		},

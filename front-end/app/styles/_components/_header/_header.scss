@@ -1,6 +1,7 @@
 .header {
 	@include _(backface_hack);
-	@include _(padding);
+	// @include _(padding);
+
 	position: absolute;
 	width: 100%;
 	height: $header_height;
@@ -8,7 +9,7 @@
 	left: 0;
 	//z-index: 2;
 	border: 1px solid $divider-color;
-	background-image: url(../images/hero/01_overlay.jpeg);
+	background-image: url(../images/hero/01.jpeg);
 	background-position: center;
 	background-size: cover;
 	
@@ -16,47 +17,9 @@
 		height: 64px;
 	}
 
-	&__wrapper {
+	&__container {
 		@include _(flex);
-		@include _(flex-wrap);
-		@include _(align-items-center);
-		@include _(space-between);
-		@include _(limited-full-width);
-		height: 60px;
-		z-index: 1;
-		margin-bottom: 48px;
-
-		&__logo {
-			
-			&:hover {
-				cursor: pointer;
-			}
-			
-			svg {
-				width: 150px;
-				height: 35px;
-
-				rect,
-				path {
-					fill: $white;
-				}
-			}
-
-			p {
-				font-size: 13px;
-				color: white;
-			}
-		}
-
-		&__menu {
-			background-color: $blue;
-			color: $white;
-			text-decoration: underline;
-			padding: 6px;
-
-			&:hover {
-				cursor: pointer;
-			}
-		}
+		@include _(justify-content-center);
+		height: 100%;
 	}
 }

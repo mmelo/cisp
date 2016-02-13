@@ -14,7 +14,7 @@ define([
 
 		tagName: 'section',
 
-		className: 'header__wrapper',
+		className: 'header__container',
 
 		events: {
 			'click #logo': '_returnHome',
@@ -38,9 +38,10 @@ define([
 		*	@function
 		*/
 		_openMenu: function (ev) {
-			App.Vent.trigger('pages:header:menu');
-			this.$('#menu-container').addClass('active');
-			this.$('#menu-button').addClass('invisible');
+			console.log('!');
+			App.Views.Header.$('#menu-button').toggleClass('active');
+			App.Views.Header.$('#menu').toggleClass('active');
+			App.Views.Header.$('#menu-wrapper').toggleClass('active');
 		}
 	});
 
