@@ -15,10 +15,10 @@ define([
 		tagName: 'article',
 
 		id: function () {
-			return 'project-' + this.model.get('id');
+			return 'new-' + this.model.get('id');
 		},
 
-		className: 'post post--project-item',
+		className: 'post-list__new',
 
 		events: {},
 

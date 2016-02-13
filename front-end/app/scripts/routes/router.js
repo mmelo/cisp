@@ -8,8 +8,9 @@ define([
 	'controllers/post',
 	'controllers/page',
 	'controllers/publication',
+	'controllers/news',
 	'controllers/project'
-], function ($, Backbone, JST, HomeController, PostController, PageController, PublicationController, ProjectController) {
+], function ($, Backbone, JST, HomeController, PostController, PageController, PublicationController, NewsController, ProjectController) {
 	'use strict';
 
 	var Router = Backbone.Router.extend({
@@ -40,6 +41,9 @@ define([
 			}
 			if ( !App.Controllers.Publication ) {
 				App.Controllers.Publication = new PublicationController;
+			}
+			if ( !App.Controllers.News ) {
+				App.Controllers.News = new NewsController;
 			}
 			if ( !App.Controllers.Project ) {
 				App.Controllers.Project = new ProjectController;
@@ -123,6 +127,9 @@ define([
 			this._common(catg);
 			this._loading();
 
+			if ( catg === 'news' ) {
+				App.Vent.trigger('news:index');
+			} else
 			if ( catg === 'publications' ) {
 				App.Vent.trigger('publications:index');
 			} else

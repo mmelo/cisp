@@ -1,0 +1,15 @@
+<div class="post-list__header">
+	<div class="post-list__header__title">This page have every news of this website! Please take a look and tell me wath do you think!</div>
+
+	<div class="post-list__header__search">
+		<input id="post-list-search" type="text" placeholder="Search">
+		<button id="news-search-button" class="hidden">{{{view 'icons/ic_search'}}}</button>
+	</div>
+</div>
+
+{{#ifCond this.length '===' 0}}
+<div class="post-list__header__no-content">
+{{!-- {{{view 'icons/ic_notFound'}}} --}}
+	<p>Sorry, no results found.</p>
+</div>
+{{/ifCond}}

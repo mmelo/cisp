@@ -75,9 +75,14 @@
 	}
 
 	&__page-identifier {
+		display: block;
+		float: left;
 		margin-top: 340px;
-		font-size: 50px;
-	    text-transform: uppercase;
-	    text-decoration: underline;
+
+	    a {
+			font-size: 50px;
+		    text-transform: uppercase;
+		    text-decoration: underline;
+	    }
 	}
 }

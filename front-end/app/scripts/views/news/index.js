@@ -17,11 +17,37 @@ define([
 
         id: 'posts-list',
 
-        className: 'posts-list  posts-list--projects',
+        className: 'posts-list posts-list--news',
 
-        events: {},
+        events: {
+            'keyup': '_enterKey',
+            'focusin': '_showSearchButton',
+            'focusout': '_showSearchButton',
+            'click #news-search-button': '_search'
+        },
 
-        subview: NewsItemView
+        subview: NewsItemView,
+
+        /**
+        *    _enterKey - listen keyup events waiting for enter key
+        *
+        *   @private
+        *   @this AlertIndexView
+        */
+        _enterKey: function (ev) {
+            if ( ev.keyCode === 13 ) {
+                this._search();
+            }
+        },
+
+        _showSearchButton: function () {
+            $('#news-search-button').toggleClass('hidden');
+        },
+
+        _search: function () {
+            var keywords = $('#post-list-search').val();
+            App.Vent.trigger('news:index', null, keywords)
+        }
     });
 
     return NewsIndexView;

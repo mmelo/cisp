@@ -44,14 +44,17 @@ body {
 		"_components/_footer",
 		"_components/_spinner",
 		"_components/_posts/_posts",
-		"_projects/_detail";
+		"_projects/_detail",
+		"_news/_index";
 
 .invisible {
 	display: none;
 }
 
 .hidden {
-	visibility: hidden;
+	visibility: hidden !important;
+    opacity: 0 !important;
+    transition: opacity 0.2s, visibility 0.2s !important;
 }
 
 .active {

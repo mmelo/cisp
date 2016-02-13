@@ -30,8 +30,6 @@ define([
 			res.prettyDate = months[d.getMonth()] + '<br>' + d.getFullYear();
 
 			return res;
-
-			return res;
 		}
 	});
 

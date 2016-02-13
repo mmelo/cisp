@@ -1,17 +1,15 @@
-<a href="#{{categories.0.slug}}/{{slug}}" class="publication__thumbnail" {{#if inCache}}style="background-image: url({{thumbnail_images.post-thumbnail.url}})"{{/if}} alt="{{{title}}}"></a>
+<div class="post-list__new__thumbnail" 
+style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbnail_images.post-thumbnail.url}}{{else}}images/default_thumbnail.png{{/if}})">
 
-<section class="publication__content">
-	<section class="publication__content__details">
-		<time datetime="{{date}}" class="publication__content__details__date">{{date}}</time>
-	</section>
+	<time datetime="{{date}}" class="post-list__new__thumbnail__date">{{{prettyDate}}}</time>
+</div>
 
-	<a href="#{{categories.0.slug}}/{{slug}}" class="publication__content__title">{{{title}}}</a>
+<section class="post-list__new__content">
+	<p class="post-list__new__content__author">{{author.nickname}}</p>
 
-	<a href="#{{categories.0.slug}}/{{slug}}" class="publication__content__excerpt">{{{excerpt}}}</a>
+	<h2 class="post-list__new__content__title">{{{title}}}</h2>
 
-	<section class="publication__content__details bottom">
-		<a href="#" class="publication__content__details__author">{{author.nickname}}</a>
-	</section>
+	<div class="post-list__new__content__text">{{{content}}}</div>
 </section>
 
 <a href="#{{categories.0.slug}}" class="publication__category">{{categories.0.title}}</a>
