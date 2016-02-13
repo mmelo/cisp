@@ -144,10 +144,18 @@ define([
 		_detail: function (catg, slug) {
 			this._common();
 			this._loading();
-			App.Vent.trigger('posts:detail', {
-				category: catg,
-				slug: slug
-			});
+
+			if ( catg === 'projects' ) {
+				App.Vent.trigger('projects:detail', {
+					slug: slug
+				});
+			} else {
+				App.Vent.trigger('posts:detail', {
+					category: catg,
+					slug: slug
+				});
+			}
+			
 		}
 	});
 

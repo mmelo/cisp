@@ -36,7 +36,7 @@ blockquote, q {
   .post--project-item {
     width: 100%; } }
 
-html, body, header, .post__thumbnail, .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn {
+html, body, header, .post__thumbnail, .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn, .project__detail, .project__detail__wrapper {
   width: 100%; }
 
 .app, .header__wrapper, .hero-section, .spinner, .posts-list, .posts-list .subtitle, .detail__category-wrapper,
@@ -46,11 +46,14 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
   max-width: 1200px;
   margin: 0 auto; }
 
-.header__wrapper, .hero-section__claim, .menu__wrapper, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list {
+.header__wrapper, .hero-section__claim, .menu__wrapper, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .project__detail__wrapper {
   display: flex; }
 
 .menu__wrapper {
   flex-direction: column; }
+
+.project__detail__wrapper {
+  justify-content: center; }
 
 .header__wrapper, .footer__container, .footer__partners {
   justify-content: space-between; }
@@ -64,8 +67,12 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 .no-results {
   font-size: 35px; }
 
-.post__content__title {
+.post__content__title, .project__detail h1 {
   font-size: 20px;
+  font-weight: 500; }
+
+.project__detail h2 {
+  font-size: 36px;
   font-weight: 500; }
 
 .hero-section__claim {
@@ -124,7 +131,6 @@ body {
   height: 500px;
   top: 0;
   left: 0;
-  z-index: 2;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-image: url(../images/hero/01_overlay.jpeg);
   background-position: center;
@@ -415,6 +421,52 @@ body {
   .detail__content__wrapper img {
     position: relative;
     display: block; }
+
+.project__detail {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 100%;
+  background-color: #fff; }
+  .project__detail__wrapper {
+    height: 100%; }
+  .project__detail__column {
+    width: 50%;
+    min-height: 320px;
+    margin: 0 auto;
+    padding: 128px 0; }
+  .project__detail .post__thumbnail {
+    position: relative;
+    min-height: 320px;
+    height: 25%;
+    margin-bottom: 16px; }
+  .project__detail .post__content__date {
+    top: 16px;
+    right: -16px;
+    padding: 8px;
+    font-size: 32px;
+    font-weight: 300; }
+  .project__detail h1,
+  .project__detail h2 {
+    margin-left: 64px; }
+  .project__detail h1 {
+    margin-bottom: 16px; }
+  .project__detail .content {
+    max-height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 88px 64px 0 64px;
+    line-height: 24px; }
+  .project__detail .close {
+    position: absolute;
+    top: 4px;
+    right: 32px;
+    transform: rotate(45deg);
+    font-size: 88px;
+    font-weight: 300;
+    color: #999; }
 
 .invisible {
   display: none; }
