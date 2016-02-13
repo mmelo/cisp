@@ -1,0 +1,71 @@
+.project__detail {
+	@include _(full-width);
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	height: 100%;
+	background-color: #fff;
+
+	&__wrapper {
+		height: 100%;
+		@include _(full-width);
+		@include _(flex);
+		@include _(justify-content-center);
+	}
+
+	&__column {
+		width: 50%;
+		min-height: 320px;
+		margin: 0 auto;
+		padding: 128px 0;
+	}
+
+	.post__thumbnail {
+		position: relative;
+		min-height: 320px;
+		height: 25%;
+		margin-bottom: 16px;
+	}
+
+	.post__content__date {
+		top: 16px;
+		right: -16px;
+		padding: 8px;
+
+		font-size: 32px;
+		font-weight: 300;
+	}
+
+	h1,
+	h2 {
+		margin-left: 64px;
+	}
+
+	h1 {
+		@include _(title);
+		margin-bottom: 16px;
+	}
+	h2 {
+		@include _(title-pages);
+	}
+
+	.content {
+		max-height: 100%;
+		overflow: hidden;
+		overflow-y: scroll;
+		padding: 88px 64px 0 64px;
+		line-height: 24px;
+	}
+
+	.close {
+		position: absolute;
+		top: 4px;
+		right: 32px;
+		transform: rotate(45deg);
+		font-size: 88px;
+		font-weight: 300;
+		color: #999;
+	}
+}

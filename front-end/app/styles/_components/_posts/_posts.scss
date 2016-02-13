@@ -17,10 +17,6 @@
 	width: 33.33333%;
 	background-color: #fff;
 
-	@include breakpoint(medium) {
-		@include _(full-width);
-	}
-
 	.more-link {
 		display: none;
 	}
@@ -46,6 +42,7 @@
 			background-color: $accent-color;
 			color: $primary-text-color;
 			text-transform: uppercase;
+			text-align: center;
 			@include _(caption);
 		}
 
@@ -86,6 +83,10 @@
 
 	&--project-item {
 		padding: 40px;
+
+		@include breakpoint(medium) {
+			@include _(full-width);
+		}
 	}
 }
 

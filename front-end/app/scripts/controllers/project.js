@@ -6,14 +6,16 @@ define([
 	'collections/projects',
 	'models/project',
 	'views/projects/index',
-	'views/projects/item'
-], function ($, Backbone, ProjectCollection, ProjectModel, ProjectListView, ProjectItemView) {
+	'views/projects/item',
+	'views/projects/detail'
+], function ($, Backbone, ProjectCollection, ProjectModel, ProjectListView, ProjectItemView, ProjectDetailView) {
 	'use strict';
 
 	var ProjectController = Backbone.Router.extend({
 		initialize: function () {
 			App.Vent.on('projects:index', this._index, this);
 			App.Vent.on('projects:more', this._loadMore, this);
+			App.Vent.on('projects:detail', this._detail, this);
 		},
 
 		/**
@@ -64,6 +66,46 @@ define([
 						App.Container.html(App.Views.Active.render().el);
 					});
 				}
+			});
+		},
+
+		/**
+		*	_detail - fetch and render project detail page
+		*
+		*	@private
+		*	@function
+		*/
+		_detail: function (options) {
+			var _this = this;
+
+			if ( App.Collections.Project && App.Collections.Project.findWhere({ slug: options.slug }) ) {
+				App.Models.Detail = App.Collections.Project.findWhere({ slug: options.slug });
+				this._detailView(App.Models.Detail);
+			} else {
+				App.Models.Detail = new ProjectModel;
+				App.Models.Detail.set('slug', options.slug);
+				App.Models.Detail.fetch({
+					success: function () {
+						_this._detailView(App.Models.Detail);
+					}
+				});
+			}
+		},
+
+		/**
+		*	_detailView - render project detail view
+		*
+		*	@private
+		*	@function
+		*	@param {object} project - project model to be rendered
+		*/
+		_detailView: function (project) {
+			var _this = this;
+			App.Views.Active = new ProjectDetailView({
+				model: project
+			});
+			requestAnimationFrame(function () {
+				App.Container.html(App.Views.Active.render().el);
 			});
 		}
 	});
