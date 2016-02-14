@@ -1,16 +1,29 @@
-<a href="#projects/{{slug}}" class="post__thumbnail" {{#if inCache}}style="background-image: url({{thumbnail_images.post-thumbnail.url}})"{{/if}} alt="{{{title}}}"></a>
+{{!-- Mission --}}
+{{#ifCond slug '===' 'mission'}}
+{{{view 'about/mission'}}}
+{{/ifCond}}
 
-<section class="post__content">
-	<time datetime="{{date}}" class="post__content__date">{{{prettyDate}}}</time>
+{{!-- Scientific Advisory Board --}}
+{{#ifCond slug '===' 'scientific-advisory-board'}}
+{{{view 'about/scientificBoard'}}}
+{{/ifCond}}
 
-	<a href="#" class="post__content__author">{{author.nickname}}</a>
+{{!-- Scientific Comission --}}
+{{#ifCond slug '===' 'scientific-comission'}}
+{{{view 'about/scientificComission'}}}
+{{/ifCond}}
 
-	<div class="post__content__title">{{{title}}}</div>
+{{!-- Thematic Lines --}}
+{{#ifCond slug '===' 'thematic-lines'}}
+{{{view 'about/thematicLines'}}}
+{{/ifCond}}
 
-	<div class="post__content__excerpt">{{{excerpt}}}</div>
+{{!-- Management --}}
+{{#ifCond slug '===' 'management'}}
+{{{view 'about/management'}}}
+{{/ifCond}}
 
-	<a href="#projects/{{slug}}" class="post__content__btn">more</a>
-
-</section>
-
-<a href="#projects" class="post__category">{{categories.0.title}}</a>
+{{!-- Contacts --}}
+{{#ifCond slug '===' 'contacts'}}
+{{{view 'about/contacts'}}}
+{{/ifCond}}

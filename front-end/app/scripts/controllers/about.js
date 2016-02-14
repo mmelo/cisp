@@ -28,7 +28,8 @@ define([
 			App.Collections.About = new AboutCollection;
 			App.Collections.About.catg = catg;
 			App.Views.Active = new AboutListView({
-				collection: App.Collections.About
+				collection: App.Collections.About,
+				target: '#about-container'
 			});
 			this._renderIndex();
 		},
@@ -65,46 +66,6 @@ define([
 						App.Container.html(App.Views.Active.render().el);
 					});
 				}
-			});
-		},
-
-		/**
-		*	_detail - fetch and render About detail page
-		*
-		*	@private
-		*	@function
-		*/
-		_detail: function (options) {
-			var _this = this;
-
-			if ( App.Collections.About && App.Collections.About.findWhere({ slug: options.slug }) ) {
-				App.Models.Detail = App.Collections.About.findWhere({ slug: options.slug });
-				this._detailView(App.Models.Detail);
-			} else {
-				App.Models.Detail = new AboutModel;
-				App.Models.Detail.set('slug', options.slug);
-				App.Models.Detail.fetch({
-					success: function () {
-						_this._detailView(App.Models.Detail);
-					}
-				});
-			}
-		},
-
-		/**
-		*	_detailView - render About detail view
-		*
-		*	@private
-		*	@function
-		*	@param {object} About - About model to be rendered
-		*/
-		_detailView: function (About) {
-			var _this = this;
-			App.Views.Active = new AboutDetailView({
-				model: About
-			});
-			requestAnimationFrame(function () {
-				App.Container.html(App.Views.Active.render().el);
 			});
 		}
 	});

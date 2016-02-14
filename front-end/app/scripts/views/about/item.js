@@ -18,7 +18,7 @@ define([
 			return 'about-' + this.model.get('id');
 		},
 
-		className: 'post post--about-item',
+		className: 'about-item',
 
 		events: {},
 
