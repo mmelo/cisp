@@ -9,7 +9,7 @@ define([
 
 	var NewsCollection = Backbone.Collection.extend({
 		url: function () {
-			var url = this.search ? App.BaseUrl + '?json=get_search_results&post_type=news&search=' + this.search : App.BaseUrl + '?json=get_posts&post_type=news';
+			var url = this.search ? App.BaseUrl + '?json=get_posts&post_type=news&s=' + this.search : App.BaseUrl + '?json=get_posts&post_type=news';
 			return url + (this.count ? '&count=' + this.count : '') + (this.page ? '&page=' + this.page : '');
 		},
 		model: NewsModel,
