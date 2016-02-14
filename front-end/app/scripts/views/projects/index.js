@@ -1,28 +1,34 @@
 /*global define*/
 
 define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'templates',
-    'views/projects/item',
-    'collectionview'
+	'jquery',
+	'underscore',
+	'backbone',
+	'templates',
+	'views/projects/item',
+	'collectionview'
 ], function ($, _, Backbone, JST, ProjectItemView) {
-    'use strict';
+	'use strict';
 
-    var ProjectsIndexView = Backbone.CollectionView.extend({
-        template: JST['app/scripts/templates/projects/index.hbs'],
+	var ProjectsIndexView = Backbone.CollectionView.extend({
+		template: JST['app/scripts/templates/projects/index.hbs'],
 
-        tagName: 'section',
+		tagName: 'section',
 
-        id: 'posts-list',
+		id: 'posts-list',
 
-        className: 'posts-list  posts-list--projects',
+		className: 'posts-list  posts-list--projects',
 
-        events: {},
+		events: {
+			'click #load-more-posts': '_lazyLoad'
+		},
 
-        subview: ProjectItemView
-    });
+		subview: ProjectItemView,
 
-    return ProjectsIndexView;
+		_lazyLoad: function () {
+			App.Vent.trigger('projects:more');
+		}
+	});
+
+	return ProjectsIndexView;
 });

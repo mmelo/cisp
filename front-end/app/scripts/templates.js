@@ -318,7 +318,7 @@ function program1(depth0,data) {
   if (helper = helpers.excerpt) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.excerpt); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</p>\n	<a href=\"#\">";
+  buffer += "</p>\n	<a href=\"#news\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += " See more</a>\n</div>\n\n";
@@ -350,7 +350,9 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.excerpt) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.excerpt); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</p>\n	<a href=\"#\">";
+  buffer += "</p>\n	<a href=\""
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" target=\"_blank\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += " See more</a>\n	<time datetime=\"";
@@ -756,10 +758,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/scripts/templates/projects/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "";
+  
 
 
-  return buffer;
+  return "<div id=\"projects-container\" class=\"projects-container\"></div>\n<div id=\"load-more-posts\" class=\"load-more\">MORE</div>\n";
   });
 
 this["JST"]["app/scripts/templates/projects/item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -818,10 +820,10 @@ function program1(depth0,data) {
 this["JST"]["app/scripts/templates/publications/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "";
+  
 
 
-  return buffer;
+  return "<div id=\"publications-container\" class=\"publications-container\"></div>\n<div id=\"load-more-posts\" class=\"load-more\">MORE</div>\n";
   });
 
 this["JST"]["app/scripts/templates/publications/item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
