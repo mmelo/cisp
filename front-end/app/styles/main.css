@@ -331,6 +331,7 @@ body {
 
 .home__section__publication {
   position: relative;
+  width: calc(33.333% - 24px);
   margin: 0 24px 16px 0;
   padding-right: 8px;
   padding-bottom: 8px;
