@@ -43,7 +43,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
   max-width: 1200px;
   margin: 0 auto; }
 
-.header__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .projects-container, .project__detail__wrapper, .post-list__header, .post-list__new, .member__detail__wrapper, .member__detail__article__see-more, .publications-container, .publication-list, .publication__item {
+.header__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .projects-container, .project__detail__wrapper, .about__header__menu, .post-list__header, .post-list__new, .member__detail__wrapper, .member__detail__article__see-more, .publications-container, .publication-list, .publication__item {
   display: flex; }
 
 .header__container, .project__detail__wrapper {
@@ -517,6 +517,37 @@ body {
     font-size: 88px;
     font-weight: 300;
     color: #999; }
+
+.about__header {
+  width: 100%; }
+  .about__header__menu {
+    width: 100%; }
+    .about__header__menu li {
+      width: 16%; }
+
+.about__mission__text {
+  padding: 16px 56px; }
+  .about__mission__text p {
+    margin-bottom: 4px; }
+
+.about__mission__quote {
+  position: relative;
+  margin-top: 24px;
+  padding: 0 24px;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: justify;
+  text-justify: inter-word; }
+  .about__mission__quote__mark {
+    position: absolute; }
+    .about__mission__quote__mark svg {
+      fill: #4498C8; }
+    .about__mission__quote__mark--left {
+      top: -12;
+      left: 0; }
+    .about__mission__quote__mark--right {
+      top: 12px;
+      right: 0; }
 
 .post-list__header {
   width: 100%;

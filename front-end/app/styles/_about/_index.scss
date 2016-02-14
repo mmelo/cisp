@@ -1,0 +1,58 @@
+.about {
+	
+	&__header {
+		width: 100%;
+
+		&__menu {
+			@include _(flex);
+			width: 100%;
+
+			li {
+				width: 16%;
+			}
+		}
+	}
+
+	&__about-item {
+
+	}
+
+	&__mission {
+
+		&__text {
+			padding: 16px 56px;
+
+			p {
+				margin-bottom: 4px;
+			}
+		}
+
+		&__quote {
+			position: relative;
+			margin-top: 24px;
+			padding: 0 24px;
+			font-size: 24px;
+			font-weight: 500;
+			text-align: justify;
+    		text-justify: inter-word;
+
+			&__mark {
+				position: absolute;
+
+				svg {
+					fill: $light-blue;
+				}
+
+				&--left {
+					top: -12;
+					left: 0;
+				}
+
+				&--right {
+					top: 12px;
+					right: 0;
+				}
+			}
+		}
+	}
+}
