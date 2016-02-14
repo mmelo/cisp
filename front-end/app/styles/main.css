@@ -43,7 +43,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
   max-width: 1200px;
   margin: 0 auto; }
 
-.header__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .projects-container, .project__detail__wrapper, .sci-board__row, .sci-board__row__info__see-more, .posts-about__header__menu, .posts-about__header__menu li, .posts-about__sci-comission__header, .posts-about__thematic__header, .posts-about__management__header, .posts-about__contacts__header, .posts-about__contacts__container, .post-list__header, .post-list__new, .member__detail__wrapper, .member__detail__article__see-more, .publications-container, .publication-list, .publication__item {
+.header__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .projects-container, .project__detail__wrapper, .sci-board__row, .sci-board__row__info__see-more, .posts-about__header__menu, .posts-about__header__menu li, .posts-about__sci-comission__header, .posts-about__thematic__header, .posts-about__management__header, .posts-about__contacts__header, .posts-about__contacts__container, .post-list__header, .post-list__new, .member__detail__wrapper, .member__detail__article__see-more, .publications-container, .publications-filter, .publications-filter-list, .publication-list, .publication__item {
   display: flex; }
 
 .header__container, .project__detail__wrapper {
@@ -58,13 +58,13 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 .sci-board__row__info__see-more {
   justify-content: flex-start; }
 
-.menu__container {
+.menu__container, .publications-filter, .publications-filter-list {
   justify-content: flex-end; }
 
 .home__section__new a, .home__section__publication a, .footer__container, .footer__partners, .sci-board__row__info__see-more, .posts-about__header__menu, .member__detail__article__see-more {
   align-items: center; }
 
-.home__section, .posts-list, .projects-container, .member__detail__wrapper, .publications-container, .publication-list {
+.home__section, .posts-list, .projects-container, .member__detail__wrapper, .publications-container, .publications-filter, .publications-filter-list, .publication-list {
   flex-wrap: wrap; }
 
 .no-results {
@@ -89,7 +89,8 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 .post__content__excerpt {
   font-size: 16px; }
 
-.post__content__date {
+.post__content__date, .publications-filter .tab, .publications-filter .dropdown,
+.publications-filter .search {
   font-size: 12px; }
 
 .post__content__btn {
@@ -1079,6 +1080,40 @@ body {
   .member__detail__article__text p {
     line-height: 20px;
     margin-bottom: 8px; }
+
+.publications-container {
+  margin-top: 64px; }
+
+.publications-filter {
+  width: 50%;
+  padding-right: 32px; }
+  .publications-filter-list {
+    width: 160px;
+    padding: 4px;
+    border: 1px solid #aaa; }
+  .publications-filter .tab,
+  .publications-filter .dropdown,
+  .publications-filter .search {
+    width: 100%;
+    margin-left: auto;
+    margin-top: 4px;
+    padding: 4px;
+    text-align: right; }
+  .publications-filter .tab {
+    width: 50%;
+    margin-left: 0;
+    text-align: left; }
+  .publications-filter .dropdown {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    -webkit-appearance: none; }
+  .publications-filter .search {
+    padding: 8px;
+    background-color: #3F51B5;
+    color: #FFF;
+    text-decoration: underline; }
+    .publications-filter .search:hover {
+      cursor: pointer; }
 
 .publication-list {
   padding: 64px 0; }

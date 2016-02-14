@@ -2,9 +2,62 @@
 	@include _(full-width);
 	@include _(flex);
 	@include _(flex-wrap);
+	margin-top: 64px;
 }
 
 .publication {
+	&s-filter {
+		width: 50%;
+		padding-right: 32px;
+
+		@include _(flex);
+		@include _(flex-wrap);
+		@include _(justify-content-end);
+
+		&-list {
+			width: 160px;
+			padding: 4px;
+			border: 1px solid #aaa;
+			@include _(flex);
+			@include _(flex-wrap);
+			@include _(justify-content-end);
+		}
+
+		.tab,
+		.dropdown,
+		.search {
+			width: 100%;
+			margin-left: auto;
+			margin-top: 4px;
+			padding: 4px;
+			text-align: right;
+		}
+		.tab {
+			width: 50%;
+			margin-left: 0;
+			@include _(caption);
+			text-align: left;
+		}
+		.dropdown,
+		.search {
+			@include _(caption);
+		}
+		.dropdown {
+			border: 1px solid #ccc;
+			border-radius: 0;
+			-webkit-appearance: none;
+		}
+		.search {
+			padding: 8px;
+			background-color: $accent-color;
+			color: #FFF;
+			text-decoration: underline;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
 	&-list {
 		padding: 64px 0;
 

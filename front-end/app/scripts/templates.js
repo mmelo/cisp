@@ -844,13 +844,33 @@ function program1(depth0,data) {
   return buffer;
   });
 
+this["JST"]["app/scripts/templates/publications/filters.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"tab\">by Author</div>\n<div class=\"tab\">by Year</div>\n<select name=\"authors-list\" id=\"authors-list\" class=\"dropdown\">\n	<option value=\"all\" selected=\"selected\">all</option>\n</select>\n<div id=\"search\" class=\"search\">Search</div>";
+  });
+
+this["JST"]["app/scripts/templates/publications/filtersitem.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  return escapeExpression(stack1);
+  });
+
 this["JST"]["app/scripts/templates/publications/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div id=\"publications-container\" class=\"publications-container\"></div>\n<div id=\"load-more-posts\" class=\"load-more\">MORE</div>\n";
+  return "<div class=\"post-list__header__title\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</div>\n<div id=\"publications-filter\" class=\"publications-filter\">\n	\n</div>\n<div id=\"publications-container\" class=\"publications-container\"></div>\n<div id=\"load-more-posts\" class=\"load-more\">MORE</div>\n";
   });
 
 this["JST"]["app/scripts/templates/publications/item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

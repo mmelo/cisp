@@ -4,10 +4,12 @@ define([
 	'jquery',
 	'backbone',
 	'collections/publications',
+	'collections/author',
 	'models/publication',
 	'views/publications/index',
-	'views/publications/item'
-], function ($, Backbone, PublicationCollection, PublicationModel, PublicationListView, PublicationItemView) {
+	'views/publications/item',
+	'views/publications/filters',
+], function ($, Backbone, PublicationCollection, AuthorCollection, PublicationModel, PublicationListView, PublicationItemView, FiltersView) {
 	'use strict';
 
 	var PublicationController = Backbone.Router.extend({
@@ -21,11 +23,11 @@ define([
 		*
 		*	@private
 		*	@function
-		*	@param {string} catg (optional)
+		*	@param {string} author (optional)
 		*/
-		_index: function (catg) {
+		_index: function (author) {
 			App.Collections.Publication = new PublicationCollection;
-			App.Collections.Publication.catg = catg;
+			App.Collections.Publication.author = author;
 			App.Views.Active = new PublicationListView({
 				collection: App.Collections.Publication,
 				target: '#publications-container'
@@ -58,12 +60,15 @@ define([
 		*	@function
 		*/
 		_renderIndex: function (callback) {
+			var _this = this;
 			App.Collections.Publication.fetch({
 				remove: false,
 				success: function (res) {
 					requestAnimationFrame(function () {
 						App.Container.html(App.Views.Active.render().el);
 						App.Vent.trigger('global:scroll');
+
+						_this._renderFilters();
 
 						if ( callback ) {
 							callback();
@@ -78,6 +83,19 @@ define([
 							callback();
 						}
 					});
+				}
+			});
+		},
+
+		_renderFilters: function () {
+			App.Collections.Author = new AuthorCollection;
+			App.Collections.Author.fetch({
+				success: function () {
+					var filters = new FiltersView({
+						collection: App.Collections.Author,
+						target: '#authors-list'
+					});
+					$('#publications-filter').html(filters.render().el);
 				}
 			});
 		}

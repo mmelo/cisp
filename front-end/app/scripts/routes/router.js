@@ -187,6 +187,10 @@ define([
 				App.Vent.trigger('members:detail', {
 					slug: slug
 				});
+			} if ( catg === 'publications' ) {
+				App.Vent.trigger('publications:index', {
+					slug: slug
+				});
 			} else {
 				App.Vent.trigger('posts:detail', {
 					category: catg,
