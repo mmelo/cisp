@@ -4,10 +4,12 @@ define([
 	'jquery',
 	'backbone',
 	'collections/publications',
+	'collections/author',
 	'models/publication',
 	'views/publications/index',
-	'views/publications/item'
-], function ($, Backbone, PublicationCollection, PublicationModel, PublicationListView, PublicationItemView) {
+	'views/publications/item',
+	'views/publications/filters',
+], function ($, Backbone, PublicationCollection, AuthorCollection, PublicationModel, PublicationListView, PublicationItemView, FiltersView) {
 	'use strict';
 
 	var PublicationController = Backbone.Router.extend({
@@ -31,6 +33,7 @@ define([
 				target: '#publications-container'
 			});
 			this._renderIndex();
+			this._renderFilters();
 		},
 
 		/**
@@ -78,6 +81,19 @@ define([
 							callback();
 						}
 					});
+				}
+			});
+		},
+
+		_renderFilters: function () {
+			App.Collections.Author = new AuthorCollection;
+			App.Collections.Author.fetch({
+				success: function () {
+					var filters = new FiltersView({
+						collection: App.Collections.Author,
+						target: '#authors-list'
+					});
+					$('#publications-filter').html(fitlers.render().el);
 				}
 			});
 		}

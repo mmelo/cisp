@@ -746,6 +746,9 @@ body {
     margin: 8px 0 16px 0;
     font-size: 18px; }
 
+.publications-container {
+  margin-top: 64px; }
+
 .publication-list {
   padding: 64px 0; }
   .publication-list .home__section__publication {
