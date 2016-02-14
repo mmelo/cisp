@@ -23,12 +23,19 @@ define([
 		*	@private
 		*	@function
 		*	@param {string} catg (optional)
+		*	@param {string} params (optional) - params to be searched
 		*/
-		_index: function (catg, searchParams) {
+		_index: function (catg, params) {
 			App.Collections.News = new NewsCollection;
 			App.Collections.News.catg = catg;
-			if ( searchParams) {
-				App.Collections.News.search = searchParams;
+			
+			if ( params) {
+				
+				var paramsUrl = params.replace(' ', '-').toLowerCase(); // prepare params to url (todo: replace special characters)
+				App.Router.navigate('#news?' + paramsUrl)
+
+				var paramsEscaped = escape(params); // html escape to params to be searched
+				App.Collections.News.search = paramsEscaped;
 			}
 			App.Views.Active = new NewsListView({
 				collection: App.Collections.News
