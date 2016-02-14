@@ -178,6 +178,11 @@ define([
 					slug: slug
 				});
 			} else 
+			if ( catg === 'about' ) {
+				App.Vent.trigger('about:index', {
+					slug: slug
+				});
+			} else 
 			if ( catg === 'members' ) {
 				App.Vent.trigger('members:detail', {
 					slug: slug

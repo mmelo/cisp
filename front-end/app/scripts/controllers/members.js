@@ -4,11 +4,15 @@ define([
 	'jquery',
 	'backbone',
 	'collections/members',
+	'collections/memberPosts',
 	'models/members',
+	'models/memberPosts',
 	'views/members/index',
 	'views/members/item',
+	'views/members/memberPosts',
+	'views/members/memberPost',
 	'views/members/detail',
-], function ($, Backbone, MembersCollection, MemberModel, MembersListView, MembersItemView, MemberDetailView) {
+], function ($, Backbone, MembersCollection, MemberPostsCollection, MemberModel, MemberPostsModel, MembersListView, MembersItemView, MemberPostsListView, MemberPostsItemView, MemberDetailView) {
 	'use strict';
 
 	var MembersController = Backbone.Router.extend({
@@ -16,6 +20,7 @@ define([
 			App.Vent.on('members:index', this._index, this);
 			App.Vent.on('members:renderIndex', this._renderIndex, this);
 			App.Vent.on('members:detail', this._detail, this);
+			App.Vent.on('members:posts', this._getAllPosts, this);
 		},
 
 		/**
@@ -84,12 +89,14 @@ define([
 			if ( App.Collections.Members && App.Collections.Members.findWhere({ slug: options.slug }) ) {
 				App.Models.Detail = App.Collections.Members.findWhere({ slug: options.slug });
 				this._detailView(App.Models.Detail);
+				_this._getAllPosts();
 			} else {
 				App.Models.Detail = new MemberModel;
 				App.Models.Detail.set('slug', options.slug);
 				App.Models.Detail.fetch({
 					success: function () {
 						_this._detailView(App.Models.Detail);
+						_this._getAllPosts();
 					}
 				});
 			}
@@ -109,6 +116,33 @@ define([
 			});
 			requestAnimationFrame(function () {
 				App.Container.html(App.Views.Active.render().el);
+			});
+		},
+
+		_getAllPosts: function (slug) {
+			slug = 'julian';
+			App.Collections.MemberPosts = new MemberPostsCollection;
+			App.Collections.MemberPosts.slug = slug;
+			App.Views.MemberPosts = new MemberPostsListView({
+				collection: App.Collections.MemberPosts,
+			});
+			this._renderMemberPostsIndex();
+		},
+
+		_renderMemberPostsIndex: function () {
+			App.Collections.MemberPosts.fetch({
+				remove: false,
+				success: function (res) {
+					requestAnimationFrame(function () {
+						$('#member-posts').html(App.Views.MemberPosts.render().el);
+						App.Vent.trigger('global:scroll');
+					});
+				},
+				error: function (res, err) {
+					// requestAnimationFrame(function () {
+					// 	App.Container.html(App.Views.Active.render().el);
+					// });
+				}
 			});
 		}
 	});
