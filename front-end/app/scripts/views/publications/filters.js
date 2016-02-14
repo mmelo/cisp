@@ -17,11 +17,22 @@ define([
 
         id: 'publication-filter-list',
 
-        className: 'publication-filter-list',
+        className: 'publications-filter-list',
 
-        events: {},
+        events: {
+            'click #search': '_loadByAuthor'
+        },
 
-        subview: FiltersItemView
+        subview: FiltersItemView,
+
+        _loadByAuthor: function (ev) {
+            var author = $('#authors-list option:selected').attr('value');
+            if ( author !== 'all' ) {
+                App.Router.navigate('publications/' + author, { trigger: true });
+            } else {
+                App.Router.navigate('publications', { trigger: true });
+            }
+        }
     });
 
     return FiltersIndexView;

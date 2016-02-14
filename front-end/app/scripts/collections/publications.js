@@ -10,6 +10,9 @@ define([
 	var PublicationCollection = Backbone.Collection.extend({
 		url: function () {
 			var url = App.BaseUrl + '?json=get_posts&post_type=publication';
+			if ( this.author ) {
+				url += ('&auhor_slug=' + this.author);
+			}
 			return url + (this.count ? '&count=' + this.count : '') + (this.page ? '&page=' + this.page : '');
 		},
 		model: PublicationModel,

@@ -9,7 +9,7 @@ define([
 
 	var AuthorCollection = Backbone.Collection.extend({
 		url: function () {
-			var url = App.BaseUrl + '?json=get_author_index';
+			var url = App.BaseUrl + '?json=get_author_index&post_type=publication';
 			return url;
 		},
 		model: AuthorModel,
@@ -19,7 +19,7 @@ define([
 		},
 
 		parse: function (res) {
-			return res.posts;
+			return res.authors;
 		}
 	});
 

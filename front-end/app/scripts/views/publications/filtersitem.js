@@ -27,6 +27,7 @@ define([
 		initialize: function () {
 			this.listenTo(this.model, 'change', this.render);
 			App.Vent.on('global:scroll', this._lazyLoadImage, this);
+			this.$el.attr('value', this.model.get('slug'));
 		}
 	});
 

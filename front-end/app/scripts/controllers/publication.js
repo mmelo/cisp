@@ -23,17 +23,16 @@ define([
 		*
 		*	@private
 		*	@function
-		*	@param {string} catg (optional)
+		*	@param {string} author (optional)
 		*/
-		_index: function (catg) {
+		_index: function (author) {
 			App.Collections.Publication = new PublicationCollection;
-			App.Collections.Publication.catg = catg;
+			App.Collections.Publication.author = author;
 			App.Views.Active = new PublicationListView({
 				collection: App.Collections.Publication,
 				target: '#publications-container'
 			});
 			this._renderIndex();
-			this._renderFilters();
 		},
 
 		/**
@@ -61,12 +60,15 @@ define([
 		*	@function
 		*/
 		_renderIndex: function (callback) {
+			var _this = this;
 			App.Collections.Publication.fetch({
 				remove: false,
 				success: function (res) {
 					requestAnimationFrame(function () {
 						App.Container.html(App.Views.Active.render().el);
 						App.Vent.trigger('global:scroll');
+
+						_this._renderFilters();
 
 						if ( callback ) {
 							callback();
@@ -93,7 +95,7 @@ define([
 						collection: App.Collections.Author,
 						target: '#authors-list'
 					});
-					$('#publications-filter').html(fitlers.render().el);
+					$('#publications-filter').html(filters.render().el);
 				}
 			});
 		}

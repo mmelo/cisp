@@ -17,7 +17,7 @@ define([
 
         id: 'posts-list',
 
-        className: 'about',
+        className: 'posts-about',
 
         events: {},
 
