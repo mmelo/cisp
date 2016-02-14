@@ -10,9 +10,10 @@ define([
 	'controllers/page',
 	'controllers/publication',
 	'controllers/news',
+	'controllers/seminars',
 	'controllers/members',
 	'controllers/project'
-], function ($, Backbone, JST, HomeController, AboutController, PostController, PageController, PublicationController, NewsController, MembersController, ProjectController) {
+], function ($, Backbone, JST, HomeController, AboutController, PostController, PageController, PublicationController, NewsController, SeminarsController, MembersController, ProjectController) {
 	'use strict';
 
 	var Router = Backbone.Router.extend({
@@ -49,6 +50,9 @@ define([
 			}
 			if ( !App.Controllers.News ) {
 				App.Controllers.News = new NewsController;
+			}
+			if ( !App.Controllers.Seminars ) {
+				App.Controllers.Seminars = new SeminarsController;
 			}
 			if ( !App.Controllers.Project ) {
 				App.Controllers.Project = new ProjectController;
@@ -140,6 +144,9 @@ define([
 			} else
 			if ( catg === 'news' ) {
 				App.Vent.trigger('news:index');
+			} else
+			if ( catg === 'seminars' ) {
+				App.Vent.trigger('seminars:index');
 			} else
 			if ( catg === 'publications' ) {
 				App.Vent.trigger('publications:index');

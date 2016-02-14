@@ -1,0 +1,15 @@
+<div class="post-list__new__thumbnail" 
+style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbnail_images.post-thumbnail.url}}{{else}}images/default_thumbnail.png{{/if}})">
+
+	<time datetime="{{date}}" class="post-list__new__thumbnail__date">{{{prettyDate}}}</time>
+</div>
+
+<section class="post-list__new__content">
+	<p class="post-list__new__content__author">{{author.nickname}}</p>
+
+	<h2 class="post-list__new__content__title">{{{title}}}</h2>
+
+	<div class="post-list__new__content__text">{{{content}}}</div>
+</section>
+
+<a href="#{{categories.0.slug}}" class="publication__category">{{categories.0.title}}</a>

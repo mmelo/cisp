@@ -886,6 +886,102 @@ body {
     width: 50%;
     font-size: 22px;
     font-weight: 500; }
+  .post-list__header__search input {
+    width: 50px;
+    padding: 4px 8px;
+    font-size: 14px;
+    border: 1px solid #BFBEBE;
+    transition: all .5s ease; }
+    .post-list__header__search input::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: black; }
+    .post-list__header__search input ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: black; }
+    .post-list__header__search input :-ms-input-placeholder {
+      /* IE 10+ */
+      color: black; }
+    .post-list__header__search input :-moz-placeholder {
+      /* Firefox 18- */
+      color: black; }
+    .post-list__header__search input:focus {
+      border: 1px solid #45639F;
+      outline: none;
+      width: 150px; }
+  .post-list__header__search button {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s, visibility 0.5s; }
+  .post-list__header__no-content {
+    width: 100%;
+    text-align: center;
+    padding-top: 100px; }
+    .post-list__header__no-content p {
+      font-size: 50px; }
+
+.post-list__new {
+  position: relative;
+  width: 100%;
+  border-bottom: 2px solid #BFBEBE;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 8px; }
+  .post-list__new:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 10px;
+    width: 2px;
+    background: #BFBEBE; }
+  .post-list__new__thumbnail {
+    flex: 1;
+    position: relative;
+    margin-right: 40px;
+    margin-bottom: 8px;
+    height: 160px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat; }
+    .post-list__new__thumbnail__date {
+      position: absolute;
+      display: block;
+      top: 10px;
+      right: -22px;
+      padding: 4px;
+      background-color: #45639F;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center; }
+  .post-list__new__content {
+    flex: 3;
+    padding: 8px  0;
+    font-size: 16px; }
+    .post-list__new__content__author {
+      margin-bottom: 8px;
+      font-weight: 500; }
+    .post-list__new__content__title {
+      margin-bottom: 16px;
+      font-weight: 700;
+      font-size: 20px; }
+    .post-list__new__content__text {
+      font-weight: 500;
+      line-height: 18px; }
+      .post-list__new__content__text p {
+        margin-bottom: 8px; }
+
+.post-list__header {
+  width: 100%;
+  margin-bottom: 32px; }
+  .post-list__header__title {
+    width: 50%;
+    font-size: 22px;
+    font-weight: 500; }
 
 .post-list__member {
   margin: 16px;
