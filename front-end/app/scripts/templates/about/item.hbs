@@ -1,0 +1,16 @@
+<a href="#projects/{{slug}}" class="post__thumbnail" {{#if inCache}}style="background-image: url({{thumbnail_images.post-thumbnail.url}})"{{/if}} alt="{{{title}}}"></a>
+
+<section class="post__content">
+	<time datetime="{{date}}" class="post__content__date">{{{prettyDate}}}</time>
+
+	<a href="#" class="post__content__author">{{author.nickname}}</a>
+
+	<div class="post__content__title">{{{title}}}</div>
+
+	<div class="post__content__excerpt">{{{excerpt}}}</div>
+
+	<a href="#projects/{{slug}}" class="post__content__btn">more</a>
+
+</section>
+
+<a href="#projects" class="post__category">{{categories.0.title}}</a>

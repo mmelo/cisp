@@ -5,13 +5,14 @@ define([
 	'backbone',
 	'templates',
 	'controllers/home',
+	'controllers/about',
 	'controllers/post',
 	'controllers/page',
 	'controllers/publication',
 	'controllers/news',
 	'controllers/members',
 	'controllers/project'
-], function ($, Backbone, JST, HomeController, PostController, PageController, PublicationController, NewsController, MembersController, ProjectController) {
+], function ($, Backbone, JST, HomeController, AboutController, PostController, PageController, PublicationController, NewsController, MembersController, ProjectController) {
 	'use strict';
 
 	var Router = Backbone.Router.extend({
@@ -33,6 +34,9 @@ define([
 
 			if ( !App.Controllers.Home ) {
 				App.Controllers.Home = new HomeController;
+			}
+			if ( !App.Controllers.About ) {
+				App.Controllers.About = new AboutController;
 			}
 			if ( !App.Controllers.Post ) {
 				App.Controllers.Post = new PostController;
@@ -131,6 +135,9 @@ define([
 			this._common(catg);
 			this._loading();
 
+			if ( catg === 'about' ) {
+				App.Vent.trigger('about:index');
+			} else
 			if ( catg === 'news' ) {
 				App.Vent.trigger('news:index');
 			} else
