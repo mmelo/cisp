@@ -68,3 +68,15 @@
 		height: 180px;
 	}
 }
+
+.load-more {
+	margin: 32px auto;
+	padding: 4px 0 4px 8px;
+	text-align: center;
+	border: 2px solid #444;
+	letter-spacing: 8px;
+
+	&:hover {
+		cursor: pointer;
+	}
+}

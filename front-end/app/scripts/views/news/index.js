@@ -23,7 +23,8 @@ define([
             'keyup': '_enterKey',
             'focusin': '_showSearchButton',
             'focusout': '_showSearchButton',
-            'click #news-search-button': '_search'
+            'click #news-search-button': '_search',
+            'click #load-more-posts': '_lazyLoad'
         },
 
         subview: NewsItemView,
@@ -47,6 +48,10 @@ define([
         _search: function () {
             var keywords = $('#post-list-search').val();
             App.Vent.trigger('news:index', null, keywords)
+        },
+
+        _lazyLoad: function () {
+            App.Vent.trigger('news:more');
         }
     });
 

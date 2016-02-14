@@ -84,7 +84,7 @@ define([
 				success: function () {
 					var temp = new PostListView({
 						collection: App.Collections.RelatedPosts,
-						subview: PostItemView,
+						subview: PostItemView
 					});
 					App.Views.Active.subviews.push(temp);
 					requestAnimationFrame(function () {

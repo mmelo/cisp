@@ -406,9 +406,10 @@ function program1(depth0,data) {
   buffer += "<div class=\"post-list__header\">\n	<div class=\"post-list__header__title\">This page have every news of this website! Please take a look and tell me wath do you think!</div>\n\n	<div class=\"post-list__header__search\">\n		<input id=\"post-list-search\" type=\"text\" placeholder=\"Search\">\n		<button id=\"news-search-button\" class=\"hidden\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_search", options) : helperMissing.call(depth0, "view", "icons/ic_search", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</button>\n	</div>\n</div>\n\n";
+  buffer += "</button>\n	</div>\n</div>\n\n<div id=\"post-list-container\" class=\"post-list__container\">\n";
   stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.length), "===", 0, options) : helperMissing.call(depth0, "ifCond", (depth0 && depth0.length), "===", 0, options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</div>\n\n<div id=\"load-more-posts\" class=\"load-more\">MORE</div>\n";
   return buffer;
   });
 

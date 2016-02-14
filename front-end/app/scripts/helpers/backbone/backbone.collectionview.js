@@ -31,19 +31,19 @@ define([
 			var target = this.$el,
 				data = this.collection ? this.collection.toJSON() : this.data;
 
-
 			if (this.template) {
-				if (this.target) {
-					$(target).html(this.template(data));
-				} else {
-					this.$el.html(this.template(data));
-				}
+				this.$el.html(this.template(data));
 			}
 
 			this.collection.each(function (model) {
 				var temp = new this.subview({ model: model });
 				this.subviews.push(temp);
-				this.$el.append(temp.render().el);
+
+				if ( this.target ) {
+					this.$el.find(this.target).append(temp.render().el);
+				} else {
+					this.$el.append(temp.render().el);
+				}
 			}, this);
 			return this;
 		},

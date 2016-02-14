@@ -29,8 +29,7 @@ define([
 			App.Collections.News = new NewsCollection;
 			App.Collections.News.catg = catg;
 			
-			if ( params) {
-				
+			if (params) {				
 				var paramsUrl = params.replace(' ', '-').toLowerCase(); // prepare params to url (todo: replace special characters)
 				App.Router.navigate('#news?' + paramsUrl)
 
@@ -38,7 +37,8 @@ define([
 				App.Collections.News.search = paramsEscaped;
 			}
 			App.Views.Active = new NewsListView({
-				collection: App.Collections.News
+				collection: App.Collections.News,
+				target: '#post-list-container'
 			});
 			this._renderIndex();
 		},
@@ -52,7 +52,13 @@ define([
 		*/
 		_loadMore: function (catg) {
 			App.Collections.News.page++;
-			this._renderIndex();
+			this._renderIndex(null, function () {
+				requestAnimationFrame(function () {
+					if ( (App.Collections.News.page*10) > App.Collections.News.length ) {
+						$('.load-more').remove();
+					}
+				});
+			});
 		},
 
 		/**
@@ -61,18 +67,25 @@ define([
 		*	@private
 		*	@function
 		*/
-		_renderIndex: function (searchParams) {
+		_renderIndex: function (searchParams, callback) {
 			App.Collections.News.fetch({
 				remove: false,
 				success: function (res) {
 					requestAnimationFrame(function () {
 						App.Container.html(App.Views.Active.render().el);
 						App.Vent.trigger('global:scroll');
+
+						if ( callback ) {
+							callback();
+						}
 					});
 				},
 				error: function (res, err) {
 					requestAnimationFrame(function () {
 						App.Container.html(App.Views.Active.render().el);
+						if ( callback ) {
+							callback();
+						}
 					});
 				}
 			});
