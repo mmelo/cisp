@@ -33,7 +33,7 @@ blockquote, q {
   .post--project-item {
     width: 100%; } }
 
-html, body, header, .post__thumbnail, .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn, .project__detail, .project__detail__wrapper, .publication-list .home__section__publication__content, .publication__item {
+html, body, header, .post__thumbnail, .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn, .projects-container, .project__detail, .project__detail__wrapper, .publications-container, .publication-list, .publication-list .home__section__publication__content, .publication__item {
   width: 100%; }
 
 .app, .spinner, .posts-list, .posts-list .subtitle, .detail__category-wrapper,
@@ -43,7 +43,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
   max-width: 1200px;
   margin: 0 auto; }
 
-.header__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .project__detail__wrapper, .post-list__header, .post-list__new, .member__detail__wrapper, .member__detail__article__see-more, .publication__item {
+.header__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .projects-container, .project__detail__wrapper, .post-list__header, .post-list__new, .member__detail__wrapper, .member__detail__article__see-more, .publications-container, .publication-list, .publication__item {
   display: flex; }
 
 .header__container, .project__detail__wrapper {
@@ -58,7 +58,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 .home__section__new a, .home__section__publication a, .footer__container, .footer__partners, .member__detail__article__see-more {
   align-items: center; }
 
-.home__section, .posts-list, .member__detail__wrapper {
+.home__section, .posts-list, .projects-container, .member__detail__wrapper, .publications-container, .publication-list {
   flex-wrap: wrap; }
 
 .no-results {
@@ -330,7 +330,6 @@ body {
     cursor: pointer; }
 
 .home__section__publication {
-  flex: 1;
   position: relative;
   margin: 0 24px 16px 0;
   padding-right: 8px;
@@ -717,6 +716,9 @@ body {
 
 .publication-list {
   padding: 64px 0; }
+  .publication-list .home__section__publication {
+    width: 100%;
+    flex-grow: 2; }
   .publication-list .home__section__publication__content {
     position: relative; }
 

@@ -19,9 +19,15 @@ define([
 
         className: 'publication-list',
 
-        events: {},
+        events: {
+            'click #load-more-posts': '_lazyLoad'
+        },
 
-        subview: PublicationItemView
+        subview: PublicationItemView,
+
+        _lazyLoad: function () {
+            App.Vent.trigger('publications:more');
+        }
     });
 
     return PublicationsIndexView;

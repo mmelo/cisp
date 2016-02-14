@@ -29,7 +29,8 @@ define([
 			App.Collections.Project = new ProjectCollection;
 			App.Collections.Project.catg = catg;
 			App.Views.Active = new ProjectListView({
-				collection: App.Collections.Project
+				collection: App.Collections.Project,
+				target: '#projects-container'
 			});
 			this._renderIndex();
 		},
@@ -43,7 +44,13 @@ define([
 		*/
 		_loadMore: function (catg) {
 			App.Collections.Project.page++;
-			this._renderIndex();
+			this._renderIndex(function () {
+				requestAnimationFrame(function () {
+					if ( (App.Collections.Project.page*10) > App.Collections.Project.length ) {
+						$('.load-more').remove();
+					}
+				});
+			});
 		},
 
 		/**
@@ -52,18 +59,26 @@ define([
 		*	@private
 		*	@function
 		*/
-		_renderIndex: function () {
+		_renderIndex: function (callback) {
 			App.Collections.Project.fetch({
 				remove: false,
 				success: function (res) {
 					requestAnimationFrame(function () {
 						App.Container.html(App.Views.Active.render().el);
 						App.Vent.trigger('global:scroll');
+
+						if ( callback ) {
+							callback();
+						}
 					});
 				},
 				error: function (res, err) {
 					requestAnimationFrame(function () {
 						App.Container.html(App.Views.Active.render().el);
+
+						if ( callback ) {
+							callback();
+						}
 					});
 				}
 			});

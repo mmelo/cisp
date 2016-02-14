@@ -1,6 +1,6 @@
 .home__section__publication {
 	@include _(flex);
-	@include flex(1);
+	//@include flex(1);
 	position: relative;
 	margin: 0 24px 16px 0;
 	padding-right: 8px;

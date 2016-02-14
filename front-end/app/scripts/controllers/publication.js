@@ -27,7 +27,8 @@ define([
 			App.Collections.Publication = new PublicationCollection;
 			App.Collections.Publication.catg = catg;
 			App.Views.Active = new PublicationListView({
-				collection: App.Collections.Publication
+				collection: App.Collections.Publication,
+				target: '#publications-container'
 			});
 			this._renderIndex();
 		},
@@ -41,7 +42,13 @@ define([
 		*/
 		_loadMore: function (catg) {
 			App.Collections.Publication.page++;
-			this._renderIndex();
+			this._renderIndex(function () {
+				requestAnimationFrame(function () {
+					if ( (App.Collections.Publication.page*10) > App.Collections.Publication.length ) {
+						$('.load-more').remove();
+					}
+				});
+			});
 		},
 
 		/**
@@ -50,18 +57,26 @@ define([
 		*	@private
 		*	@function
 		*/
-		_renderIndex: function () {
+		_renderIndex: function (callback) {
 			App.Collections.Publication.fetch({
 				remove: false,
 				success: function (res) {
 					requestAnimationFrame(function () {
 						App.Container.html(App.Views.Active.render().el);
 						App.Vent.trigger('global:scroll');
+
+						if ( callback ) {
+							callback();
+						}
 					});
 				},
 				error: function (res, err) {
 					requestAnimationFrame(function () {
 						App.Container.html(App.Views.Active.render().el);
+						
+						if ( callback ) {
+							callback();
+						}
 					});
 				}
 			});

@@ -1,6 +1,22 @@
+.publications-container {
+	@include _(full-width);
+	@include _(flex);
+	@include _(flex-wrap);
+}
+
 .publication {
 	&-list {
 		padding: 64px 0;
+
+		@include _(full-width);
+		@include _(full-width);
+		@include _(flex);
+		@include _(flex-wrap);
+
+		.home__section__publication {
+			width: 100%;
+			flex-grow: 2;
+		}
 
 		.home__section__publication__content {
 			position: relative;
