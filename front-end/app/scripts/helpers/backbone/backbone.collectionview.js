@@ -26,8 +26,6 @@ define([
 			this.template = this.template || obj.template || false;
 			this.data = obj ? obj.data : [];
 			this.target = this.target || obj.target || false;
-
-			console.log(obj);
 		},
 		render: function () {
 			var target = this.$el,

@@ -320,6 +320,15 @@ body {
     width: 250px;
     height: 180px; }
 
+.load-more {
+  margin: 32px auto;
+  padding: 4px 0 4px 8px;
+  text-align: center;
+  border: 2px solid #444;
+  letter-spacing: 8px; }
+  .load-more:hover {
+    cursor: pointer; }
+
 .home__section__publication {
   flex: 1;
   position: relative;
