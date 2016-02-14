@@ -31,7 +31,8 @@ define([
 				App.Collections.News.search = searchParams;
 			}
 			App.Views.Active = new NewsListView({
-				collection: App.Collections.News
+				collection: App.Collections.News,
+				target: '#post-list-container'
 			});
 			this._renderIndex();
 		},
