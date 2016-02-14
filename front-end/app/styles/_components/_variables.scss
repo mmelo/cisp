@@ -41,6 +41,9 @@ $header_height: 500px;
 @include placeholder('space-between') {
 	justify-content: space-between;
 }
+@include placeholder('space-around') {
+	justify-content: space-around;
+}
 @include placeholder('justify-content-start') {
 	justify-content: flex-start;
 }
