@@ -22,6 +22,7 @@ define([
 		},
 
 		parse: function (res) {
+			this.totalPosts = res.count_total;
 			return res.posts;
 		}
 	});
