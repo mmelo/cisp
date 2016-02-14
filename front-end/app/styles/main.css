@@ -117,7 +117,7 @@ body {
   background-color: #fff;
   font-family: 'Raleway',sans-serif;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
   text-rendering: optimizelegibility; }
   body a {
     -webkit-font-smoothing: antialiased !important; }
@@ -720,7 +720,7 @@ body {
     .posts-about__management:before {
       content: '';
       position: absolute;
-      z-index: 1;
+      z-index: -1;
       top: -70px;
       left: 0;
       width: 0;
@@ -728,14 +728,12 @@ body {
       border-style: solid;
       border-width: 155px 0 0 195px;
       border-color: transparent transparent transparent #45639F; }
-    .posts-about__management__header {
-      z-index: 2; }
-      .posts-about__management__header__title {
-        width: 50%;
-        font-size: 60px;
-        line-height: 45px;
-        text-transform: uppercase;
-        margin: 0 80px; }
+    .posts-about__management__header__title {
+      width: 50%;
+      font-size: 60px;
+      line-height: 45px;
+      text-transform: uppercase;
+      margin: 0 80px; }
     .posts-about__management--thumbnail {
       border: 2px solid #45639F; }
     .posts-about__management--see-more svg {
@@ -986,6 +984,8 @@ body {
 .post-list__member {
   margin: 16px;
   min-width: 20%; }
+  .post-list__member--publication {
+    width: 100%; }
   .post-list__member__thumbnail {
     margin: 0 auto;
     position: relative;
@@ -1071,9 +1071,14 @@ body {
     font-size: 14px; }
     .member__detail__article__see-more svg {
       margin-right: 4px; }
+  .member__detail__article__type {
+    text-transform: capitalize; }
   .member__detail__article__title {
     margin: 8px 0 16px 0;
     font-size: 18px; }
+  .member__detail__article__text p {
+    line-height: 20px;
+    margin-bottom: 8px; }
 
 .publication-list {
   padding: 64px 0; }

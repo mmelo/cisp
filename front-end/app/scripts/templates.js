@@ -27,7 +27,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"posts-about__header\">\n	<ul class=\"posts-about__header__menu\">\n		<li>Mission</li>\n		<li>Scientific Advisory Board</li>\n		<li>Scientific Comission</li>\n		<li>Thematic Lines</li>\n		<li>Management</li>\n		<li>Contacts</li>\n	</ul>\n</div>\n<div id=\"about-container\" class=\"posts-about__container\"></div>";
+  return "<div class=\"posts-about__header\">\n	<ul class=\"posts-about__header__menu\">\n		<li id=\"navigate-mission\">Mission</li>\n		<li id=\"navigate-scientific-board\">Scientific Advisory Board</li>\n		<li id=\"navigate-scientific-comission\">Scientific Comission</li>\n		<li id=\"navigate-thematic\">Thematic Lines</li>\n		<li id=\"navigate-management\">Management</li>\n		<li id=\"navigate-contacts\">Contacts</li>\n	</ul>\n</div>\n<div id=\"about-container\" class=\"posts-about__container\"></div>";
   });
 
 this["JST"]["app/scripts/templates/about/item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -487,16 +487,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</h2>\n	</section>\n	\n	<section class=\"member__detail__column member__detail__column--details\">\n		<article class=\"member__detail__article\">\n			<a href=\"\" target=\"_blank\" class=\"member__detail__article__see-more\">";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " see more</a>\n			<p class=\"member__detail__article__type\">Publications</p>\n			<h5 class=\"member__detail__article__title\">My first publication</h5>\n			<p class=\"member__detail__article__text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n		</article>\n		<article class=\"member__detail__article\">\n			<a href=\"\" target=\"_blank\" class=\"member__detail__article__see-more\">";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " see more</a>\n			<p class=\"member__detail__article__type\">Publications</p>\n			<h5 class=\"member__detail__article__title\">My first publication</h5>\n			<p class=\"member__detail__article__text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n		</article>\n		<article class=\"member__detail__article\">\n			<a href=\"\" target=\"_blank\" class=\"member__detail__article__see-more\">";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " see more</a>\n			<p class=\"member__detail__article__type\">Publications</p>\n			<h5 class=\"member__detail__article__title\">My first publication</h5>\n			<p class=\"member__detail__article__text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n		</article>\n	</section>\n</div>";
+  buffer += "</h2>\n	</section>\n	\n	<section class=\"member__detail__column member__detail__column--details\" id=\"member-posts\">\n		\n	</section>\n</div>";
   return buffer;
   });
 
@@ -544,6 +535,42 @@ function program3(depth0,data) {
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</h2>\n	</section>\n</a>";
+  return buffer;
+  });
+
+this["JST"]["app/scripts/templates/members/memberPost.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
+
+
+  buffer += "<article class=\"member__detail__article\">\n	<a href=\"https://"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" target=\"_blank\" class=\"member__detail__article__see-more\">";
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += " see more</a>\n	<p class=\"member__detail__article__type\">";
+  if (helper = helpers.type) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.type); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</p>\n	<h5 class=\"member__detail__article__title\">";
+  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</h5>\n	<div class=\"member__detail__article__text\">";
+  if (helper = helpers.content) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.content); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</div>\n</article>";
+  return buffer;
+  });
+
+this["JST"]["app/scripts/templates/members/memberPosts.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "";
+
+
   return buffer;
   });
 
@@ -884,7 +911,7 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<div class=\"post-list__header\">\n	<div class=\"post-list__header__title\">This page have every news of this website! Please take a look and tell me wath do you think!</div>\n\n	<div class=\"post-list__header__search\">\n		<input id=\"post-list-search\" type=\"text\" placeholder=\"Search\">\n		<button id=\"news-search-button\" class=\"hidden\">";
+  buffer += "<div class=\"post-list__header\">\n	<div class=\"post-list__header__title\">This page have every seminars and all the information related! Please take a look and tell me wath do you think!</div>\n\n	<div class=\"post-list__header__search\">\n		<input id=\"post-list-search\" type=\"text\" placeholder=\"Search\">\n		<button id=\"news-search-button\" class=\"hidden\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_search", options) : helperMissing.call(depth0, "view", "icons/ic_search", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</button>\n	</div>\n</div>\n\n<div id=\"post-list-container\" class=\"post-list__container\">\n";
@@ -928,7 +955,11 @@ function program3(depth0,data) {
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</h2>\n\n	<div class=\"post-list__new__content__text\">";
+  buffer += "</h2>\n\n	<div class=\"post-list__new__content__when\">When: <span>"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.when)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span></div>\n\n	<div class=\"post-list__new__content__when\">Where: <span>"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.where)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span></div>\n\n	<div class=\"post-list__new__content__text\">";
   if (helper = helpers.content) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.content); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }

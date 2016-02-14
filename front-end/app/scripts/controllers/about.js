@@ -25,6 +25,8 @@ define([
 		*	@param {string} catg (optional)
 		*/
 		_index: function (catg) {
+			$(window).scrollTop(0);
+			console.log('!!');
 			App.Collections.About = new AboutCollection;
 			App.Collections.About.catg = catg;
 			App.Views.Active = new AboutListView({
