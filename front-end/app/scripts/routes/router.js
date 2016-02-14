@@ -9,8 +9,9 @@ define([
 	'controllers/page',
 	'controllers/publication',
 	'controllers/news',
+	'controllers/members',
 	'controllers/project'
-], function ($, Backbone, JST, HomeController, PostController, PageController, PublicationController, NewsController, ProjectController) {
+], function ($, Backbone, JST, HomeController, PostController, PageController, PublicationController, NewsController, MembersController, ProjectController) {
 	'use strict';
 
 	var Router = Backbone.Router.extend({
@@ -47,6 +48,9 @@ define([
 			}
 			if ( !App.Controllers.Project ) {
 				App.Controllers.Project = new ProjectController;
+			}
+			if ( !App.Controllers.Members ) {
+				App.Controllers.Members = new MembersController;
 			}
 		},
 
@@ -135,6 +139,9 @@ define([
 			} else
 			if ( catg === 'projects' ) {
 				App.Vent.trigger('projects:index');
+			}else
+			if ( catg === 'members' ) {
+				App.Vent.trigger('members:index');
 			} else {
 				App.Vent.trigger('posts:index', catg);
 			}
@@ -154,6 +161,11 @@ define([
 
 			if ( catg === 'projects' ) {
 				App.Vent.trigger('projects:detail', {
+					slug: slug
+				});
+			} else 
+			if ( catg === 'members' ) {
+				App.Vent.trigger('members:detail', {
 					slug: slug
 				});
 			} else {

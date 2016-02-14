@@ -2,7 +2,7 @@
 
 	<div id="logo" class="hero-section__logo">
 		{{{view 'icons/ic_logo-v01'}}}
-		<p>Centro de Investicação Saúde Publica</p>
+		<p>Centro de Investigação Saúde Publica</p>
 	</div>
 
 {{#ifCond data.catg '===' 'home'}}
@@ -13,8 +13,13 @@
 		<div class="hero-section__block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 	</div>
 {{else}}
-	<div class="hero-section__page-identifier">
-		<a href="#{{data.catg}}">{{data.catg}}</a>
+		{{#ifCond data.catg '===' 'seminars'}}
+		<div class="hero-section__page-identifier hero-section__page-identifier--small">
+			<a href="#{{data.catg}}">Public Health Research Seminars</a>
+		{{else}}
+		<div class="hero-section__page-identifier">
+			<a href="#{{data.catg}}">{{data.catg}}</a>
+		{{/ifCond}}
 	</div>
 
 {{/ifCond}}

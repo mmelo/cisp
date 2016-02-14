@@ -84,5 +84,13 @@
 		    text-transform: uppercase;
 		    text-decoration: underline;
 	    }
+
+	    &--small {
+	    	margin-top: 290px;
+	    	a {
+				line-height: 50px;
+				font-size: 40px
+	    	}
+	    }
 	}
 }

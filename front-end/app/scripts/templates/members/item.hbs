@@ -1,0 +1,11 @@
+<a href="#members/{{slug}}" alt="{{{title}}}">
+	<div class="post-list__member__thumbnail" 
+	style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbnail_images.post-thumbnail.url}}{{else}}images/default_thumbnail.png{{/if}})">
+	</div>
+
+	<section class="post-list__member__content">
+		<p class="post-list__member__content__position">{{custom_fields.member-position}}</p>
+
+		<h2 class="post-list__member__content__name">{{{title}}}</h2>
+	</section>
+</a>
