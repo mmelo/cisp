@@ -123,7 +123,17 @@
 				font-size: 20px;
 			}
 
+			&__when,
+			&__where {
+				margin-bottom: 8px;
+				
+				span {
+					font-weight: 700;
+				}
+			}
+
 			&__text {
+				margin-top: 16px;
 				font-weight: 500;
 				line-height: 18px;
 

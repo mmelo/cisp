@@ -170,7 +170,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"posts-about__sci-comission\" id=\"scientific-comission\">\n	\n	<div class=\"posts-about__sci-comission__header\">\n		<h4 class=\"posts-about__sci-comission__header__title\">Scientific <br> Comission</h4>\n	</div>\n\n	<div class=\"posts-about__sci-comission__description\">\n		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At porro quaerat vero, cum a aliquid impedit. Eius nemo quaerat magni accusantium soluta atque praesentium, eum reprehenderit. Adipisci inventore, dolore voluptas.</p>\n		<p>Possimus iste tempore labore, a omnis at aliquid, eius explicabo neque, dolores, nisi ducimus delectus velit cum! Delectus natus omnis, nulla ex, illo possimus, voluptates, placeat maxime voluptatum doloremque quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n		<p>Non nobis omnis esse minima possimus rem, magnam est, corrupti minus nihil, tempore eum! Omnis quaerat, perferendis. Vero debitis nemo distinctio quis dolorem assumenda, harum praesentium fugit nisi tempore libero.</p>\n		<p>Qui similique rerum commodi explicabo aperiam officiis dolor, porro pariatur libero minima aliquam placeat veniam, dolorum harum enim perspiciatis laudantium, esse sapiente. Minima, explicabo ducimus cumque laboriosam odit nulla perspiciatis.</p>\n		<p>Ex doloribus impedit, ipsam voluptatem? Repudiandae nulla dolorem nemo excepturi blanditiis, aliquam qui, natus repellat laudantium autem laboriosam cupiditate reiciendis molestiae iste dignissimos maiores tempore eaque officiis a, voluptatibus atque?</p>\n		<p>Quis culpa nesciunt molestias ipsa, cum cupiditate dolore similique ducimus in, ratione reiciendis doloremque. Fugiat aut delectus illum, dolore! Recusandae, unde. Enim, quod vel natus necessitatibus aperiam accusantium, quaerat aspernatur.</p>\n		<p>Similique voluptates quis laborum quo, voluptatem, dicta illo aperiam ipsa beatae, excepturi quae. Vel sit praesentium provident cum iusto iste sapiente explicabo adipisci nisi animi, doloribus porro officia, ipsa ipsum.</p>\n		<p>Nulla, debitis, vero? Doloribus excepturi suscipit, recusandae similique, voluptatum autem commodi soluta odio laboriosam, laudantium eveniet itaque deleniti nemo magni iure maiores ea. Commodi aut officia obcaecati ipsa, eveniet repudiandae.</p>\n	</div>\n	\n	<img src=\"images/about/scientific_comission/organogram.jpg\" class=\"posts-about__sci-comission__organogram\" alt=\"CISP - scientific comission organogram\">\n\n</div>";
+  return "<div class=\"posts-about__sci-comission\" id=\"scientific-comission\">\n	\n	<div class=\"posts-about__sci-comission__header\">\n		<h4 class=\"posts-about__sci-comission__header__title\">Scientific Comission</h4>\n	</div>\n\n	<div class=\"posts-about__sci-comission__description\">\n		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At porro quaerat vero, cum a aliquid impedit. Eius nemo quaerat magni accusantium soluta atque praesentium, eum reprehenderit. Adipisci inventore, dolore voluptas.</p>\n		<p>Possimus iste tempore labore, a omnis at aliquid, eius explicabo neque, dolores, nisi ducimus delectus velit cum! Delectus natus omnis, nulla ex, illo possimus, voluptates, placeat maxime voluptatum doloremque quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n		<p>Non nobis omnis esse minima possimus rem, magnam est, corrupti minus nihil, tempore eum! Omnis quaerat, perferendis. Vero debitis nemo distinctio quis dolorem assumenda, harum praesentium fugit nisi tempore libero.</p>\n		<p>Qui similique rerum commodi explicabo aperiam officiis dolor, porro pariatur libero minima aliquam placeat veniam, dolorum harum enim perspiciatis laudantium, esse sapiente. Minima, explicabo ducimus cumque laboriosam odit nulla perspiciatis.</p>\n		<p>Ex doloribus impedit, ipsam voluptatem? Repudiandae nulla dolorem nemo excepturi blanditiis, aliquam qui, natus repellat laudantium autem laboriosam cupiditate reiciendis molestiae iste dignissimos maiores tempore eaque officiis a, voluptatibus atque?</p>\n		<p>Quis culpa nesciunt molestias ipsa, cum cupiditate dolore similique ducimus in, ratione reiciendis doloremque. Fugiat aut delectus illum, dolore! Recusandae, unde. Enim, quod vel natus necessitatibus aperiam accusantium, quaerat aspernatur.</p>\n		<p>Similique voluptates quis laborum quo, voluptatem, dicta illo aperiam ipsa beatae, excepturi quae. Vel sit praesentium provident cum iusto iste sapiente explicabo adipisci nisi animi, doloribus porro officia, ipsa ipsum.</p>\n		<p>Nulla, debitis, vero? Doloribus excepturi suscipit, recusandae similique, voluptatum autem commodi soluta odio laboriosam, laudantium eveniet itaque deleniti nemo magni iure maiores ea. Commodi aut officia obcaecati ipsa, eveniet repudiandae.</p>\n	</div>\n	\n	<img src=\"images/about/scientific_comission/organogram.jpg\" class=\"posts-about__sci-comission__organogram\" alt=\"CISP - scientific comission organogram\">\n\n</div>";
   });
 
 this["JST"]["app/scripts/templates/about/thematicLines.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -247,7 +247,7 @@ function program6(depth0,data) {
   buffer += "<div class=\"hero-section__container\">\n\n	<div id=\"logo\" class=\"hero-section__logo\">\n		";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_logo-v01", options) : helperMissing.call(depth0, "view", "icons/ic_logo-v01", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n		<p>Centro de Investigação Saúde Publica</p>\n	</div>\n\n";
+  buffer += "\n		<p>Centro de Investigação Saúde Publica</p>\n		<p>Public Health Research Center</p>\n	</div>\n\n";
   stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", "home", options) : helperMissing.call(depth0, "ifCond", ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", "home", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</div>\n";
@@ -339,7 +339,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/scripts/templates/home/publicationsItem.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
 
 
   buffer += "<div class=\"home__section__publication__content\">\n	<h4>";
@@ -350,12 +350,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.excerpt) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.excerpt); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</p>\n	<a href=\""
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" target=\"_blank\">";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " See more</a>\n	<time datetime=\"";
+  buffer += "</p>\n	\n	<time datetime=\"";
   if (helper = helpers.date) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.date); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -633,9 +628,7 @@ function program3(depth0,data) {
   if (helper = helpers.prettyDate) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.prettyDate); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</time>\n</div>\n\n<section class=\"post-list__new__content\">\n	<p class=\"post-list__new__content__author\">"
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.author)),stack1 == null || stack1 === false ? stack1 : stack1.nickname)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</p>\n\n	<h2 class=\"post-list__new__content__title\">";
+  buffer += "</time>\n</div>\n\n<section class=\"post-list__new__content\">\n	\n\n	<h2 class=\"post-list__new__content__title\">";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
@@ -817,10 +810,22 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1;
-  buffer += "style=\"background-image: url("
-    + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.thumbnail_images)),stack1 == null || stack1 === false ? stack1 : stack1['post-thumbnail'])),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + ")\"";
+  buffer += "style=\"background-image: url(";
+  stack1 = helpers['if'].call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.thumbnail_images)),stack1 == null || stack1 === false ? stack1 : stack1['post-thumbnail'])),stack1 == null || stack1 === false ? stack1 : stack1.url), {hash:{},inverse:self.program(4, program4, data),fn:self.program(2, program2, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += ")\"";
   return buffer;
+  }
+function program2(depth0,data) {
+  
+  var stack1;
+  return escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.thumbnail_images)),stack1 == null || stack1 === false ? stack1 : stack1['post-thumbnail'])),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1));
+  }
+
+function program4(depth0,data) {
+  
+  
+  return "images/default_thumbnail.png";
   }
 
   buffer += "<a href=\"#projects/";
@@ -903,20 +908,8 @@ function program1(depth0,data) {
 this["JST"]["app/scripts/templates/publications/item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing, self=this;
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
 
-function program1(depth0,data) {
-  
-  var buffer = "", stack1, helper;
-  buffer += "\n		<div class=\"publication__item__column publication__item__column--right\">\n			<div class=\"publication__item__thumbnail\" style=\"background-image:url("
-    + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.thumbnail_images)),stack1 == null || stack1 === false ? stack1 : stack1['post-thumbnail'])),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + ")\" alt=\"";
-  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\"></div>\n		</div>\n		";
-  return buffer;
-  }
 
   buffer += "<div class=\"home__section__publication__content\">\n	<div class=\"publication__item\">\n		<div class=\"publication__item__column\">\n			<h4>";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
@@ -926,12 +919,7 @@ function program1(depth0,data) {
   if (helper = helpers.excerpt) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.excerpt); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</p>\n			<a href=\""
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" target=\"_blank\">";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " See more</a>\n			<time datetime=\"";
+  buffer += "</p>\n			\n			<time datetime=\"";
   if (helper = helpers.date) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.date); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -939,10 +927,7 @@ function program1(depth0,data) {
   if (helper = helpers.prettyDate) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.prettyDate); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</time>\n		</div>\n		";
-  stack1 = helpers['if'].call(depth0, ((stack1 = (depth0 && depth0.thumbnail_images)),stack1 == null || stack1 === false ? stack1 : stack1['post-thumbnail']), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n	</div>\n</div>";
+  buffer += "</time>\n		</div>\n		\n	</div>\n</div>";
   return buffer;
   });
 
@@ -985,6 +970,24 @@ function program3(depth0,data) {
   return "images/default_thumbnail.png";
   }
 
+function program5(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n	<div class=\"post-list__new__content__when\"><span>When: </span>"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.when)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n	";
+  return buffer;
+  }
+
+function program7(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n	<div class=\"post-list__new__content__where\"><span>Where: </span>"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.where)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n	";
+  return buffer;
+  }
+
   buffer += "<div class=\"post-list__new__thumbnail\" \nstyle=\"background-image: url(";
   stack1 = helpers['if'].call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.thumbnail_images)),stack1 == null || stack1 === false ? stack1 : stack1['post-thumbnail'])),stack1 == null || stack1 === false ? stack1 : stack1.url), {hash:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
@@ -996,17 +999,17 @@ function program3(depth0,data) {
   if (helper = helpers.prettyDate) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.prettyDate); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</time>\n</div>\n\n<section class=\"post-list__new__content\">\n	<p class=\"post-list__new__content__author\">"
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.author)),stack1 == null || stack1 === false ? stack1 : stack1.nickname)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</p>\n\n	<h2 class=\"post-list__new__content__title\">";
+  buffer += "</time>\n</div>\n\n<section class=\"post-list__new__content\">\n	\n\n	<h2 class=\"post-list__new__content__title\">";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</h2>\n\n	<div class=\"post-list__new__content__when\">When: <span>"
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.when)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</span></div>\n\n	<div class=\"post-list__new__content__when\">Where: <span>"
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.where)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</span></div>\n\n	<div class=\"post-list__new__content__text\">";
+  buffer += "</h2>\n	\n	";
+  stack1 = helpers['if'].call(depth0, ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.when), {hash:{},inverse:self.noop,fn:self.program(5, program5, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n	\n	";
+  stack1 = helpers['if'].call(depth0, ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.when), {hash:{},inverse:self.noop,fn:self.program(7, program7, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n	<div class=\"post-list__new__content__text\">";
   if (helper = helpers.content) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.content); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }

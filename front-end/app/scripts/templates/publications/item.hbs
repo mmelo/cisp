@@ -3,13 +3,13 @@
 		<div class="publication__item__column">
 			<h4>{{title}}</h4>
 			<p>{{{excerpt}}}</p>
-			<a href="{{custom_fields.url}}" target="_blank">{{{view 'icons/ic_arrow-right'}}} See more</a>
+			{{!-- <a href="{{custom_fields.url}}" target="_blank">{{{view 'icons/ic_arrow-right'}}} See more</a> --}}
 			<time datetime="{{date}}">{{{prettyDate}}}</time>
 		</div>
-		{{#if thumbnail_images.post-thumbnail}}
+		{{!-- {{#if thumbnail_images.post-thumbnail}}
 		<div class="publication__item__column publication__item__column--right">
 			<div class="publication__item__thumbnail" style="background-image:url({{thumbnail_images.post-thumbnail.url}})" alt="{{{title}}}"></div>
 		</div>
-		{{/if}}
+		{{/if}} --}}
 	</div>
 </div>
