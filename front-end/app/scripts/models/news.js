@@ -23,7 +23,7 @@ define([
 		parse: function(response, options)  {
 			var res = response.post || response;
 			var d = new Date(res.date);
-			var months = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEC'];
+			var months = ['JAN', 'FEB', 'MAR', 'APR', 'MAI', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
 			res.prettyDate = months[d.getMonth()] + '<br>' + d.getFullYear();
 

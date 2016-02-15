@@ -64,7 +64,10 @@
 			}
 		}
 	}
-
+	
+	&__container {
+		width: 100%;
+	}
 	&__new {
 		@include _(flex);
 		position: relative;

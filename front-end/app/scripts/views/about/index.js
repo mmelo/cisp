@@ -46,7 +46,7 @@ define([
         },
 
         _thematic: function () {
-            $(window).scrollTop(2613);
+            $(window).scrollTop(2660);
             App.Router.navigate('#about/scientific-thematic-lines', { trigger: false });
         },
 

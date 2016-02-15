@@ -5,13 +5,17 @@ style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbn
 </div>
 
 <section class="post-list__new__content">
-	<p class="post-list__new__content__author">{{author.nickname}}</p>
+	{{!-- <p class="post-list__new__content__author">{{author.nickname}}</p> --}}
 
 	<h2 class="post-list__new__content__title">{{{title}}}</h2>
-
-	<div class="post-list__new__content__when">When: <span>{{custom_fields.when}}</span></div>
-
-	<div class="post-list__new__content__when">Where: <span>{{custom_fields.where}}</span></div>
+	
+	{{#if custom_fields.when}}
+	<div class="post-list__new__content__when"><span>When: </span>{{custom_fields.when}}</div>
+	{{/if}}
+	
+	{{#if custom_fields.when}}
+	<div class="post-list__new__content__where"><span>Where: </span>{{custom_fields.where}}</div>
+	{{/if}}
 
 	<div class="post-list__new__content__text">{{{content}}}</div>
 </section>
