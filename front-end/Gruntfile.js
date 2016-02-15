@@ -118,7 +118,7 @@ module.exports = function (grunt) {
 					optimize: 'uglify2',
 					paths: {
 						'text': '../../<%= yeoman.app %>/bower_components/requirejs-text/text',
-						'templates': '../../.tmp/scripts/templates',
+						'templates': '../../<%= yeoman.app %>/scripts/templates',
 						'jquery': '../../<%= yeoman.app %>/scripts/vendor/zepto',
 						'backbone': '../../<%= yeoman.app %>/bower_components/backbone/backbone-min',
 						'underscore': '../../<%= yeoman.app %>/bower_components/lodash/lodash.min'
@@ -163,7 +163,7 @@ module.exports = function (grunt) {
 		},
 		imagemin: {
 			options: {
-				optimizationLevel: 7
+				optimizationLevel: 1
 			},
 			dist: {
 				files: [{
