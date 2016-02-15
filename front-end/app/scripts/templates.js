@@ -310,7 +310,7 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<div class=\"home__section__publication__content\">\n	<h4>";
+  buffer += "<div class=\"home__section__new__content\">\n	<h4>";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)

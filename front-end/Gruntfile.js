@@ -309,7 +309,7 @@ module.exports = function (grunt) {
 		'sass:dist',
 		'useminPrepare',
 		'requirejs',
-		'imagemin',
+		
 		'htmlmin',
 		'cssmin',
 		'copy',
