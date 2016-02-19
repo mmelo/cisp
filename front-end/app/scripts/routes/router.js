@@ -139,24 +139,25 @@ define([
 			this._common(catg);
 			this._loading();
 
-			if ( catg === 'about' ) {
+			if ( catg === 'sobre' ) {
 				App.Vent.trigger('about:index');
 			} else
-			if ( catg === 'news' ) {
+			if ( catg === 'noticias' ) {
 				App.Vent.trigger('news:index');
 			} else
-			if ( catg === 'seminars' ) {
+			if ( catg === 'seminarios' ) {
 				App.Vent.trigger('seminars:index');
 			} else
-			if ( catg === 'publications' ) {
+			if ( catg === 'publicacoes' ) {
 				App.Vent.trigger('publications:index');
 			} else
-			if ( catg === 'projects' ) {
+			if ( catg === 'projectos' ) {
 				App.Vent.trigger('projects:index');
 			}else
-			if ( catg === 'members' ) {
+			if ( catg === 'membros' ) {
 				App.Vent.trigger('members:index');
-			} else {
+			} else
+			if ( catg === 'noticias' ) {
 				App.Vent.trigger('posts:index', catg);
 			}
 		},
@@ -173,25 +174,26 @@ define([
 			this._common(catg);
 			this._loading();
 
-			if ( catg === 'projects' ) {
+			if ( catg === 'projectos' ) {
 				App.Vent.trigger('projects:detail', {
 					slug: slug
 				});
 			} else 
-			if ( catg === 'about' ) {
+			if ( catg === 'sobre' ) {
 				App.Vent.trigger('about:index', {
 					slug: slug
 				});
 			} else 
-			if ( catg === 'members' ) {
+			if ( catg === 'membros' ) {
 				App.Vent.trigger('members:detail', {
 					slug: slug
 				});
-			} if ( catg === 'publications' ) {
+			} if ( catg === 'publicacoes' ) {
 				App.Vent.trigger('publications:index', {
 					slug: slug
 				});
-			} else {
+			} else 
+			if ( catg === 'noticias' ) {
 				App.Vent.trigger('posts:detail', {
 					category: catg,
 					slug: slug

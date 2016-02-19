@@ -32,32 +32,32 @@ define([
 
         _mission: function () {
             $(window).scrollTop(504);
-            App.Router.navigate('#about/mission', { trigger: false });
+            App.Router.navigate('#sobre/mission', { trigger: false });
         },
 
         _scientificBoard: function () {
             $(window).scrollTop(920);
-            App.Router.navigate('#about/scientific-board', { trigger: false });
+            App.Router.navigate('#sobre/scientific-board', { trigger: false });
         },
 
         _scientificComission: function () {
             $(window).scrollTop(1763);
-            App.Router.navigate('#about/scientific-comission', { trigger: false });
+            App.Router.navigate('#sobre/scientific-comission', { trigger: false });
         },
 
         _thematic: function () {
             $(window).scrollTop(2660);
-            App.Router.navigate('#about/scientific-thematic-lines', { trigger: false });
+            App.Router.navigate('#sobre/scientific-thematic-lines', { trigger: false });
         },
 
         _management: function () {
             $(window).scrollTop(3702);
-            App.Router.navigate('#about/scientific-management', { trigger: false });
+            App.Router.navigate('#sobre/scientific-management', { trigger: false });
         },
 
         _contacts: function () {
             $(window).scrollTop(3702);
-            App.Router.navigate('#about/contacts', { trigger: false });
+            App.Router.navigate('#sobre/contacts', { trigger: false });
         }
     });
 
