@@ -9,7 +9,7 @@ define([
 
 	var MembersCollection = Backbone.Collection.extend({
 		url: function () {
-			var url = App.BaseUrl + '?json=get_posts&post_type=members';
+			var url = App.BaseUrl + '?json=get_posts&post_type=members&custom_fields=effective';
 			return url + (this.count ? '&count=' + this.count : '') + (this.page ? '&page=' + this.page : '');
 		},
 		model: MembersModel,

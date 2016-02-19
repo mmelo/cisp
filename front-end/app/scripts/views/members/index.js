@@ -5,25 +5,18 @@ define([
     'underscore',
     'backbone',
     'templates',
-    'views/members/item',
-    'collectionview'
-], function ($, _, Backbone, JST, MembersItemView) {
+    'baseview'
+], function ($, _, Backbone, JST) {
     'use strict';
 
-    var MembersIndexView = Backbone.CollectionView.extend({
+    var MembersIndexView = Backbone.BaseView.extend({
         template: JST['app/scripts/templates/members/index.hbs'],
 
-        tagName: 'section',
+        tagName: 'div',
 
-        id: 'posts-list',
+        className: 'members_index',
 
-        className: 'posts-list posts-list--members',
-
-        events: {
-        },
-
-        subview: MembersItemView,
-
+        events: {}
     });
 
     return MembersIndexView;

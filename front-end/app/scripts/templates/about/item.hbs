@@ -3,20 +3,20 @@
 {{{view 'about/mission'}}}
 {{/ifCond}}
 
+{{!-- Thematic Lines --}}
+{{#ifCond slug '===' 'thematic-lines'}}
+{{{view 'about/thematicLines'}}}
+{{/ifCond}}
+
 {{!-- Scientific Advisory Board --}}
 {{#ifCond slug '===' 'scientific-advisory-board'}}
 {{{view 'about/scientificBoard'}}}
 {{/ifCond}}
 
 {{!-- Scientific Comission --}}
-{{#ifCond slug '===' 'scientific-comission'}}
+{{!-- {{#ifCond slug '===' 'scientific-comission'}}
 {{{view 'about/scientificComission'}}}
-{{/ifCond}}
-
-{{!-- Thematic Lines --}}
-{{#ifCond slug '===' 'thematic-lines'}}
-{{{view 'about/thematicLines'}}}
-{{/ifCond}}
+{{/ifCond}} --}}
 
 {{!-- Management --}}
 {{#ifCond slug '===' 'management'}}

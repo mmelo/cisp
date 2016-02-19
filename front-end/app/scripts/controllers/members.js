@@ -8,13 +8,13 @@ define([
 	'models/members',
 	'models/memberPosts',
 	'views/members/index',
-	'views/members/item',
+	'views/members/effectiveList',
+	'views/members/associatedList',
 	'views/members/memberPosts',
 	'views/members/memberPost',
 	'views/members/detail',
-], function ($, Backbone, MembersCollection, MemberPostsCollection, MemberModel, MemberPostsModel, MembersListView, MembersItemView, MemberPostsListView, MemberPostsItemView, MemberDetailView) {
+], function ($, Backbone, MembersCollection, MemberPostsCollection, MemberModel, MemberPostsModel, MembersIndexView, EffectiveMembersListView, AssociatedMembersListView, MemberPostsListView, MemberPostsItemView, MemberDetailView) {
 	'use strict';
-
 	var MembersController = Backbone.Router.extend({
 		initialize: function () {
 			App.Vent.on('members:index', this._index, this);
@@ -36,11 +36,63 @@ define([
 			if ( searchParams) {
 				App.Collections.Members.search = searchParams;
 			}
-			App.Views.Active = new MembersListView({
-				collection: App.Collections.Members
+			App.Views.Active = new MembersIndexView;
+			requestAnimationFrame(function () {
+				App.Container.html(App.Views.Active.render().el);
+				App.Vent.trigger('global:scroll');
 			});
-			this._renderIndex();
+			this._renderLists();
 		},
+
+		/**
+		*	_renderIndex - fetch and render list of Members
+		*
+		*	@private
+		*	@function
+		*/
+		_renderLists: function (searchParams) {
+			var _this = this;
+			App.Collections.Members.fetch({
+				remove: false,
+				success: function (res) {
+					requestAnimationFrame(function () {
+						var effectiveMembers = new Backbone.Collection(App.Collections.Members.filter(function(model) {
+						    return !!(_.findWhere(model.get('categories'), {title: 'effective'}));
+						}));
+						_this._effectiveMembers(effectiveMembers);
+
+						var associatedMembers = new Backbone.Collection(App.Collections.Members.filter(function(model) {
+						    return !!(_.findWhere(model.get('categories'), {title: 'associated'}));
+						}));
+						_this._associatedMembers(associatedMembers);
+					});
+				},
+				error: function (res, err) {
+					requestAnimationFrame(function () {
+						App.Container.html(App.Views.Active.render().el);
+					});
+				}
+			});
+		},
+
+		_effectiveMembers: function (members) {
+			App.Views.EffectiveMembers = new EffectiveMembersListView({
+				collection: members,
+			});
+			requestAnimationFrame(function () {
+				$('#members-effective').html(App.Views.EffectiveMembers.render().el);
+			});
+		},
+
+		_associatedMembers: function (members) {
+			App.Views.AssociatedMembers = new AssociatedMembersListView({
+				collection: members,
+			});
+			requestAnimationFrame(function () {
+				$('#members-associated').html(App.Views.AssociatedMembers.render().el);
+			});
+		},
+
 
 		/**
 		*	_loadMore - load another "page" of Members and append it to the current list
@@ -52,29 +104,6 @@ define([
 		_loadMore: function (catg) {
 			App.Collections.Members.page++;
 			this._renderIndex();
-		},
-
-		/**
-		*	_renderIndex - fetch and render list of Members
-		*
-		*	@private
-		*	@function
-		*/
-		_renderIndex: function (searchParams) {
-			App.Collections.Members.fetch({
-				remove: false,
-				success: function (res) {
-					requestAnimationFrame(function () {
-						App.Container.html(App.Views.Active.render().el);
-						App.Vent.trigger('global:scroll');
-					});
-				},
-				error: function (res, err) {
-					requestAnimationFrame(function () {
-						App.Container.html(App.Views.Active.render().el);
-					});
-				}
-			});
 		},
 
 		/**
