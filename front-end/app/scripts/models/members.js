@@ -23,9 +23,10 @@ define([
 		parse: function(response, options)  {
 			var res = response.post || response;
 			if(res.date) {
-				var d = new Date(res.date);
-				var months = ['JAN', 'FEB', 'MAR', 'APR', 'MAI', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-				res.prettyDate = months[d.getMonth()] + '<br>' + d.getFullYear();
+				var d = res.date.split('-');
+				var months = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ'];
+
+				res.prettyDate = months[parseInt(d[1], 10) - 1] + '<br>' + d[0];
 			}
 
 			// calculate Estimated Reading Time

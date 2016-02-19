@@ -1,8 +1,8 @@
 <div class="post-list__header">
-	<div class="post-list__header__title">This page have every news of this website! Please take a look and tell me wath do you think!</div>
+	<div class="post-list__header__title">Esta página contém todas as notícias do CISP. Por favor dê-nos a sua opinião.</div>
 
 	<div class="post-list__header__search">
-		<input id="post-list-search" type="text" placeholder="Search">
+		<input id="post-list-search" type="text" placeholder="Pesquisar">
 		<button id="news-search-button" class="hidden">{{{view 'icons/ic_search'}}}</button>
 	</div>
 </div>
@@ -11,12 +11,12 @@
 {{#ifCond this.length '===' 0}}
 <div class="post-list__header__no-content">
 {{!-- {{{view 'icons/ic_notFound'}}} --}}
-	<p>Sorry, no results found.</p>
+	<p>Pedimos desculpa, não foram encontrados resultados.</p>
 </div>
 {{/ifCond}}
 </div>
 
 <div id="load-more-posts" class="load-more">MORE</div>
 {{#ifCond this.length '<' this.totalPosts}}
-<div id="load-more-posts" class="load-more">MORE</div>
+<div id="load-more-posts" class="load-more">MAIS</div>
 {{/ifCond}}

@@ -22,12 +22,11 @@ define([
 
 		parse: function(response, options)  {
 			var res = response.post || response;
-			var d = new Date(res.date);
-			var months = ['JAN', 'FEB', 'MAR', 'APR', 'MAI', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-			// calculate Estimated Reading Time
-			res.ert = Math.ceil((res.content.split(' ').length / 250));
 
-			res.prettyDate = months[d.getMonth()] + '<br>' + d.getFullYear();
+			var d = res.date.split('-');
+			var months = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ'];
+
+			res.prettyDate = months[parseInt(d[1], 10) - 1] + '<br>' + d[0];
 
 			return res;
 		}
