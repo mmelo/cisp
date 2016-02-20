@@ -7,6 +7,11 @@
 	padding-bottom: 8px;
 	min-width: 190px;
 	border-bottom: 2px solid $light-gray;
+
+	@include breakpoint(medium){
+		width: 100% !important;
+		flex: auto;
+	}
 	
 	&:after {
 		content:'';

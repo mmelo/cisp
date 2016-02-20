@@ -29,10 +29,6 @@ ul {
 blockquote, q {
   quotes: none; }
 
-@media (max-width: 900px) {
-  .post--project-item {
-    width: 100%; } }
-
 html, body, header, .post__thumbnail, .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn, .projects-container, .project__detail, .project__detail__wrapper, .publications-container, .publication-list, .publication-list .home__section__publication__content, .publication__item {
   width: 100%; }
 
@@ -42,6 +38,12 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
   width: 100%;
   max-width: 1200px;
   margin: 0 auto; }
+  @media (max-width: 900px) {
+    .app, .spinner, .posts-list, .posts-list .subtitle, .detail__category-wrapper,
+    .detail .post__content__details, .detail__excerpt, .detail__thumbnail__wrapper,
+    .detail__content__wrapper img {
+      max-width: 100%;
+      padding: 0 32px; } }
 
 .header__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .projects-container, .project__detail__wrapper, .sci-board__row, .sci-board__row__column, .sci-board__row__info__see-more, .posts-about__header__menu, .posts-about__header__menu li, .posts-about__sci-comission__header, .posts-about__thematic__header, .posts-about__management__header, .posts-about__contacts__header, .posts-about__contacts__container, .post-list__header, .post-list__new, .post-list__members__effective, .post-list__members__associated, .member__detail__wrapper, .member__detail__article__see-more, .publications-container, .publications-filter, .publications-filter-list, .publication-list, .publication__item {
   display: flex; }
@@ -288,6 +290,10 @@ body {
   padding-bottom: 8px;
   min-width: 190px;
   border-bottom: 2px solid #BFBEBE; }
+  @media (max-width: 900px) {
+    .home__section__new {
+      width: 100% !important;
+      flex: auto; } }
   .home__section__new:after {
     content: '';
     position: absolute;
@@ -343,6 +349,9 @@ body {
   padding-bottom: 8px;
   min-width: 190px;
   border-bottom: 2px solid #BFBEBE; }
+  @media (max-width: 900px) {
+    .home__section__publication {
+      width: 100%; } }
   .home__section__publication:hover {
     border-bottom: 2px solid #45639F; }
   .home__section__publication h4 {
@@ -379,6 +388,12 @@ body {
     .footer__logo svg {
       width: 260px;
       height: 60px; }
+    @media (max-width: 900px) {
+      .footer__logo {
+        width: 80px; }
+        .footer__logo svg {
+          width: 80px;
+          height: auto; } }
   .footer__copy-right {
     font-size: 12px;
     margin-bottom: 8px; }
@@ -388,6 +403,10 @@ body {
     width: 60px;
     height: 60px;
     margin: 0 24px 8px 24px; }
+    @media (max-width: 900px) {
+      .footer__partners__ensp, .footer__partners__unl, .footer__partners__fct {
+        width: 30px;
+        height: 30px; } }
   .footer__partners__ensp {
     background-image: url(../images/footer/logo_ensp.png); }
   .footer__partners__unl {
@@ -395,6 +414,9 @@ body {
   .footer__partners__fct {
     background-image: url(../images/footer/logo_fct.png);
     width: 182px; }
+    @media (max-width: 900px) {
+      .footer__partners__fct {
+        width: 82px; } }
 
 .spinner {
   position: relative;
@@ -470,6 +492,10 @@ body {
     line-height: 40px; }
   .post--project-item {
     padding: 40px; }
+    @media (max-width: 900px) {
+      .post--project-item {
+        width: 100% !important;
+        padding: 16px 0; } }
 
 .no-results {
   padding: 32px;
@@ -888,6 +914,9 @@ body {
     width: 50%;
     font-size: 22px;
     font-weight: 500; }
+    @media (max-width: 900px) {
+      .post-list__header__title {
+        font-size: 16px; } }
   .post-list__header__search input {
     width: 90px;
     padding: 4px 8px;
@@ -950,6 +979,10 @@ body {
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat; }
+    @media (max-width: 900px) {
+      .post-list__new__thumbnail {
+        flex: 0;
+        width: 0; } }
     .post-list__new__thumbnail__date {
       position: absolute;
       display: block;
@@ -1158,6 +1191,9 @@ body {
     width: 50%;
     height: 100%;
     flex-grow: 2; }
+    @media (max-width: 900px) {
+      .publication__item__column p {
+        padding-right: 64px; } }
     .publication__item__column--right {
       padding-left: 64px; }
   .publication__item__thumbnail {

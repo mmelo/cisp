@@ -10,6 +10,10 @@
 			width: 50%;
 			font-size: 22px;
 			font-weight: 500;
+
+			@include breakpoint(medium){
+				font-size: 16px;
+			}
 		}
 
 		&__search {
@@ -93,6 +97,11 @@
 			background-size: cover;
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
+
+			@include breakpoint(medium){
+				@include flex(0);
+				width: 0;
+			}
 
 			&__date {
 				position: absolute;

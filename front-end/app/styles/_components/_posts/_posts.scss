@@ -85,7 +85,8 @@
 		padding: 40px;
 
 		@include breakpoint(medium) {
-			@include _(full-width);
+			width: 100% !important;
+			padding: 16px 0;
 		}
 	}
 }
