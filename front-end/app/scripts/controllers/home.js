@@ -60,6 +60,7 @@ define([
 		_news: function () {
 			App.Collections.News = new NewsCollection;
 			App.Collections.News.count = 3;
+			App.Collections.News.isHome = true;
 			App.Collections.News.fetch({
 				remove: false,
 				success: function () {

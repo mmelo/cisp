@@ -175,7 +175,7 @@ define([
 			App.Collections.MemberPublications.fetch({
 				remove: false,
 				success: function (res) {
-					console.log(App.Collections.MemberPublications);
+					console.log(App.Collections.MemberPublications.toJSON());
 					requestAnimationFrame(function () {
 						$('#member-publications').html(App.Views.MemberPublications.render().el);
 						App.Vent.trigger('global:scroll');
@@ -193,7 +193,7 @@ define([
 			App.Collections.MemberProjects.fetch({
 				remove: false,
 				success: function (res) {
-					console.log(App.Collections.MemberProjects);
+					console.log(App.Collections.MemberProjects.toJSON());
 					requestAnimationFrame(function () {
 						$('#member-projects').html(App.Views.MemberProjects.render().el);
 						App.Vent.trigger('global:scroll');
