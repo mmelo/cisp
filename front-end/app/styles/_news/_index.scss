@@ -51,6 +51,10 @@
 				visibility: visible;
 			    opacity: 1;
 			    transition: opacity 0.5s, visibility 0.5s;
+
+			    &:hover {
+			    	cursor: pointer;
+			    }
 			}
 		}
 

@@ -34,6 +34,10 @@
 		height: 100%;
 		max-width: 600px;
 		padding: 32px 16px 0 0;
+
+		@include breakpoint(medium) {
+			padding-top: 15px;
+		}
 	}
 
 	&__wrapper {
@@ -51,6 +55,10 @@
 				&:hover {
 					cursor: pointer;
 				}
+			}
+
+			@include breakpoint(medium) {
+				height: 15px;
 			}
 		}
 

@@ -69,20 +69,22 @@ define([
 					var index = App.Collections.News.indexOf(App.Collections.News.model);
 					var indexSelected = App.Collections.News.at(index-2);
 					
-					if ( indexSelected.get('thumbnail') ) {
+					if ( indexSelected ) {
 						indexSelected.set('isLarge', true);
 					} else {
 						indexSelected = App.Collections.News.at(index-1);
 
-						if ( indexSelected.get('thumbnail') ) {
-							indexSelected.set('isLarge', true);
+						if (indexSelected) {
+							if ( indexSelected.get('thumbnail') ) {
+								indexSelected.set('isLarge', true);
+							}
 						} else {
 							indexSelected = App.Collections.News.at(index);
+							
 							if ( indexSelected.get('thumbnail') ) {
 								indexSelected.set('isLarge', true);
 							}
 						}
-
 					}
 					
 					requestAnimationFrame(function () {
