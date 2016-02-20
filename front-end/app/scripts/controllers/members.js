@@ -20,7 +20,7 @@ define([
 			App.Vent.on('members:index', this._index, this);
 			App.Vent.on('members:renderIndex', this._renderIndex, this);
 			App.Vent.on('members:detail', this._detail, this);
-			App.Vent.on('members:posts', this._getAllPosts, this);
+			// App.Vent.on('members:posts', this._getAllPosts, this);
 		},
 
 		/**
@@ -119,7 +119,7 @@ define([
 			if ( App.Collections.Members && App.Collections.Members.findWhere({ slug: options.slug }) ) {
 				App.Models.Detail = App.Collections.Members.findWhere({ slug: options.slug });
 				this._detailView(App.Models.Detail);
-				_this._getAllPosts();
+				// _this._getAllPosts();
 			} else {
 				App.Models.Detail = new MemberModel;
 				App.Models.Detail.set('slug', options.slug);
