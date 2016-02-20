@@ -9,6 +9,10 @@
 		@include _(flex-wrap);
 		padding: 8px;
 		text-align: center;
+
+		@include breakpoint(medium) {
+			justify-content: flex-start;
+		}
 	}
 	
 	&__logo {
@@ -31,6 +35,10 @@
 	&__copy-right {
 		font-size: 12px;
 		margin-bottom: 8px;
+
+		@include breakpoint(medium) {
+			max-width: 260px;
+		}
 	}
 
 	&__partners {
