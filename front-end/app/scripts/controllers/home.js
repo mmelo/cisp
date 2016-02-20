@@ -65,7 +65,6 @@ define([
 				remove: false,
 				success: function () {
 
-					console.log(App.Collections.News);
 					// setting isLarge attribute to n'th model of the collection to stylize.
 					var index = App.Collections.News.indexOf(App.Collections.News.model);
 					var indexSelected = App.Collections.News.at(index-2);
