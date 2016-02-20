@@ -91,6 +91,12 @@
 
 			flex-grow: 2;
 
+			@include breakpoint(medium) {
+				p {
+					padding-right: 64px;
+				}
+			}
+
 			&--right {
 				padding-left: 64px;
 			}

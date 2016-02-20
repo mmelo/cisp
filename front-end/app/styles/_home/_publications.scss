@@ -8,6 +8,10 @@
 	min-width: 190px;
 	border-bottom: 2px solid $light-gray;
 	@include _(flex);
+
+	@include breakpoint(medium){
+		width: 100%;
+	}
 	
 	&:hover {
 		border-bottom: 2px solid $blue-mariner;

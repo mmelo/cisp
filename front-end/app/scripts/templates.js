@@ -639,7 +639,7 @@ function program3(depth0,data) {
   buffer += "</button>\n	</div>\n</div>\n\n<div id=\"post-list-container\" class=\"post-list__container\">\n";
   stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.length), "===", 0, options) : helperMissing.call(depth0, "ifCond", (depth0 && depth0.length), "===", 0, options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</div>\n\n<div id=\"load-more-posts\" class=\"load-more\">MORE</div>\n";
+  buffer += "\n</div>\n\n";
   stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.length), "<", (depth0 && depth0.totalPosts), options) : helperMissing.call(depth0, "ifCond", (depth0 && depth0.length), "<", (depth0 && depth0.totalPosts), options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n";

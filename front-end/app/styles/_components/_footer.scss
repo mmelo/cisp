@@ -18,6 +18,14 @@
 			width: 260px;
 			height: 60px;
 		}
+
+		@include breakpoint(medium) {
+			width: 80px;
+			svg {
+				width: 80px;
+				height: auto;
+			}
+		}
 	}
 
 	&__copy-right {
@@ -38,6 +46,11 @@
 			width: 60px;
 			height: 60px;
 			margin: 0 24px 8px 24px ;
+
+			@include breakpoint(medium) {
+				width: 30px;
+				height: 30px;
+			}
 		}
 
 		&__ensp {
@@ -49,6 +62,9 @@
 		&__fct {
 			background-image: url(../images/footer/logo_fct.png);
 			width: 182px;
+			@include breakpoint(medium) {
+				width: 82px;
+			}
 		}
 	}
 }
