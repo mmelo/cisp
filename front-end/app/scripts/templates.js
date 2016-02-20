@@ -261,7 +261,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "<div class=\"menu__container\">\n	<div id=\"menu-button\" class=\"menu__button active\">MENU</div>\n\n	<div id=\"menu-wrapper\" class=\"menu__wrapper\">\n		<div class=\"menu__wrapper__close\" id=\"menu-close\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_close", options) : helperMissing.call(depth0, "view", "icons/ic_close", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</div>\n		<ul>\n			<li><a href=\"#sobre\">Sobre Nós.</a></li>\n			<li><a href=\"#membros\">Membros.</a></li>\n			<li><a href=\"#projectos\">Projectos.</a></li>\n			<li><a href=\"#seminarios\">Seminarios de Investigação de Saúde Pública.</a></li>\n			<li><a href=\"#publicacoes\">Publicações.</a></li>\n			<li><a href=\"#noticias\">Notícias.</a></li>\n		</ul>\n	</div>\n</div>";
+  buffer += "</div>\n		<ul>\n			<li><a href=\"#sobre\">Sobre Nós.</a></li>\n			<li><a href=\"#membros\">Membros.</a></li>\n			<li><a href=\"#projectos\">Projectos.</a></li>\n			<li><a href=\"#seminarios\">Public Health Research Seminars.</a></li>\n			<li><a href=\"#publicacoes\">Publicações.</a></li>\n			<li><a href=\"#noticias\">Notícias.</a></li>\n		</ul>\n	</div>\n</div>";
   return buffer;
   });
 
@@ -935,17 +935,17 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "";
-  buffer += "\n<div class=\"post-list__header__no-content\">\n\n	<p>Sorry, no results were found.</p>\n</div>\n";
+  buffer += "\n<div class=\"post-list__header__no-content\">\n\n	<p>Pedimos desculpa, não foram encontrados resultados.</p>\n</div>\n";
   return buffer;
   }
 
-  buffer += "<div class=\"post-list__header\">\n	<div class=\"post-list__header__title\">This page contains all seminars, please let us know what you think!</div>\n\n	<div class=\"post-list__header__search\">\n		<input id=\"post-list-search\" type=\"text\" placeholder=\"Search\">\n		<button id=\"news-search-button\" class=\"hidden\">";
+  buffer += "<div class=\"post-list__header\">\n	<div class=\"post-list__header__title\">Esta página contém todos os seminários, por favor dê-nos a sua opinião</div>\n\n	<div class=\"post-list__header__search\">\n		<input id=\"post-list-search\" type=\"text\" placeholder=\"Pesquisar\">\n		<button id=\"news-search-button\" class=\"hidden\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_search", options) : helperMissing.call(depth0, "view", "icons/ic_search", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</button>\n	</div>\n</div>\n\n<div id=\"post-list-container\" class=\"post-list__container\">\n";
   stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.length), "===", 0, options) : helperMissing.call(depth0, "ifCond", (depth0 && depth0.length), "===", 0, options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</div>\n\n<div id=\"load-more-posts\" class=\"load-more\">MORE</div>\n";
+  buffer += "\n</div>\n\n<div id=\"load-more-posts\" class=\"load-more\">MAIS</div>\n";
   return buffer;
   });
 

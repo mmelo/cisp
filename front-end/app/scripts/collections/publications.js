@@ -11,7 +11,7 @@ define([
 		url: function () {
 			var url = App.BaseUrl + '?json=get_posts&post_type=publication';
 			if ( this.author ) {
-				url += ('&auhor_slug=' + this.author);
+				url = App.BaseUrl + ('?json=get_author_posts&post_type=publication&slug=' + this.author.slug);
 			}
 			return url + (this.count ? '&count=' + this.count : '') + (this.page ? '&page=' + this.page : '');
 		},
