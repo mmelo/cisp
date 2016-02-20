@@ -76,6 +76,7 @@
 		@include breakpoint(small) {
 			font-size: 27px;
 			min-width: 185px;
+			margin-left: 0;
 		}
 	}
 

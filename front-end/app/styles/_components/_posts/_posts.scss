@@ -10,6 +10,12 @@
 		padding: 16px 0 16px 0;
 		text-transform: uppercase;
 	}
+
+	&--news {
+		@include breakpoint(small) {
+			padding-left: 24px;
+		}
+	}
 }
 
 .post {

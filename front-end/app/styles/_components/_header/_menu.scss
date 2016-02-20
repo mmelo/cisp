@@ -38,6 +38,10 @@
 		@include breakpoint(medium) {
 			padding-top: 15px;
 		}
+
+		@include breakpoint(x-small) {
+			padding: 15px 0 0 0;
+		}
 	}
 
 	&__wrapper {
@@ -87,6 +91,10 @@
 
 			@include breakpoint(small) {
 				font-size: 21px;
+			}
+
+			@include breakpoint(x-small) {
+				font-size: 16px;
 			}
 		}
 	}

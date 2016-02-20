@@ -1,5 +1,6 @@
 .home__section__publication {
 	//@include flex(1);
+	@include _(flex);
 	position: relative;
 	width: calc(33.333% - 24px);
 	margin: 0 24px 16px 0;
@@ -7,10 +8,11 @@
 	padding-bottom: 8px;
 	min-width: 190px;
 	border-bottom: 2px solid $light-gray;
-	@include _(flex);
+	
 
 	@include breakpoint(medium){
 		width: 100%;
+		margin-right: 0;
 	}
 	
 	&:hover {

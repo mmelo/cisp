@@ -2,6 +2,10 @@
 	margin-top: 80px;
 	padding: 16px 32px;
 
+	@include breakpoint(small) {
+		padding: 8px;
+	}
+
 	&__container {
 		@include _(flex);
 		@include _(space-between);
@@ -12,6 +16,10 @@
 
 		@include breakpoint(medium) {
 			justify-content: flex-start;
+		}
+
+		@include breakpoint(small) {
+			justify-content: center;
 		}
 	}
 	
@@ -45,6 +53,10 @@
 		@include _(flex);
 		@include _(space-between);
 		@include _(align-items-center);
+
+		@include breakpoint(x-small) {
+			@include _(flex-wrap);
+		}
 
 		&__ensp,
 		&__unl,

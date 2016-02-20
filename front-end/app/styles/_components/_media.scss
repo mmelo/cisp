@@ -6,6 +6,7 @@
 // When generating a placeholder,
 // The same placeholder will be generated in every breakpoint
 $breakpoints: (
+  "x-small"  : 400px,
   "small"  : 600px,
   "medium" : 900px,
   "large": 2560px,
