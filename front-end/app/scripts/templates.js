@@ -268,10 +268,17 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/scripts/templates/home/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing;
 
 
-  return "<section class=\"home__section\" id=\"home-news\"> </section>\n\n<section class=\"home__section\" id=\"home-publications\"> </section>";
+  buffer += "<section class=\"home__section\" id=\"home-news\">";
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "components/spinner", options) : helperMissing.call(depth0, "view", "components/spinner", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</section>\n\n<section class=\"home__section\" id=\"home-publications\">";
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "components/spinner", options) : helperMissing.call(depth0, "view", "components/spinner", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</section>";
+  return buffer;
   });
 
 this["JST"]["app/scripts/templates/home/newsItem.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -489,10 +496,17 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/scripts/templates/members/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing;
 
 
-  return "<h3 class=\"post-list__title\">Membros Efectivos</h3>\n<div id=\"effective-list\">\n	<div id=\"members-effective\" class=\"post-list__members__effective\"></div>\n</div>\n\n<h3 class=\"post-list__title post-list__title--associated\">Membros Associados</h3>\n<div id=\"members-associated\" class=\"post-list__members__associated\"></div>";
+  buffer += "<h3 class=\"post-list__title\">Membros Efectivos</h3>\n<div id=\"effective-list\">\n	<div id=\"members-effective\" class=\"post-list__members__effective\">";
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "components/spinner", options) : helperMissing.call(depth0, "view", "components/spinner", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</div>\n</div>\n\n<h3 class=\"post-list__title post-list__title--associated\">Membros Associados</h3>\n<div id=\"members-associated\" class=\"post-list__members__associated\">";
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "components/spinner", options) : helperMissing.call(depth0, "view", "components/spinner", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</div>";
+  return buffer;
   });
 
 this["JST"]["app/scripts/templates/members/item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
