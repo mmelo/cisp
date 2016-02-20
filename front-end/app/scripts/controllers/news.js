@@ -31,7 +31,7 @@ define([
 			
 			if (params) {				
 				var paramsUrl = params.replace(' ', '-').toLowerCase(); // prepare params to url (todo: replace special characters)
-				App.Router.navigate('#news?' + paramsUrl)
+				App.Router.navigate('#noticias?' + paramsUrl)
 
 				var paramsEscaped = escape(params); // html escape to params to be searched
 				App.Collections.News.search = paramsEscaped;

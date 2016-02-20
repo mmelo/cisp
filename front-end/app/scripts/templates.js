@@ -320,7 +320,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"home__section__title\"><a href=\"#news\">Notícias</a></div>";
+  return "<div class=\"home__section__title\"><a href=\"#noticias\">Notícias</a></div>";
   });
 
 this["JST"]["app/scripts/templates/home/publicationsItem.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
