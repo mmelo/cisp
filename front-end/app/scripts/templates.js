@@ -302,8 +302,7 @@ function program1(depth0,data) {
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
     + "</h4>\n	<p>";
-  if (helper = helpers.excerpt) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.excerpt); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  stack1 = ((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.excerpt)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1);
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</p>\n	<a href=\"#noticias\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
@@ -639,7 +638,7 @@ function program3(depth0,data) {
   return "\n<div id=\"load-more-posts\" class=\"load-more\">MAIS</div>\n";
   }
 
-  buffer += "<div class=\"post-list__header\">\n	<div class=\"post-list__header__title\">Esta página contém todas as notícias do CISP. Por favor dê-nos a sua opinião.</div>\n\n	<div class=\"post-list__header__search\">\n		<input id=\"post-list-search\" type=\"text\" placeholder=\"Pesquisar\">\n		<button id=\"news-search-button\" class=\"hidden\">";
+  buffer += "<div class=\"post-list__header\">\n	<div class=\"post-list__header__title\"></div>\n\n	<div class=\"post-list__header__search\">\n		<input id=\"post-list-search\" type=\"text\" placeholder=\"Pesquisar\">\n		<button id=\"news-search-button\" class=\"hidden\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_search", options) : helperMissing.call(depth0, "view", "icons/ic_search", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</button>\n	</div>\n</div>\n\n<div id=\"post-list-container\" class=\"post-list__container\">\n";
@@ -1001,7 +1000,7 @@ function program3(depth0,data) {
   return "\n<div id=\"load-more-posts\" class=\"load-more\">MAIS</div>\n";
   }
 
-  buffer += "<div class=\"post-list__header\">\n	<div class=\"post-list__header__title\">Esta página contém todos os seminários, por favor dê-nos a sua opinião</div>\n\n	<div class=\"post-list__header__search\">\n		<input id=\"post-list-search\" type=\"text\" placeholder=\"Pesquisar\">\n		<button id=\"news-search-button\" class=\"hidden\">";
+  buffer += "<div class=\"post-list__header\">\n	<div class=\"post-list__header__title\"></div>\n\n	<div class=\"post-list__header__search\">\n		<input id=\"post-list-search\" type=\"text\" placeholder=\"Pesquisar\">\n		<button id=\"seminars-search-button\" class=\"hidden\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_search", options) : helperMissing.call(depth0, "view", "icons/ic_search", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</button>\n	</div>\n</div>\n\n<div id=\"post-list-container\" class=\"post-list__container\">\n";

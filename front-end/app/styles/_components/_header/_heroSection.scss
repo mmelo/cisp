@@ -56,6 +56,10 @@
 			background-color: $white;
 			border-bottom: 1px solid $white;
 		}
+
+		@include breakpoint(medium) {
+			margin-top: 32px;
+		}
 	}
 
 	&__block {
@@ -72,6 +76,10 @@
 			color: $white;
 			font-weight: 400;
 			line-height: 18px;
+		}
+
+		@include breakpoint(medium) {
+			margin-top: 40px;
 		}
 	}
 
@@ -93,5 +101,9 @@
 				font-size: 40px
 	    	}
 	    }
+
+	    @include breakpoint(medium) {
+			margin-top: 90px;
+		}
 	}
 }

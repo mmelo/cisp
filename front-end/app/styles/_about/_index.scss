@@ -402,8 +402,11 @@
 			padding-top: 48px;
 
 			&__block {
+				margin: 0 16px;
 				max-width: 150px;
+				min-width: 115px;
 				text-align: center;
+
 
 				svg {
 					fill: $white;
