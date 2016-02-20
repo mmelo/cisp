@@ -15,7 +15,7 @@ define([
 
         tagName: 'section',
 
-        id: 'posts-list',
+        id: 'posts-list-publications',
 
         className: 'posts-list posts-list--members',
 

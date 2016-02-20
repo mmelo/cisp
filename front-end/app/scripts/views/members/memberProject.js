@@ -18,7 +18,7 @@ define([
 			return 'member-' + this.model.get('id');
 		},
 
-		className: 'post-list__member post-list__member--publication',
+		className: 'post-list__member post-list__member--project',
 
 		events: {},
 

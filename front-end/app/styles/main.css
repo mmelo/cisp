@@ -1003,6 +1003,8 @@ body {
     min-width: 20%; }
     .post-list__member--publication {
       width: 100%; }
+    .post-list__member--project {
+      width: 100%; }
     .post-list__member__thumbnail {
       margin: 0 auto;
       position: relative;
@@ -1025,6 +1027,11 @@ body {
         .post-list__member__content__name p {
           margin-bottom: 8px; }
 
+.posts-list--members h2 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 16px; }
+
 .member__detail__close {
   position: absolute;
   top: 50px;
@@ -1045,11 +1052,11 @@ body {
   padding: 80px 16px 0 16px; }
   .member__detail__column--person {
     text-align: center; }
-  .member__detail__column--details {
-    padding-top: 200px; }
   .member__detail__column--info {
     padding-top: 150px;
     line-height: 21px; }
+  .member__detail__column--details {
+    padding-top: 100px; }
 
 .member__detail__thumbnail {
   margin: 0 auto;
@@ -1072,6 +1079,7 @@ body {
   font-weight: 600; }
 
 .member__detail__article {
+  width: 100%;
   position: relative;
   margin-top: 24px;
   border-bottom: 2px solid #BFBEBE;
