@@ -146,8 +146,10 @@ define([
 			//console.log(member.toJSON())
 			requestAnimationFrame(function () {
 				App.Container.html(App.Views.Active.render().el);
-				_this._getMemberPublications(member.get('slug'));
-				_this._getMemberProjects(member.get('slug'));
+				setTimeout(function () {
+					_this._getMemberPublications(member.get('slug'));
+					_this._getMemberProjects(member.get('slug'));
+				}, 200);
 			});
 		},
 

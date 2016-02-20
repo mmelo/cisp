@@ -65,26 +65,25 @@ define([
 				remove: false,
 				success: function () {
 
-					console.log(App.Collections.News);
-					// // setting isLarge attribute to n'th model of the collection to stylize.
-					// var index = App.Collections.News.indexOf(App.Collections.News.model);
-					// var indexSelected = App.Collections.News.at(index-2);
+					// setting isLarge attribute to n'th model of the collection to stylize.
+					var index = App.Collections.News.indexOf(App.Collections.News.model);
+					var indexSelected = App.Collections.News.at(index-2);
 					
-					// if ( indexSelected.get('thumbnail') ) {
-					// 	indexSelected.set('isLarge', true);
-					// } else {
-					// 	indexSelected = App.Collections.News.at(index-1);
+					if ( indexSelected.get('thumbnail') ) {
+						indexSelected.set('isLarge', true);
+					} else {
+						indexSelected = App.Collections.News.at(index-1);
 
-					// 	if ( indexSelected.get('thumbnail') ) {
-					// 		indexSelected.set('isLarge', true);
-					// 	} else {
-					// 		indexSelected = App.Collections.News.at(index);
-					// 		if ( indexSelected.get('thumbnail') ) {
-					// 			indexSelected.set('isLarge', true);
-					// 		}
-					// 	}
+						if ( indexSelected.get('thumbnail') ) {
+							indexSelected.set('isLarge', true);
+						} else {
+							indexSelected = App.Collections.News.at(index);
+							if ( indexSelected.get('thumbnail') ) {
+								indexSelected.set('isLarge', true);
+							}
+						}
 
-					// }
+					}
 					
 					requestAnimationFrame(function () {
 						App.Views.News = new NewsListView({

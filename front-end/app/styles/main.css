@@ -66,7 +66,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 .home__section__new a, .home__section__publication a, .footer__container, .footer__partners, .sci-board__row__column, .sci-board__row__info__see-more, .posts-about__header__menu, .member__detail__article__see-more {
   align-items: center; }
 
-.home__section, .posts-list, .projects-container, .post-list__members__effective, .post-list__members__associated, .member__detail__wrapper, .publications-container, .publications-filter, .publications-filter-list, .publication-list {
+.home__section, .footer__container, .posts-list, .projects-container, .post-list__members__effective, .post-list__members__associated, .member__detail__wrapper, .publications-container, .publications-filter, .publications-filter-list, .publication-list {
   flex-wrap: wrap; }
 
 .no-results {
@@ -828,7 +828,7 @@ body {
     font-size: 22px;
     font-weight: 500; }
   .post-list__header__search input {
-    width: 50px;
+    width: 90px;
     padding: 4px 8px;
     font-size: 14px;
     border: 1px solid #BFBEBE;
@@ -930,7 +930,7 @@ body {
       .post-list__header__title {
         font-size: 16px; } }
   .post-list__header__search input {
-    width: 50px;
+    width: 90px;
     padding: 4px 8px;
     font-size: 14px;
     border: 1px solid #BFBEBE;
