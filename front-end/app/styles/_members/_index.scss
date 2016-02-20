@@ -39,6 +39,10 @@
 			width: 100%;
 		}
 
+		&--project {
+			width: 100%;
+		}
+
 		&__thumbnail {
 			margin: 0 auto;
 			position: relative;
@@ -69,6 +73,17 @@
 				}
 			}
 
+		}
+	}
+}
+
+.posts-list {
+	
+	&--members {
+		h2 {
+			font-weight: 600;
+			font-size: 20px;
+			margin-left: 16px ;
 		}
 	}
 }

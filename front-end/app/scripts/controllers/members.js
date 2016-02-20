@@ -143,15 +143,15 @@ define([
 			App.Views.Active = new MemberDetailView({
 				model: member
 			});
+			console.log(member.toJSON())
 			requestAnimationFrame(function () {
 				App.Container.html(App.Views.Active.render().el);
-				_this._getMemberPublications();
-				_this._getMemberProjects();
+				_this._getMemberPublications(member.get('slug'));
+				_this._getMemberProjects(member.get('slug'));
 			});
 		},
 
 		_getMemberPublications: function (slug) {
-			slug = 'julian';
 			App.Collections.MemberPublications = new MembersPublicationsCollection;
 			App.Collections.MemberPublications.slug = slug;
 			App.Views.MemberPublications = new MemberPublicationsView({
@@ -159,16 +159,6 @@ define([
 			});
 			this._renderMemberPublications();
 			
-		},
-
-		_getMemberProjects: function (slug) {
-			slug = 'julian';
-			App.Collections.MemberProjects = new MembersProjectsCollection;
-			App.Collections.MemberProjects.slug = slug;
-			App.Views.MemberProjects = new MemberProjectsView({
-				collection: App.Collections.MemberProjects
-			});
-			this._renderMemberProjects();
 		},
 
 		_renderMemberPublications: function () {
@@ -182,11 +172,21 @@ define([
 					});
 				},
 				error: function (res, err) {
-					// requestAnimationFrame(function () {
-					// 	App.Container.html(App.Views.Active.render().el);
-					// });
+					requestAnimationFrame(function () {
+						$('#member-publications').html(App.Views.MemberPublications.render().el);
+						App.Vent.trigger('global:scroll');
+					});
 				}
 			});
+		},
+
+		_getMemberProjects: function (slug) {
+			App.Collections.MemberProjects = new MembersProjectsCollection;
+			App.Collections.MemberProjects.slug = slug;
+			App.Views.MemberProjects = new MemberProjectsView({
+				collection: App.Collections.MemberProjects
+			});
+			this._renderMemberProjects();
 		},
 
 		_renderMemberProjects: function () {
@@ -200,9 +200,10 @@ define([
 					});
 				},
 				error: function (res, err) {
-					// requestAnimationFrame(function () {
-					// 	App.Container.html(App.Views.Active.render().el);
-					// });
+					requestAnimationFrame(function () {
+						$('#member-projects').html(App.Views.MemberProjects.render().el);
+						App.Vent.trigger('global:scroll');
+					});
 				}
 			});
 		}

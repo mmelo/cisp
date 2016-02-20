@@ -1,1 +1,7 @@
-<h2>PUBLICAÇÔES</h2>
+<h2 class="member__detail__article__title">PUBLICAÇÔES</h2>
+
+{{#ifCond this.length '===' 0}}
+<article class="member__detail__article">
+	<p>Sem publicações para apresentar</p>
+</article>
+{{/ifCond}}

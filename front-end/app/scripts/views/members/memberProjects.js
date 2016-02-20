@@ -10,12 +10,12 @@ define([
 ], function ($, _, Backbone, JST, MemberProjectView) {
     'use strict';
 
-    var MemebrsProjectsView = Backbone.CollectionView.extend({
-        template: JST['app/scripts/templates/members/memberProject.hbs'],
+    var MembersProjectsView = Backbone.CollectionView.extend({
+        template: JST['app/scripts/templates/members/memberProjects.hbs'],
 
         tagName: 'section',
 
-        id: 'posts-list',
+        id: 'posts-list-projects',
 
         className: 'posts-list posts-list--members',
 
@@ -26,5 +26,5 @@ define([
 
     });
 
-    return MemebrsProjectsView;
+    return MembersProjectsView;
 });

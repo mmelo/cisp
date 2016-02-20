@@ -29,13 +29,13 @@
 			text-align: center;
 		}
 
-		&--details {
-			padding-top: 200px;
-		}
-
 		&--info {
 			padding-top: 150px;
 			line-height: 21px;
+		}
+
+		&--details {
+			padding-top: 100px;
 		}
 	}
 
@@ -63,10 +63,12 @@
 	}
 
 	&__article {
+		width: 100%;
 		position: relative;
 		margin-top: 24px;
 		border-bottom: 2px solid $light-gray;
 		padding-bottom: 8px;
+
 
 		&:after {
 			content:'';
