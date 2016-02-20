@@ -14,7 +14,7 @@ define([
 
         tagName: 'div',
 
-        className: 'members_index',
+        className: '.post-list post-list__members',
 
         events: {}
     });

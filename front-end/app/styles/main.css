@@ -992,10 +992,12 @@ body {
     text-transform: uppercase; }
     .post-list__title--associated {
       margin-top: 48px; }
-  .post-list__members__effective {
-    width: 100%; }
-  .post-list__members__associated {
-    width: 100%; }
+  .post-list__members {
+    padding-top: 24px; }
+    .post-list__members__effective {
+      width: 100%; }
+    .post-list__members__associated {
+      width: 100%; }
   .post-list__member {
     margin: 16px;
     min-width: 20%; }

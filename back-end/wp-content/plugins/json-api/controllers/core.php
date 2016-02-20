@@ -46,7 +46,7 @@ class JSON_API_Core_Controller {
     global $json_api;
     $url = parse_url($_SERVER['REQUEST_URI']);
     $defaults = array(
-      'ignore_sticky_posts' => true
+      'ignore_sticky_posts' => false
     );
     $query = wp_parse_args($url['query']);
     unset($query['json']);

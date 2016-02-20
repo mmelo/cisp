@@ -14,6 +14,7 @@
 	}
 	
 	&__members {
+		padding-top: 24px;
 
 		&__effective {
 			@include _(flex);

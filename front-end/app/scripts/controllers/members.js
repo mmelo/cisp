@@ -33,6 +33,7 @@ define([
 		_index: function (catg, searchParams) {
 			App.Collections.Members = new MembersCollection;
 			App.Collections.Members.catg = catg;
+			App.Collections.Members.count = 60;
 			if ( searchParams) {
 				App.Collections.Members.search = searchParams;
 			}

@@ -181,7 +181,7 @@ class JSON_API_Introspector {
     ");
     $all_authors = array_map(array(&$this, 'get_author_by_id'), $author_ids);
     $active_authors = array_filter($all_authors, array(&$this, 'is_active_author'));
-    return $active_authors;
+    return $all_authors;
   }
   
   public function get_current_author() {
