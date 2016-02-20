@@ -8,12 +8,15 @@
 	}
 
 	&__container {
+		@include _(flex);
+		@include _(flex-column);
+		@include _(space-between);
 		color: $white;
 		width: 100%;
 		height: 100%;
 		max-width: 600px;
 		margin-left: auto;
-		padding: 32px 0 0 16px;
+		padding: 32px 0 16px 16px;
 	}
 
 	&__logo {
@@ -46,7 +49,7 @@
 		position: relative;
 		margin-left: 32px;
 		text-align: right;
-		margin-top: 72px;
+		// margin-top: 72px;
 
 		&__underline {
 			position: absolute;
@@ -55,17 +58,31 @@
 			left: 0;
 			background-color: $white;
 			border-bottom: 1px solid $white;
+
+			@include breakpoint(medium) {
+				width: 78px;
+			}
+
+			@include breakpoint(small) {
+				width: 68px;
+			}
 		}
 
 		@include breakpoint(medium) {
 			margin-top: 20px;
+			font-size: 30px
+		}
+
+		@include breakpoint(small) {
+			font-size: 27px;
+			min-width: 185px;
 		}
 	}
 
 	&__block {
 		display: block;
 		float: left;
-		margin-top: 80px;
+		// margin-top: 80px;
 		max-width: 300px;
 
 		&__title {
@@ -81,6 +98,10 @@
 		@include breakpoint(medium) {
 			margin-top: 30px;
 		}
+
+		@include breakpoint(small) {
+			display: none;
+		}
 	}
 
 	&__page-identifier {
@@ -92,18 +113,33 @@
 			font-size: 50px;
 		    text-transform: uppercase;
 		    text-decoration: underline;
+
+		    @include breakpoint(small) {
+				font-size: 30px;
+				line-height: 30px;
+			}
 	    }
 
 	    &--small {
 	    	margin-top: 290px;
+
 	    	a {
 				line-height: 50px;
-				font-size: 40px
+				font-size: 40px;
+
+				@include breakpoint(small) {
+					font-size: 20px;
+					line-height: 30px;
+				}
 	    	}
 	    }
 
 	    @include breakpoint(medium) {
-			margin-top: 90px;
+			margin-top: 50px;
+		}
+
+		@include breakpoint(small) {
+			// margin: 10px;
 		}
 	}
 }

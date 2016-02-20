@@ -110,7 +110,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing;
 
 
-  buffer += "<div class=\"posts-about__management\" id=\"management\">\n	<div class=\"posts-about__management__header\">\n		<h4 class=\"posts-about__management__header__title\">gestão</h4>\n\n		<p class=\"posts-about__management__header__content\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit error natus hic voluptatem ducimus non, mollitia in animi ab alias facilis saepe repudiandae. Vel in, aliquam nobis! Quibusdam, nulla, tempore?</p>\n	</div>\n	\n	<div class=\"sci-board__row\">\n		\n		<div class=\"sci-board__row__column sci-board__row__column--align-right\">\n			<div class=\"sci-board__row__thumbnail posts-about__management--thumbnail\" style=\"background-image: url('images/about/scientific_board/paula_lobato_faria.jpg')\"></div>\n		</div>\n\n		<div class=\"sci-board__row__column sci-board__row__column--second\">\n			<div class=\"sci-board__row__info posts-about__management--info posts-about__management--info--align-left\">\n				<div class=\"sci-board__row__info__position\">Cargo</div>\n				<div class=\"sci-board__row__info__name\">Paula Lobato Faria</div>\n				<div class=\"sci-board__row__info__description posts-about__management--description\">\n					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n					consequat.\n				</div>\n\n				<a href=\"\" class=\"sci-board__row__info__see-more posts-about__management--see-more\">";
+  buffer += "<div class=\"posts-about__management\" id=\"management\">\n	<div class=\"posts-about__management__header\">\n		<h4 class=\"posts-about__management__header__title\">gestão</h4>\n\n		\n	</div>\n	\n	<div class=\"sci-board__row\">\n		\n		<div class=\"sci-board__row__column sci-board__row__column--align-right\">\n			<div class=\"sci-board__row__thumbnail posts-about__management--thumbnail\" style=\"background-image: url('images/about/scientific_board/paula_lobato_faria.jpg')\"></div>\n		</div>\n\n		<div class=\"sci-board__row__column sci-board__row__column--second\">\n			<div class=\"sci-board__row__info posts-about__management--info posts-about__management--info--align-left\">\n				<div class=\"sci-board__row__info__position\">Cargo</div>\n				<div class=\"sci-board__row__info__name\">Paula Lobato Faria</div>\n				<div class=\"sci-board__row__info__description posts-about__management--description\">\n					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n					consequat.\n				</div>\n\n				<a href=\"\" class=\"sci-board__row__info__see-more posts-about__management--see-more\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += " ver mais</a>\n\n			</div>\n		</div>\n\n	</div>\n\n	<div class=\"sci-board__row\">\n		\n		<div class=\"sci-board__row__column\">\n			<div class=\"sci-board__row__info sci-board__row__info--align-right posts-about__management--info\">\n				<div class=\"sci-board__row__info__position\">Cargo</div>\n				<div class=\"sci-board__row__info__name\">Carlos Dias</div>\n				<div class=\"sci-board__row__info__description posts-about__management--description\">\n					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n					consequat.\n				</div>\n\n				<a href=\"\" class=\"sci-board__row__info__see-more sci-board__row__info__see-more--align-right posts-about__management--see-more\">";
@@ -921,10 +921,11 @@ function program4(depth0,data) {
 this["JST"]["app/scripts/templates/publications/filters.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "";
 
 
-  return "<div class=\"tab\">por Autor</div>\n<div class=\"tab\">por Ano</div>\n<select name=\"authors-list\" id=\"authors-list\" class=\"dropdown\">\n	<option value=\"all\" selected=\"selected\">todos</option>\n</select>\n<div id=\"search\" class=\"search\">Pesquisar</div>";
+  buffer += "<div class=\"tab\">Pesquisar por Autor</div>\n\n<select name=\"authors-list\" id=\"authors-list\" class=\"dropdown\">\n	<option value=\"all\" selected=\"selected\">todos</option>\n</select>\n<div id=\"search\" class=\"search\">Pesquisar</div>";
+  return buffer;
   });
 
 this["JST"]["app/scripts/templates/publications/filtersitem.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -949,7 +950,7 @@ function program1(depth0,data) {
   return "\n<div id=\"load-more-posts\" class=\"load-more\">MAIS</div>\n";
   }
 
-  buffer += "<div class=\"post-list__header__title\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</div>\n<div id=\"publications-filter\" class=\"publications-filter\">\n	\n</div>\n<div id=\"publications-container\" class=\"publications-container\"></div>\n\n";
+  buffer += "<div class=\"post-list__header__title\"></div>\n<div id=\"publications-filter\" class=\"publications-filter\">\n	\n</div>\n<div id=\"publications-container\" class=\"publications-container\"></div>\n\n";
   stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.length), "<", (depth0 && depth0.totalPosts), options) : helperMissing.call(depth0, "ifCond", (depth0 && depth0.length), "<", (depth0 && depth0.totalPosts), options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n";

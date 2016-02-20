@@ -4,6 +4,9 @@
 	padding-bottom: 48px;
 	background-color: $blue-mariner;
 	color: $white;
+	@include breakpoint(small) {
+		padding: 8px 8px;
+	}
 	
 	&:before {
 		content: '';
@@ -23,11 +26,20 @@
 		width: 10px;
 		height: 80%;
 		background-color: $white;
+
+		@include breakpoint(small) {
+			display: none;
+		}
 	}
+
 	&__row {
 		@include _(flex);
 		width: 100%;
 		margin-top: 80px;
+		
+		@include breakpoint(small) {
+			@include _(flex-wrap);
+		}
 
 		&:first-child {
 			margin-bottom: 72px;
@@ -43,6 +55,13 @@
 			font-weight: 500;
 			text-decoration: underline;
 			text-transform: uppercase;
+
+			@include breakpoint(small) {
+				font-size: 30px;
+				line-height: 40px;
+				width: 100%;
+				padding-left: 30px;
+			}
 		}
 
 		&__description {
@@ -55,16 +74,26 @@
 			@include _(align-items-center);
 			width: 50%;
 
+			@include breakpoint(small) {
+				width: 100%;
+				order: 2;
+			}
+
 			&--align-right {
 				padding-left: 140px;
+				
+				@include breakpoint(small) {
+					padding-left: 0;
+				}
 			}
 
 			&--align-left {
 				padding-right: 140px;
-			}
-
-			&--second {
 				
+				@include breakpoint(small) {
+					padding-right: 0;
+					order: 1;
+				}
 			}
 		}
 
@@ -83,10 +112,18 @@
 			width: 70%;
 			text-align: left;
 
+			@include breakpoint(small) {
+				width: 100%;
+			}
+
 			&--align-right {
 				text-align: right;
 				margin-left: auto;
 				margin-right: 0;
+
+				@include breakpoint(small) {
+					text-align: left;
+				}
 			}
 			
 			&__position {
@@ -136,6 +173,10 @@
 .posts-about {
 	padding: 16px;
 
+	@include breakpoint(small) {
+		padding: 16px 0;
+	}
+
 	&__header {
 		width: 100%;
 		margin-bottom: 32px;
@@ -172,6 +213,10 @@
 
 		&__text {
 			padding: 16px 32px;
+
+			@include breakpoint(small) {
+				padding: 0;
+			}
 
 			p {
 				margin-bottom: 4px;
@@ -247,18 +292,29 @@
 			border-bottom: 2px solid $blue-mariner;
 			margin-left: 80px;
 
+			@include breakpoint(small) {
+				margin-left: 0;
+			}
+
 			&__title {
 				width: 50%;
 				font-size: 60px;
 				line-height: 45px;
 				text-transform: uppercase;
 				margin: 0;
+				@include breakpoint(small) {
+					font-size: 48px;
+				}
 			}
 		}
 
 		&__container {
 			position: relative;
 			padding: 40px 80px 50px 80px;
+
+			@include breakpoint(small) {
+				padding: 20px;
+			}
 			
 			&:after {
 				position: absolute;
@@ -304,6 +360,10 @@
 		position: relative;
 		z-index: 2;
 
+		@include breakpoint(small) {
+			padding: 0 8px;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -326,6 +386,10 @@
 				line-height: 45px;
 				text-transform: uppercase;
 				margin: 0 80px;
+
+				@include breakpoint(small) {
+					font-size: 40px;
+				}
 			}
 
 			&__content {
@@ -376,6 +440,11 @@
 		color: $white;
 		padding: 24px 80px;
 
+		@include breakpoint(small) {
+			padding: 16px 0;
+			margin-top: 80px;
+		}
+
 		&__header {
 			@include _(flex);
 
@@ -387,6 +456,10 @@
 				text-transform: uppercase;
 				margin: 0;
 				font-weight: 600;
+
+				@include breakpoint(small) {
+					font-size: 40px;
+				}
 			}
 
 			&__content {
@@ -397,10 +470,14 @@
 
 		&__container {
 			@include _(flex);
+			@include _(flex-wrap)
 			@include _(space-around);
 			padding: 0 200px;
 			padding-top: 48px;
-
+			
+			@include breakpoint(small) {
+				padding: 48px 0 0 0;
+			}
 			&__block {
 				margin: 0 16px;
 				max-width: 150px;

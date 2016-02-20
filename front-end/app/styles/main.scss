@@ -34,6 +34,11 @@ body {
 	@include breakpoint(medium) {
 		margin-top: 300px;
 	}
+
+	@include breakpoint(small) {
+		margin-top: 300px;
+		padding: 0;
+	}
 }
 
 @import "_components/_header/_header",

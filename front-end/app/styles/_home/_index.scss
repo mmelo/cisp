@@ -13,4 +13,8 @@
 		text-transform: uppercase;
 		font-weight: 600;
 	}
+
+	@include breakpoint(medium) {
+		padding: 32px 0;
+	}
 }
