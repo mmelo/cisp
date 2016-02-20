@@ -382,6 +382,9 @@ body {
   .footer__container {
     padding: 8px;
     text-align: center; }
+    @media (max-width: 900px) {
+      .footer__container {
+        justify-content: flex-start; } }
   .footer__logo {
     margin: 0 24px 8px 24px;
     width: 260px; }
@@ -397,6 +400,9 @@ body {
   .footer__copy-right {
     font-size: 12px;
     margin-bottom: 8px; }
+    @media (max-width: 900px) {
+      .footer__copy-right {
+        max-width: 260px; } }
   .footer__partners__ensp, .footer__partners__unl, .footer__partners__fct {
     background-size: cover;
     background-repeat: no-repeat;
