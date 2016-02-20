@@ -25,6 +25,7 @@ class JSON_API_Post {
   var $comment_status;  // String ("open" or "closed")
   var $thumbnail;       // String
   var $custom_fields;   // Object (included by using custom_fields query var)
+  var $is_sticky;       // Boolean
   
   function JSON_API_Post($wp_post = null) {
     if (!empty($wp_post)) {
