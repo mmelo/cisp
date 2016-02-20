@@ -143,7 +143,7 @@ define([
 			App.Views.Active = new MemberDetailView({
 				model: member
 			});
-			console.log(member.toJSON())
+			//console.log(member.toJSON())
 			requestAnimationFrame(function () {
 				App.Container.html(App.Views.Active.render().el);
 				_this._getMemberPublications(member.get('slug'));
@@ -165,11 +165,11 @@ define([
 			App.Collections.MemberPublications.fetch({
 				remove: false,
 				success: function (res) {
-					console.log(App.Collections.MemberPublications.toJSON());
-					requestAnimationFrame(function () {
+					//console.log(App.Collections.MemberPublications.toJSON());
+					//requestAnimationFrame(function () {
 						$('#member-publications').html(App.Views.MemberPublications.render().el);
 						App.Vent.trigger('global:scroll');
-					});
+					//});
 				},
 				error: function (res, err) {
 					requestAnimationFrame(function () {
@@ -193,11 +193,11 @@ define([
 			App.Collections.MemberProjects.fetch({
 				remove: false,
 				success: function (res) {
-					console.log(App.Collections.MemberProjects.toJSON());
-					requestAnimationFrame(function () {
+					//console.log(App.Collections.MemberProjects.toJSON());
+					//requestAnimationFrame(function () {
 						$('#member-projects').html(App.Views.MemberProjects.render().el);
 						App.Vent.trigger('global:scroll');
-					});
+					//});
 				},
 				error: function (res, err) {
 					requestAnimationFrame(function () {
