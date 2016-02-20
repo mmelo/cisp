@@ -2,12 +2,16 @@
 <div class="member__detail__wrapper">
 	<section class="member__detail__column member__detail__column--person">
 		<div class="member__detail__thumbnail" style="background-image: url({{thumbnail_images.post-thumbnail.url}})" alt="{{{title}}}"> </div>
-		<p class="member__detail__position">{{custom_fields.member-position}}</p>
+		{{!-- <p class="member__detail__position">{{custom_fields.member-position}}</p> --}}
 
 		<h2 class="member__detail__name">{{{title}}}</h2>
 	</section>
+
+	<section class="member__detail__column member__detail__column--info">
+		<p>{{{content}}}</p>
+	</section>
 	
-	<section class="member__detail__column member__detail__column--details" id="member-posts">
+	<section class="member__detail__column member__detail__column--details" id="member-publications">
 		{{!-- <article class="member__detail__article">
 			<a href="" target="_blank" class="member__detail__article__see-more">{{{view 'icons/ic_arrow-right'}}} see more</a>
 			<p class="member__detail__article__type">Publications</p>
@@ -26,5 +30,8 @@
 			<h5 class="member__detail__article__title">My first publication</h5>
 			<p class="member__detail__article__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		</article> --}}
+	</section>
+
+	<section class="member__detail__column member__detail__column--details" id="member-projects">
 	</section>
 </div>

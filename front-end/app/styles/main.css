@@ -1047,6 +1047,9 @@ body {
     text-align: center; }
   .member__detail__column--details {
     padding-top: 200px; }
+  .member__detail__column--info {
+    padding-top: 150px;
+    line-height: 21px; }
 
 .member__detail__thumbnail {
   margin: 0 auto;

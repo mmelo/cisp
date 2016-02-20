@@ -4,16 +4,16 @@ define([
 	'jquery',
 	'backbone',
 	'collections/members',
-	'collections/memberPosts',
+	'collections/memberPublications',
+	'collections/memberProjects',
 	'models/members',
-	'models/memberPosts',
 	'views/members/index',
 	'views/members/effectiveList',
 	'views/members/associatedList',
-	'views/members/memberPosts',
-	'views/members/memberPost',
+	'views/members/memberPublications',
+	'views/members/memberProjects',
 	'views/members/detail',
-], function ($, Backbone, MembersCollection, MemberPostsCollection, MemberModel, MemberPostsModel, MembersIndexView, EffectiveMembersListView, AssociatedMembersListView, MemberPostsListView, MemberPostsItemView, MemberDetailView) {
+], function ($, Backbone, MembersCollection, MembersPublicationsCollection, MembersProjectsCollection, MemberModel, MembersIndexView, EffectiveMembersListView, AssociatedMembersListView, MemberPublicationsView, MemberProjectsView, MemberDetailView) {
 	'use strict';
 	var MembersController = Backbone.Router.extend({
 		initialize: function () {
@@ -126,7 +126,6 @@ define([
 				App.Models.Detail.fetch({
 					success: function () {
 						_this._detailView(App.Models.Detail);
-						_this._getAllPosts();
 					}
 				});
 			}
@@ -146,25 +145,57 @@ define([
 			});
 			requestAnimationFrame(function () {
 				App.Container.html(App.Views.Active.render().el);
+				_this._getMemberPublications();
+				_this._getMemberProjects();
 			});
 		},
 
-		_getAllPosts: function (slug) {
+		_getMemberPublications: function (slug) {
 			slug = 'julian';
-			App.Collections.MemberPosts = new MemberPostsCollection;
-			App.Collections.MemberPosts.slug = slug;
-			App.Views.MemberPosts = new MemberPostsListView({
-				collection: App.Collections.MemberPosts,
+			App.Collections.MemberPublications = new MembersPublicationsCollection;
+			App.Collections.MemberPublications.slug = slug;
+			App.Views.MemberPublications = new MemberPublicationsView({
+				collection: App.Collections.MemberPublications
 			});
-			this._renderMemberPostsIndex();
+			this._renderMemberPublications();
+			
 		},
 
-		_renderMemberPostsIndex: function () {
-			App.Collections.MemberPosts.fetch({
+		_getMemberProjects: function (slug) {
+			slug = 'julian';
+			App.Collections.MemberProjects = new MembersProjectsCollection;
+			App.Collections.MemberProjects.slug = slug;
+			App.Views.MemberProjects = new MemberProjectsView({
+				collection: App.Collections.MemberProjects
+			});
+			this._renderMemberProjects();
+		},
+
+		_renderMemberPublications: function () {
+			App.Collections.MemberPublications.fetch({
 				remove: false,
 				success: function (res) {
+					console.log(App.Collections.MemberPublications);
 					requestAnimationFrame(function () {
-						$('#member-posts').html(App.Views.MemberPosts.render().el);
+						$('#member-publications').html(App.Views.MemberPublications.render().el);
+						App.Vent.trigger('global:scroll');
+					});
+				},
+				error: function (res, err) {
+					// requestAnimationFrame(function () {
+					// 	App.Container.html(App.Views.Active.render().el);
+					// });
+				}
+			});
+		},
+
+		_renderMemberProjects: function () {
+			App.Collections.MemberProjects.fetch({
+				remove: false,
+				success: function (res) {
+					console.log(App.Collections.MemberProjects);
+					requestAnimationFrame(function () {
+						$('#member-projects').html(App.Views.MemberProjects.render().el);
 						App.Vent.trigger('global:scroll');
 					});
 				},

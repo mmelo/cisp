@@ -3,16 +3,16 @@
 define([
 	'underscore',
 	'backbone',
-	'models/memberPosts'
-], function (_, Backbone, MemberPostsModel) {
+	'models/memberProject'
+], function (_, Backbone, MemberProjectModel) {
 	'use strict';
 
-	var MemberPostsCollection = Backbone.Collection.extend({
+	var MemberProjectsCollection = Backbone.Collection.extend({
 		url: function () {
-			var url = App.BaseUrl + '?json=get_author_posts&post_type=publication&author_slug=' + this.slug;
+			var url = App.BaseUrl + '?json=get_author_posts&post_type=member_projects&author_slug=' + this.slug;
 			return url + (this.count ? '&count=' + this.count : '') + (this.page ? '&page=' + this.page : '');
 		},
-		model: MemberPostsModel,
+		model: MemberProjectModel,
 
 		initialize: function () {
 			this.page = 1;
@@ -24,5 +24,5 @@ define([
 		}
 	});
 
-	return MemberPostsCollection;
+	return MemberProjectsCollection;
 });
