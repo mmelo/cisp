@@ -28,9 +28,9 @@ define([
         _loadByAuthor: function (ev) {
             var author = $('#authors-list option:selected').attr('value');
             if ( author !== 'all' ) {
-                App.Router.navigate('publications/' + author, { trigger: true });
+                App.Router.navigate('publicacoes/' + author, { trigger: true });
             } else {
-                App.Router.navigate('publications', { trigger: true });
+                App.Router.navigate('publicacoes', { trigger: true });
             }
         }
     });
