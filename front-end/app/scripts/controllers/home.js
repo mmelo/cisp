@@ -111,6 +111,7 @@ define([
 		_publications: function () {
 			App.Collections.Publications = new PublicationsCollection;
 			App.Collections.Publications.count = 3;
+			App.Collections.Publications.isHome = true;
 			App.Collections.Publications.fetch({
 				remove: false,
 				success: function () {
