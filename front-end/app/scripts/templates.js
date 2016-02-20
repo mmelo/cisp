@@ -192,7 +192,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  return "\n	<h2 class=\"hero-section__claim\">From research<br>to action <span class=\"hero-section__claim__underline\"></span> </h2>\n	\n	<div class=\"hero-section__block\">\n		<div class=\"hero-section__block__title\">Centro de Investigação Saúde Pública</div>\n		<div class=\"hero-section__block__text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>\n	</div>\n";
+  return "\n	<h2 class=\"hero-section__claim\">From research<br>to action <span class=\"hero-section__claim__underline\"></span> </h2>\n	\n	<div class=\"hero-section__block\">\n		<div class=\"hero-section__block__title\">Centro de Investigação Saúde Pública</div>\n		<div class=\"hero-section__block__text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</div>\n	</div>\n";
   }
 
 function program3(depth0,data) {
