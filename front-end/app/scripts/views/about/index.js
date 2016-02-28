@@ -40,7 +40,7 @@ define([
             App.Router.navigate('#sobre/scientific-board', { trigger: false });
         },
 
-        _scientificComission: function () {// WHERE IS THIS SECTION
+        _scientificComission: function () {// WHERE IS THIS SECTION ?
             $(window).scrollTop(1763);
             App.Router.navigate('#sobre/scientific-comission', { trigger: false });
         },
