@@ -425,7 +425,7 @@ body {
   width: calc(33.333% - 24px);
   margin: 0 24px 16px 0;
   padding-right: 8px;
-  padding-bottom: 8px;
+  padding-bottom: 28px;
   min-width: 190px;
   border-bottom: 2px solid #BFBEBE; }
   @media (max-width: 900px) {

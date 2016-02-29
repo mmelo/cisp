@@ -14,7 +14,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "\n			<p>+351 123 123 123</p>\n		</div>\n		<div class=\"posts-about__contacts__container__block\">\n			";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_email", options) : helperMissing.call(depth0, "view", "icons/ic_email", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n			<p>cisp@gmail.com</p>\n		</div>\n		<div class=\"posts-about__contacts__container__block\">\n			";
+  buffer += "\n			<p>cisp@ensp.unl.pt</p>\n		</div>\n		<div class=\"posts-about__contacts__container__block\">\n			";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_pin", options) : helperMissing.call(depth0, "view", "icons/ic_pin", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n			<p>Escola Nacional de Saúde Pública</p>\n		</div>\n	</div>\n</div>";
@@ -27,7 +27,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "";
 
 
-  buffer += "<div class=\"posts-about__header\">\n	<ul class=\"posts-about__header__menu\">\n		\n		<li id=\"navigate-mission\">Missão</li>\n		<li id=\"navigate-thematic\">Linhas Temáticas</li>\n		<li id=\"navigate-scientific-board\">Scientific Advisory Board</li>\n		<li id=\"navigate-management\">Gestão</li>\n		<li id=\"navigate-contacts\">Contactos</li>\n	</ul>\n</div>\n<div id=\"about-container\" class=\"posts-about__container\">\n	<div id=\"about-mission\"></div>\n	<div id=\"about-sci-board\"></div>\n	<div id=\"about-thematic\"></div>\n	<div id=\"about-management\"></div>\n	<div id=\"about-contacts\"></div>\n</div>";
+  buffer += "<div class=\"posts-about__header\">\n	<ul class=\"posts-about__header__menu\">\n		\n		<li id=\"navigate-mission\">Missão</li>\n		<li id=\"navigate-thematic\">Linhas Temáticas</li>\n		\n		\n		<li id=\"navigate-contacts\">Contactos</li>\n	</ul>\n</div>\n<div id=\"about-container\" class=\"posts-about__container\">\n	<div id=\"about-mission\"></div>\n	\n	<div id=\"about-thematic\"></div>\n	\n	<div id=\"about-contacts\"></div>\n</div>";
   return buffer;
   });
 
@@ -333,8 +333,8 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
     + "</h4>\n	<p>";
-  if (helper = helpers.excerpt) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.excerpt); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if (helper = helpers.content) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.content); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</p>\n	\n	<time datetime=\"";
   if (helper = helpers.date) { stack1 = helper.call(depth0, {hash:{},data:data}); }
