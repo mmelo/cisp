@@ -31,32 +31,32 @@ define([
         subview: AboutItemView,
 
         _mission: function () {
-            $(window).scrollTop(504);
+            $(window).scrollTop($('#about-mission')[0].getBoundingClientRect().top);
             App.Router.navigate('#sobre/mission', { trigger: false });
         },
 
         _scientificBoard: function () {
-            $(window).scrollTop(920);
+            $(window).scrollTop($('#scientific-board')[0].getBoundingClientRect().top);
             App.Router.navigate('#sobre/scientific-board', { trigger: false });
         },
 
-        _scientificComission: function () {
+        _scientificComission: function () {// WHERE IS THIS SECTION ?
             $(window).scrollTop(1763);
             App.Router.navigate('#sobre/scientific-comission', { trigger: false });
         },
 
         _thematic: function () {
-            $(window).scrollTop(2660);
+            $(window).scrollTop($('#thematic-lines')[0].getBoundingClientRect().top);
             App.Router.navigate('#sobre/scientific-thematic-lines', { trigger: false });
         },
 
         _management: function () {
-            $(window).scrollTop(3702);
+            $(window).scrollTop($('#management')[0].getBoundingClientRect().top);
             App.Router.navigate('#sobre/scientific-management', { trigger: false });
         },
 
         _contacts: function () {
-            $(window).scrollTop(3702);
+            $(window).scrollTop($('#contacts')[0].getBoundingClientRect().top);
             App.Router.navigate('#sobre/contacts', { trigger: false });
         }
     });
