@@ -22,7 +22,7 @@
 			justify-content: center;
 		}
 	}
-	
+
 	&__logo {
 		margin: 0 24px 8px 24px;
 		width: 260px;
@@ -32,9 +32,9 @@
 		}
 
 		@include breakpoint(medium) {
-			width: 80px;
+			width: 100px;
 			svg {
-				width: 80px;
+				width: 100px;
 				height: auto;
 			}
 		}
@@ -46,6 +46,7 @@
 
 		@include breakpoint(medium) {
 			max-width: 260px;
+			font-size: 10px;
 		}
 	}
 
@@ -59,11 +60,9 @@
 		}
 
 		&__ensp,
-		&__unl,
 		&__fct {
 			background-size: cover;
 			background-repeat: no-repeat;
-			width: 60px;
 			height: 60px;
 			margin: 0 24px 8px 24px ;
 
@@ -74,16 +73,20 @@
 		}
 
 		&__ensp {
-			background-image: url(../images/footer/logo_ensp.png);
-		}
-		&__unl {
-			background-image: url(../images/footer/logo_unl.png);
+			background-image: url(../images/footer/logo_ensp_unl.png);
+			width: 135px;
+			@include breakpoint(medium) {
+				height: 60px;
+				margin: 0 auto;
+			}
 		}
 		&__fct {
 			background-image: url(../images/footer/logo_fct.png);
 			width: 182px;
 			@include breakpoint(medium) {
 				width: 82px;
+				margin: 0 auto;
+				margin-top: 20px;
 			}
 		}
 	}

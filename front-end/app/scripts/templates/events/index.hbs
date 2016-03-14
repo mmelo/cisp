@@ -3,14 +3,13 @@
 
 	<div class="post-list__header__search">
 		<input id="post-list-search" type="text" placeholder="Pesquisar">
-		<button id="seminars-search-button" class="hidden">{{{view 'icons/ic_search'}}}</button>
+		<button id="events-search-button" class="hidden">{{{view 'icons/ic_search'}}}</button>
 	</div>
 </div>
 
 <div id="post-list-container" class="post-list__container">
 {{#ifCond this.length '===' 0}}
 <div class="post-list__header__no-content">
-{{!-- {{{view 'icons/ic_notFound'}}} --}}
 	<p>Pedimos desculpa, não foram encontrados resultados.</p>
 </div>
 {{/ifCond}}

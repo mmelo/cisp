@@ -9,8 +9,8 @@ define([
 ], function ($, _, Backbone, JST) {
 	'use strict';
 
-	var SeminarsItemView = Backbone.BaseView.extend({
-		template: JST['app/scripts/templates/seminars/item.hbs'],
+	var EventsItemView = Backbone.BaseView.extend({
+		template: JST['app/scripts/templates/events/item.hbs'],
 
 		tagName: 'article',
 
@@ -41,5 +41,5 @@ define([
 		}
 	});
 
-	return SeminarsItemView;
+	return EventsItemView;
 });

@@ -6,9 +6,9 @@ define([
 ], function (_, Backbone) {
 	'use strict';
 
-	var SeminarsModel = Backbone.Model.extend({
+	var EventsModel = Backbone.Model.extend({
 		url: function () {
-			return App.BaseUrl + '?json=get_post&post_type=seminars&slug=' + this.get('slug');
+			return App.BaseUrl + '?json=get_post&post_type=events&slug=' + this.get('slug');
 		},
 
 		initialize: function() {
@@ -34,5 +34,5 @@ define([
 		}
 	});
 
-	return SeminarsModel;
+	return EventsModel;
 });

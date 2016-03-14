@@ -10,10 +10,10 @@ define([
 	'controllers/page',
 	'controllers/publication',
 	'controllers/news',
-	'controllers/seminars',
+	'controllers/events',
 	'controllers/members',
 	'controllers/project'
-], function ($, Backbone, JST, HomeController, AboutController, PostController, PageController, PublicationController, NewsController, SeminarsController, MembersController, ProjectController) {
+], function ($, Backbone, JST, HomeController, AboutController, PostController, PageController, PublicationController, NewsController, EventsController, MembersController, ProjectController) {
 	'use strict';
 
 	var Router = Backbone.Router.extend({
@@ -51,8 +51,8 @@ define([
 			if ( !App.Controllers.News ) {
 				App.Controllers.News = new NewsController;
 			}
-			if ( !App.Controllers.Seminars ) {
-				App.Controllers.Seminars = new SeminarsController;
+			if ( !App.Controllers.Events ) {
+				App.Controllers.Events = new EventsController;
 			}
 			if ( !App.Controllers.Project ) {
 				App.Controllers.Project = new ProjectController;
@@ -145,8 +145,8 @@ define([
 			if ( catg === 'noticias' ) {
 				App.Vent.trigger('news:index');
 			} else
-			if ( catg === 'seminarios' ) {
-				App.Vent.trigger('seminars:index');
+			if ( catg === 'eventos' ) {
+				App.Vent.trigger('events:index');
 			} else
 			if ( catg === 'publicacoes' ) {
 				App.Vent.trigger('publications:index');
@@ -178,12 +178,12 @@ define([
 				App.Vent.trigger('projects:detail', {
 					slug: slug
 				});
-			} else 
+			} else
 			if ( catg === 'sobre' ) {
 				App.Vent.trigger('about:index', {
 					slug: slug
 				});
-			} else 
+			} else
 			if ( catg === 'membros' ) {
 				App.Vent.trigger('members:detail', {
 					slug: slug
@@ -192,14 +192,14 @@ define([
 				App.Vent.trigger('publications:index', {
 					slug: slug
 				});
-			} else 
+			} else
 			if ( catg === 'noticias' ) {
 				App.Vent.trigger('posts:detail', {
 					category: catg,
 					slug: slug
 				});
 			}
-			
+
 		}
 	});
 

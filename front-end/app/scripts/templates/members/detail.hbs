@@ -1,8 +1,7 @@
 <a href="#membros" class="member__detail__close" id="detail-close">{{{view 'icons/ic_close'}}}</a>
 <div class="member__detail__wrapper">
 	<section class="member__detail__column member__detail__column--person">
-		<div class="member__detail__thumbnail" style="background-image: url({{thumbnail_images.post-thumbnail.url}})" alt="{{{title}}}"> </div>
-		{{!-- <p class="member__detail__position">{{custom_fields.member-position}}</p> --}}
+		<div class="member__detail__thumbnail" style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbnail_images.post-thumbnail.url}}{{else}}images/default_thumbnail.png{{/if}})" alt="{{{title}}}"> </div>
 
 		<h2 class="member__detail__name">{{{title}}}</h2>
 	</section>
@@ -10,7 +9,7 @@
 	<section class="member__detail__column member__detail__column--info">
 		<p>{{{content}}}</p>
 	</section>
-	
+
 	<section class="member__detail__column member__detail__column--details" id="member-publications">
 	{{{view "components/spinner"}}}
 	</section>

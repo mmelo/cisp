@@ -17,25 +17,25 @@
 	@include breakpoint(small) {
 		@include _(flex-wrap);
 	}
-	
+
 	&:after {
 		content:'';
-		position: absolute; 
-		bottom: 0; 
-		right: 0; 
-		height: 10%; 
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: 10%;
 		width: 2px;
-		background: $light-gray; 
+		background: $light-gray;
 	}
-	
+
 	&--large {
 		@include flex(2);
-		min-width: 300px;
+		min-width: 340px;
 		border-bottom: 3px solid $blue;
 
 		&:after {
 			width: 3px;
-			background: $blue; 
+			background: $blue;
 		}
 	}
 

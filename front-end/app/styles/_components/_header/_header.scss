@@ -12,11 +12,11 @@
 	background-image: url(../images/hero/01.jpeg);
 	background-position: center;
 	background-size: cover;
-	
+
 	@include breakpoint(medium) {
 		height: 300px;
 	}
-	
+
 	&.sobre {
 		box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
 	}
@@ -26,7 +26,7 @@
 	&.projectos {
 		box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
 	}
-	&.seminarios {
+	&.eventos {
 		box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
 	}
 	&.publicacoes {
