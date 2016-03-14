@@ -1,11 +1,11 @@
 .post-list {
-	
+
 	&__header {
 		@include _(flex);
 		@include _ (space-between);
 		width: 100%;
 		margin-bottom: 32px;
-		
+
 		&__title {
 			width: 50%;
 			font-size: 22px;
@@ -17,14 +17,14 @@
 		}
 
 		&__search {
-			
+
 			input {
 				width: 90px;
 				padding: 4px 8px;
 				font-size: 14px;
 				border: 1px solid $light-gray;
 				transition: all .5s ease;
-				
+
 				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 				  color: black;
 				}
@@ -39,7 +39,7 @@
 				}
 
 				&:focus {
-					border: 1px solid $blue-mariner;					
+					border: 1px solid $blue-mariner;
 					outline: none;
 					width: 150px;
 				}
@@ -51,7 +51,7 @@
 				right: 0;
 				border: none;
 				background-color: transparent;
-				
+
 				visibility: visible;
 			    opacity: 1;
 			    transition: opacity 0.5s, visibility 0.5s;
@@ -72,6 +72,18 @@
 		}
 	}
 
+	&__section {
+
+		&__title {
+
+			h2 {
+				font-size: 34px;
+				font-weight: 500;
+				margin-bottom: 34px;
+			}
+		}
+	}
+	
 	&__new {
 		@include _(flex);
 		position: relative;
@@ -83,12 +95,12 @@
 
 		&:after {
 			content:'';
-			position: absolute; 
-			bottom: 0; 
-			right: 0; 
-			height: 10px; 
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 10px;
 			width: 2px;
-			background: $light-gray; 
+			background: $light-gray;
 		}
 
 		&__thumbnail {
@@ -138,7 +150,7 @@
 			&__when,
 			&__where {
 				margin-bottom: 8px;
-				
+
 				span {
 					font-weight: 700;
 				}

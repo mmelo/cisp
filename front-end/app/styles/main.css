@@ -1135,6 +1135,11 @@ body {
     .post-list__header__no-content p {
       font-size: 50px; }
 
+.post-list__section__title h2 {
+  font-size: 34px;
+  font-weight: 500;
+  margin-bottom: 34px; }
+
 .post-list__new {
   position: relative;
   width: 100%;
