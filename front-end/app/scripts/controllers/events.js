@@ -6,9 +6,8 @@ define([
 	'collections/events',
 	'models/events',
 	'views/events/index',
-	'views/events/item',
 	'views/events/detail'
-], function ($, Backbone, EventsCollection, EventModel, EventsListView, EventsItemView, EventDetailView) {
+], function ($, Backbone, EventsCollection, EventModel, EventsListView, EventDetailView) {
 	'use strict';
 
 	var EventsController = Backbone.Router.extend({
@@ -100,7 +99,6 @@ define([
 		*	@function
 		*/
 		_detail: function (options) {
-			var _this = this;
 
 			if ( App.Collections.Events && App.Collections.Events.findWhere({ slug: options.slug }) ) {
 				App.Models.Detail = App.Collections.Events.findWhere({ slug: options.slug });
@@ -110,8 +108,8 @@ define([
 				App.Models.Detail.set('slug', options.slug);
 				App.Models.Detail.fetch({
 					success: function () {
-						_this._detailView(App.Models.Detail);
-					}
+						this._detailView(App.Models.Detail);
+					}.bind(this)
 				});
 			}
 		},
@@ -124,7 +122,6 @@ define([
 		*	@param {object} event - event model to be rendered
 		*/
 		_detailView: function (event) {
-			var _this = this;
 			App.Views.Active = new EventDetailView({
 				model: event
 			});

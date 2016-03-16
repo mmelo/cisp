@@ -224,7 +224,7 @@ body {
         font-size: 30px; } }
     @media (max-width: 600px) {
       .hero-section__claim {
-        font-size: 27px;
+        font-size: 24px;
         min-width: 185px;
         margin-left: 0; } }
   .hero-section__block {
@@ -494,8 +494,9 @@ body {
     margin-bottom: 8px; }
     @media (max-width: 900px) {
       .footer__copy-right {
-        max-width: 260px;
-        font-size: 10px; } }
+        margin-top: 8px;
+        font-size: 10px;
+        order: 3; } }
   .footer__partners__ensp, .footer__partners__fct {
     background-size: cover;
     background-repeat: no-repeat;
@@ -518,8 +519,7 @@ body {
     @media (max-width: 900px) {
       .footer__partners__fct {
         width: 82px;
-        margin: 0 auto;
-        margin-top: 20px; } }
+        margin: 0px auto; } }
 
 .spinner {
   position: relative;

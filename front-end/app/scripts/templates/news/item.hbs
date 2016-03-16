@@ -1,4 +1,4 @@
-<div class="post-list__new__thumbnail" 
+<div class="post-list__new__thumbnail"
 style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbnail_images.post-thumbnail.url}}{{else}}images/default_thumbnail.png{{/if}})">
 
 	<time datetime="{{date}}" class="post-list__new__thumbnail__date">{{{prettyDate}}}</time>
@@ -10,6 +10,6 @@ style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbn
 	<h2 class="post-list__new__content__title">{{{title}}}</h2>
 
 	<div class="post-list__new__content__text">{{{content}}}</div>
-</section>
 
-<a href="#{{categories.0.slug}}" class="publication__category">{{categories.0.title}}</a>
+    <a href="#noticias/{{slug}}" class="post-list__new__content__button">{{{view 'icons/ic_arrow-right'}}} Saber mais</a>
+</section>

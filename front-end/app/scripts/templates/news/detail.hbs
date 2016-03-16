@@ -1,0 +1,14 @@
+<a href="#noticias" class="close">+</a>
+<div class="event__detail__wrapper">
+	<section class="event__detail__column">
+		<div class="post__thumbnail" style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbnail_images.post-thumbnail.url}}{{else}}images/default_thumbnail.png{{/if}})" alt="{{{title}}}">
+			<!-- <time datetime="{{date}}" class="post__content__date">{{{prettyDate}}}</time> -->
+		</div>
+
+		<h2 class="event__detail__title">{{{title}}}</h2>
+	</section>
+	<section class="event__detail__column">
+
+		<div class="content">{{{content}}}</div>
+	</section>
+</div>

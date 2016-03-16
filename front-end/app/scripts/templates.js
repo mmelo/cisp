@@ -315,11 +315,7 @@ function program7(depth0,data) {
     + "\" class=\"post-list__new__content__button\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " Saber mais</a>\n</section>\n\n<a href=\"#"
-    + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.categories)),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.slug)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" class=\"publication__category\">"
-    + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.categories)),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</a>\n";
+  buffer += " Saber mais</a>\n</section>\n";
   return buffer;
   });
 
@@ -501,12 +497,17 @@ function program1(depth0,data) {
     + "</h4>\n	<p>";
   stack1 = ((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.excerpt)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1);
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</p>\n	<a href=\"#noticias\">";
+  buffer += "</p>\n	<a href=\"#noticias/";
+  if (helper = helpers.slug) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.slug); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " Ver mais</a>\n</div>\n\n";
+  buffer += " Saber mais</a>\n</div>\n\n";
   stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.thumbnail), "&&", (depth0 && depth0.isLarge), options) : helperMissing.call(depth0, "ifCond", (depth0 && depth0.thumbnail), "&&", (depth0 && depth0.isLarge), options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
   return buffer;
   });
 
@@ -829,6 +830,50 @@ function program1(depth0,data) {
   return buffer;
   });
 
+this["JST"]["app/scripts/templates/news/detail.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var stack1;
+  return escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.thumbnail_images)),stack1 == null || stack1 === false ? stack1 : stack1['post-thumbnail'])),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1));
+  }
+
+function program3(depth0,data) {
+  
+  
+  return "images/default_thumbnail.png";
+  }
+
+  buffer += "<a href=\"#noticias\" class=\"close\">+</a>\n<div class=\"event__detail__wrapper\">\n	<section class=\"event__detail__column\">\n		<div class=\"post__thumbnail\" style=\"background-image: url(";
+  stack1 = helpers['if'].call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.thumbnail_images)),stack1 == null || stack1 === false ? stack1 : stack1['post-thumbnail'])),stack1 == null || stack1 === false ? stack1 : stack1.url), {hash:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += ")\" alt=\"";
+  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\">\n			<!-- <time datetime=\"";
+  if (helper = helpers.date) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.date); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" class=\"post__content__date\">";
+  if (helper = helpers.prettyDate) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.prettyDate); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</time> -->\n		</div>\n\n		<h2 class=\"event__detail__title\">";
+  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</h2>\n	</section>\n	<section class=\"event__detail__column\">\n\n		<div class=\"content\">";
+  if (helper = helpers.content) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.content); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</div>\n	</section>\n</div>\n";
+  return buffer;
+  });
+
 this["JST"]["app/scripts/templates/news/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
@@ -863,7 +908,7 @@ function program3(depth0,data) {
 this["JST"]["app/scripts/templates/news/item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression, self=this;
+  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data) {
   
@@ -877,7 +922,7 @@ function program3(depth0,data) {
   return "images/default_thumbnail.png";
   }
 
-  buffer += "<div class=\"post-list__new__thumbnail\" \nstyle=\"background-image: url(";
+  buffer += "<div class=\"post-list__new__thumbnail\"\nstyle=\"background-image: url(";
   stack1 = helpers['if'].call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.thumbnail_images)),stack1 == null || stack1 === false ? stack1 : stack1['post-thumbnail'])),stack1 == null || stack1 === false ? stack1 : stack1.url), {hash:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += ")\">\n\n	<time datetime=\"";
@@ -896,11 +941,14 @@ function program3(depth0,data) {
   if (helper = helpers.content) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.content); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</div>\n</section>\n\n<a href=\"#"
-    + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.categories)),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.slug)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" class=\"publication__category\">"
-    + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.categories)),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</a>\n";
+  buffer += "</div>\n\n    <a href=\"#noticias/";
+  if (helper = helpers.slug) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.slug); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" class=\"post-list__new__content__button\">";
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += " Saber mais</a>\n</section>\n";
   return buffer;
   });
 

@@ -200,7 +200,7 @@ define([
 				});
 			} else
 			if ( catg === 'noticias' ) {
-				App.Vent.trigger('posts:detail', {
+				App.Vent.trigger('news:detail', {
 					category: catg,
 					slug: slug
 				});

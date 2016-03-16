@@ -45,8 +45,10 @@
 		margin-bottom: 8px;
 
 		@include breakpoint(medium) {
-			max-width: 260px;
+			//max-width: 260px;
+			margin-top: 8px;
 			font-size: 10px;
+			order: 3;
 		}
 	}
 
@@ -85,8 +87,7 @@
 			width: 182px;
 			@include breakpoint(medium) {
 				width: 82px;
-				margin: 0 auto;
-				margin-top: 20px;
+				margin: 0px auto;
 			}
 		}
 	}
