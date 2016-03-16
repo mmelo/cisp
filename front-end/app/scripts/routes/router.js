@@ -193,6 +193,12 @@ define([
 					slug: slug
 				});
 			} else
+			if ( catg === 'eventos' ) {
+				App.Vent.trigger('events:detail', {
+					category: catg,
+					slug: slug
+				});
+			} else
 			if ( catg === 'noticias' ) {
 				App.Vent.trigger('posts:detail', {
 					category: catg,

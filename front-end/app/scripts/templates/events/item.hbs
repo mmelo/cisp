@@ -5,7 +5,6 @@ style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbn
 </div>
 
 <section class="post-list__new__content">
-	{{!-- <p class="post-list__new__content__author">{{author.nickname}}</p> --}}
 
 	<h2 class="post-list__new__content__title">{{{title}}}</h2>
 
@@ -17,7 +16,9 @@ style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbn
 	<div class="post-list__new__content__where"><span>Onde: </span>{{custom_fields.where}}</div>
 	{{/if}}
 
-	<div class="post-list__new__content__text">{{{content}}}</div>
+	<div class="post-list__new__content__text">{{{custom_fields.excerpt}}}</div>
+
+	<a href="#eventos/{{slug}}" class="post-list__new__content__button">{{{view 'icons/ic_arrow-right'}}} Saber mais</a>
 </section>
 
 <a href="#{{categories.0.slug}}" class="publication__category">{{categories.0.title}}</a>

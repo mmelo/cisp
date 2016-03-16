@@ -2,7 +2,7 @@
 
 	&__header {
 		@include _(flex);
-		@include _ (space-between);
+		@include _(space-between);
 		width: 100%;
 		margin-bottom: 32px;
 
@@ -83,7 +83,7 @@
 			}
 		}
 	}
-	
+
 	&__new {
 		@include _(flex);
 		position: relative;
@@ -163,6 +163,15 @@
 
 				p {
 					margin-bottom: 8px;
+				}
+			}
+
+			&__button {
+				@include _(flex);
+				@include _(align-items-center);
+				margin-top: 16px;
+				svg {
+					margin-right: 8px;
 				}
 			}
 

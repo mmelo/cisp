@@ -47,6 +47,15 @@
 			order: 2;
 			width: 100%;
 		}
+
+		&__when,
+		&__where {
+			margin-top: 8px;
+
+			span {
+				font-weight: 700;
+			}
+		}
 	}
 
 	&__image {

@@ -29,7 +29,7 @@ ul {
 blockquote, q {
   quotes: none; }
 
-html, body, header, .post__thumbnail, .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn, .projects-container, .project__detail, .project__detail__wrapper, .publications-container, .publication-list, .publication-list .home__section__publication__content, .publication__item {
+html, body, header, .post__thumbnail, .post__content__author, .post__content__title, .post__content__excerpt, .post__content__btn, .projects-container, .project__detail, .project__detail__wrapper, .events-container, .event__detail, .event__detail__wrapper, .publications-container, .publication-list, .publication-list .home__section__publication__content, .publication__item {
   width: 100%; }
 
 .app, .spinner, .posts-list, .posts-list .subtitle, .detail__category-wrapper,
@@ -45,13 +45,13 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
       max-width: 100%;
       padding: 0 32px; } }
 
-.header__container, .hero-section__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .projects-container, .project__detail__wrapper, .sci-board__row, .sci-board__row__column, .sci-board__row__info__see-more, .posts-about__header__menu, .posts-about__header__menu li, .posts-about__sci-comission__header, .posts-about__thematic__header, .posts-about__management__header, .posts-about__contacts__header, .posts-about__contacts__container, .post-list__header, .post-list__new, .post-list__members__effective, .post-list__members__associated, .member__detail__wrapper, .member__detail__article__see-more, .publications-container, .publications-filter, .publications-filter-list, .publication-list, .publication__item {
+.header__container, .hero-section__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .projects-container, .project__detail__wrapper, .sci-board__row, .sci-board__row__column, .sci-board__row__info__see-more, .posts-about__header__menu, .posts-about__header__menu li, .posts-about__sci-comission__header, .posts-about__thematic__header, .posts-about__management__header, .posts-about__contacts__header, .posts-about__contacts__container, .post-list__header, .post-list__new, .post-list__new__content__button, .events-container, .event__detail__wrapper, .post-list__members__effective, .post-list__members__associated, .member__detail__wrapper, .member__detail__article__see-more, .publications-container, .publications-filter, .publications-filter-list, .publication-list, .publication__item {
   display: flex; }
 
 .hero-section__container {
   flex-direction: column; }
 
-.header__container, .project__detail__wrapper {
+.header__container, .project__detail__wrapper, .event__detail__wrapper {
   justify-content: center; }
 
 .hero-section__container, .footer__container, .footer__partners, .post-list__header, .post-list__members__effective, .post-list__members__associated, .publication__item {
@@ -66,7 +66,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 .menu__container, .publications-filter, .publications-filter-list {
   justify-content: flex-end; }
 
-.home__section__new a, .home__section__publication a, .footer__container, .footer__partners, .sci-board__row__column, .sci-board__row__info__see-more, .posts-about__header__menu, .member__detail__article__see-more {
+.home__section__new a, .home__section__publication a, .footer__container, .footer__partners, .sci-board__row__column, .sci-board__row__info__see-more, .posts-about__header__menu, .post-list__new__content__button, .member__detail__article__see-more {
   align-items: center; }
 
 @media (max-width: 400px) {
@@ -77,7 +77,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
   .home__section__new, .sci-board__row {
     flex-wrap: wrap; } }
 
-.home__section, .footer__container, .posts-list, .projects-container, .posts-about__contacts__container, .post-list__members__effective, .post-list__members__associated, .member__detail__wrapper, .publications-container, .publications-filter, .publications-filter-list, .publication-list {
+.home__section, .footer__container, .posts-list, .projects-container, .posts-about__contacts__container, .events-container, .post-list__members__effective, .post-list__members__associated, .member__detail__wrapper, .publications-container, .publications-filter, .publications-filter-list, .publication-list {
   flex-wrap: wrap; }
 
 .no-results {
@@ -87,7 +87,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
   font-size: 20px;
   font-weight: 500; }
 
-.project__detail h2 {
+.project__detail h2, .event__detail__title {
   font-size: 36px;
   font-weight: 500; }
 
@@ -388,6 +388,10 @@ body {
       .home__section__new__content {
         order: 2;
         width: 100%; } }
+    .home__section__new__content__when, .home__section__new__content__where {
+      margin-top: 8px; }
+      .home__section__new__content__when span, .home__section__new__content__where span {
+        font-weight: 700; }
   .home__section__new__image {
     flex-grow: 1;
     min-width: 50%;
@@ -1199,6 +1203,75 @@ body {
       line-height: 18px; }
       .post-list__new__content__text p {
         margin-bottom: 8px; }
+    .post-list__new__content__button {
+      margin-top: 16px; }
+      .post-list__new__content__button svg {
+        margin-right: 8px; }
+
+.event__detail {
+  height: 100%;
+  background-color: #fff; }
+  .event__detail__wrapper {
+    height: 100%; }
+  .event__detail__column {
+    width: 50%;
+    min-height: 320px;
+    margin: 0 auto;
+    padding: 128px 0; }
+    @media (max-width: 900px) {
+      .event__detail__column:first-child {
+        width: 30%; }
+      .event__detail__column:last-child {
+        width: 70%; } }
+  .event__detail .post__thumbnail {
+    position: relative;
+    min-height: 320px;
+    height: 25%;
+    margin-bottom: 16px; }
+    @media (max-width: 900px) {
+      .event__detail .post__thumbnail {
+        height: 0;
+        min-height: 150px; } }
+  .event__detail .post__content__date {
+    top: 16px;
+    right: -16px;
+    padding: 8px;
+    font-size: 32px;
+    font-weight: 300; }
+  .event__detail__title {
+    margin-bottom: 24px;
+    margin-left: 64px; }
+  .event__detail__when, .event__detail__where {
+    margin-left: 64px;
+    margin-bottom: 8px; }
+    .event__detail__when span, .event__detail__where span {
+      font-weight: 600;
+      margin-right: 8px; }
+  .event__detail .content {
+    max-height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 88px 64px 0 64px;
+    line-height: 24px; }
+    @media (max-width: 900px) {
+      .event__detail .content {
+        padding-top: 16px; } }
+    .event__detail .content p {
+      margin-bottom: 8px; }
+    .event__detail .content figure {
+      margin-left: 8px;
+      margin-top: 8px; }
+    .event__detail .content figcaption {
+      font-size: 14px;
+      font-style: italic; }
+  .event__detail .close {
+    position: absolute;
+    top: 4px;
+    right: 32px;
+    transform: rotate(45deg);
+    font-size: 88px;
+    font-weight: 300;
+    color: #999; }
 
 .post-list {
   width: 100%; }

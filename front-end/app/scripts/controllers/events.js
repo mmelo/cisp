@@ -6,14 +6,16 @@ define([
 	'collections/events',
 	'models/events',
 	'views/events/index',
-	'views/events/item'
-], function ($, Backbone, EventsCollection, EventsModel, EventsListView, EventsItemView) {
+	'views/events/item',
+	'views/events/detail'
+], function ($, Backbone, EventsCollection, EventModel, EventsListView, EventsItemView, EventDetailView) {
 	'use strict';
 
 	var EventsController = Backbone.Router.extend({
 		initialize: function () {
 			App.Vent.on('events:index', this._index, this);
 			App.Vent.on('events:renderIndex', this._renderIndex, this);
+			App.Vent.on('events:detail', this._detail, this);
 			App.Vent.on('events:more', this._loadMore, this);
 		},
 
@@ -88,6 +90,46 @@ define([
 						}
 					});
 				}
+			});
+		},
+
+		/**
+		*	_detail - fetch and render project detail page
+		*
+		*	@private
+		*	@function
+		*/
+		_detail: function (options) {
+			var _this = this;
+
+			if ( App.Collections.Events && App.Collections.Events.findWhere({ slug: options.slug }) ) {
+				App.Models.Detail = App.Collections.Events.findWhere({ slug: options.slug });
+				this._detailView(App.Models.Detail);
+			} else {
+				App.Models.Detail = new EventModel;
+				App.Models.Detail.set('slug', options.slug);
+				App.Models.Detail.fetch({
+					success: function () {
+						_this._detailView(App.Models.Detail);
+					}
+				});
+			}
+		},
+
+		/**
+		*	_detailView - render event detail view
+		*
+		*	@private
+		*	@function
+		*	@param {object} event - event model to be rendered
+		*/
+		_detailView: function (event) {
+			var _this = this;
+			App.Views.Active = new EventDetailView({
+				model: event
+			});
+			requestAnimationFrame(function () {
+				App.Container.html(App.Views.Active.render().el);
 			});
 		}
 	});

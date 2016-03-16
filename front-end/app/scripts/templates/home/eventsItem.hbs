@@ -1,0 +1,16 @@
+<div class="home__section__new__content">
+	<h4>{{title}}</h4>
+	<p>{{{custom_fields.excerpt}}}</p>
+
+	{{#if custom_fields.when}}
+	<div class="home__section__new__content__when"><span>Quando: </span>{{custom_fields.when}}</div>
+	{{/if}}
+
+	{{#if custom_fields.when}}
+	<div class="home__section__new__content__where"><span>Onde: </span>{{custom_fields.where}}</div>
+	{{/if}}
+
+	<a href="#eventos/{{slug}}">{{{view 'icons/ic_arrow-right'}}} Saber mais</a>
+</div>
+
+<div class="home__section__new__image" style="background-image: url({{thumbnail}})"> </div>
