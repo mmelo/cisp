@@ -2,6 +2,8 @@
 	@include _(full-width);
 	@include _(flex);
 	@include _(flex-wrap);
+
+	padding: 0 8px;
 }
 
 .project__detail {

@@ -86,12 +86,14 @@
 
 	&__new {
 		@include _(flex);
+		@include _(flex-wrap);
 		position: relative;
 		width: 100%;
 		border-bottom: 2px solid $light-gray;
 		margin-top: 16px;
 		margin-bottom: 24px;
 		padding-bottom: 8px;
+
 
 		&:after {
 			content:'';
@@ -114,7 +116,7 @@
 			background-repeat: no-repeat;
 
 			@include breakpoint(medium){
-				@include flex(0);
+				@include flex(0 0 100%);
 				width: 0;
 			}
 

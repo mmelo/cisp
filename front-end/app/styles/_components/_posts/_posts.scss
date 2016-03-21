@@ -13,7 +13,8 @@
 
 	&--news {
 		@include breakpoint(small) {
-			padding-left: 24px;
+			//padding-left: 24px;
+			padding: 8px;
 		}
 	}
 }

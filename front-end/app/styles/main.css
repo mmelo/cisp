@@ -51,6 +51,10 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 .hero-section__container {
   flex-direction: column; }
 
+@media (max-width: 600px) {
+  .posts-list--members {
+    justify-content: center; } }
+
 .header__container, .project__detail__wrapper, .event__detail__wrapper {
   justify-content: center; }
 
@@ -77,7 +81,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
   .home__section__new, .sci-board__row {
     flex-wrap: wrap; } }
 
-.home__section, .footer__container, .posts-list, .projects-container, .posts-about__contacts__container, .events-container, .post-list__members__effective, .post-list__members__associated, .member__detail__wrapper, .publications-container, .publications-filter, .publications-filter-list, .publication-list {
+.home__section, .footer__container, .posts-list, .projects-container, .posts-about__contacts__container, .post-list__new, .events-container, .post-list__members__effective, .post-list__members__associated, .member__detail__wrapper, .publications-container, .publications-filter, .publications-filter-list, .publication-list {
   flex-wrap: wrap; }
 
 .no-results {
@@ -556,7 +560,7 @@ body {
     text-transform: uppercase; }
   @media (max-width: 600px) {
     .posts-list--news {
-      padding-left: 24px; } }
+      padding: 8px; } }
 
 .post {
   position: relative;
@@ -615,6 +619,9 @@ body {
   .detail__content__wrapper img {
     position: relative;
     display: block; }
+
+.projects-container {
+  padding: 0 8px; }
 
 .project__detail {
   height: 100%;
@@ -809,7 +816,7 @@ body {
     padding: 16px 32px; }
     @media (max-width: 600px) {
       .posts-about__mission__text {
-        padding: 0; } }
+        padding: 0 8px; } }
     .posts-about__mission__text p {
       margin-bottom: 4px;
       font-weight: 500;
@@ -973,8 +980,7 @@ body {
       width: 40%;
       margin-left: auto; }
     .posts-about__contacts__container {
-      padding: 0 200px;
-      padding-top: 48px; }
+      padding: 48px 200px 0 200px; }
       @media (max-width: 600px) {
         .posts-about__contacts__container {
           padding: 48px 0 0 0; } }
@@ -1170,7 +1176,7 @@ body {
     background-repeat: no-repeat; }
     @media (max-width: 900px) {
       .post-list__new__thumbnail {
-        flex: 0;
+        flex: 0 0 100%;
         width: 0; } }
     .post-list__new__thumbnail__date {
       position: absolute;
@@ -1276,7 +1282,6 @@ body {
 .post-list {
   width: 100%; }
   .post-list__title {
-    width: 100%;
     font-size: 28px;
     font-weight: 500;
     padding-left: 24px;
@@ -1346,6 +1351,12 @@ body {
   min-height: 320px;
   margin: 0 auto;
   padding: 80px 16px 0 16px; }
+  @media (max-width: 900px) {
+    .member__detail__column {
+      width: 100%; } }
+  @media (max-width: 600px) {
+    .member__detail__column {
+      width: 100%; } }
   .member__detail__column--person {
     text-align: center; }
   .member__detail__column--info {
@@ -1353,6 +1364,14 @@ body {
     line-height: 21px; }
   .member__detail__column--details {
     padding-top: 100px; }
+  .member__detail__column__email span, .member__detail__column__orcid span {
+    font-weight: 500;
+    margin-right: 8px;
+    letter-spacing: 1px; }
+  .member__detail__column__email {
+    margin-top: 16px; }
+  .member__detail__column__orcid {
+    margin-top: 8px; }
 
 .member__detail__thumbnail {
   margin: 0 auto;
@@ -1438,7 +1457,7 @@ body {
       cursor: pointer; }
 
 .publication-list {
-  padding: 64px 0; }
+  padding: 64px 8px; }
   .publication-list .home__section__publication {
     width: 100%;
     flex-grow: 2; }

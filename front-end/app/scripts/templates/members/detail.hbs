@@ -8,6 +8,18 @@
 
 	<section class="member__detail__column member__detail__column--info">
 		<p>{{{content}}}</p>
+
+		{{#if custom_fields.member_email}}
+			<div class="member__detail__column__email">
+				<span>EMAIL:</span>{{custom_fields.member_email}}
+			</div>
+		{{/if}}
+
+		{{#if custom_fields.member_email}}
+			<div class="member__detail__column__orcid">
+				<span>ORCID:</span>{{custom_fields.member_orcid}}
+			</div>
+		{{/if}}
 	</section>
 
 	<section class="member__detail__column member__detail__column--details" id="member-publications">

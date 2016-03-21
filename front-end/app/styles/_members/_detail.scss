@@ -1,5 +1,5 @@
 .member__detail {
-	
+
 	&__close {
 		position: absolute;
 		top: 50px;
@@ -17,13 +17,21 @@
 		@include _(flex);
 		@include _(flex-wrap);
 	}
-	
+
 	&__column {
 		width: 50%;
 		min-width: 300px;
 		min-height: 320px;
 		margin: 0 auto;
 		padding: 80px 16px 0 16px;
+
+		@include breakpoint(medium) {
+			width: 100%;
+		}
+
+		@include breakpoint(small) {
+			width: 100%;
+		}
 
 		&--person {
 			text-align: center;
@@ -36,6 +44,23 @@
 
 		&--details {
 			padding-top: 100px;
+		}
+
+		&__email,
+		&__orcid {
+			span {
+				font-weight: 500;
+				margin-right: 8px;
+				letter-spacing: 1px;
+			}
+		}
+
+		&__email {
+			margin-top: 16px;
+		}
+
+		&__orcid {
+			margin-top: 8px;
 		}
 	}
 
@@ -72,12 +97,12 @@
 
 		&:after {
 			content:'';
-			position: absolute; 
-			bottom: 0; 
-			right: 0; 
-			height: 13px; 
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 13px;
 			width: 2px;
-			background: $light-gray; 
+			background: $light-gray;
 		}
 
 		&__see-more {
