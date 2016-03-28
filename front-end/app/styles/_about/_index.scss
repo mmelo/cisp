@@ -462,7 +462,7 @@
 
 		&__container {
 			@include _(flex);
-			@include _(flex-wrap)
+			@include _(flex-wrap);
 			@include _(space-around);
 			padding: 48px 200px 0 200px;
 
@@ -485,4 +485,3 @@
 		}
 	}
 }
-
