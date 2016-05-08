@@ -32,8 +32,9 @@
 	}
 
 	&__member {
+		flex: 1;
 		margin: 16px;
-		min-width: 20%;
+		min-width: 150px;
 
 		&--publication {
 			width: 100%;
@@ -56,6 +57,8 @@
 		}
 
 		&__content {
+			@include _(flex);
+			@include _(justify-content-center);
 			padding: 8px 0;
 			font-size: 16px;
 			text-align: center;
@@ -86,6 +89,7 @@
 .posts-list {
 
 	&--members {
+		@include _(flex-column);
 		@include breakpoint(small) {
 			@include _(justify-content-center);
 		}

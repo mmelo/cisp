@@ -17,7 +17,7 @@ define([
 
         id: 'effectiveList',
 
-        className: 'posts-list posts-list--members',
+        className: 'posts-list',
 
         events: {
         },

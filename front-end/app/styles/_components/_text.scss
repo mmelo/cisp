@@ -54,3 +54,13 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+.content {
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			color: $blue-mariner;
+		}
+	}
+}

@@ -84,20 +84,20 @@
 		display: block;
 		float: left;
 		// margin-top: 80px;
-		max-width: 300px;
 
 		&__title {
 			color: $light-gray;
 		}
 
 		&__text {
+			padding-right: 8px;
 			color: $white;
 			font-weight: 400;
 			line-height: 18px;
 		}
 
 		@include breakpoint(medium) {
-			margin-top: 30px;
+			display: none;
 		}
 
 		@include breakpoint(small) {

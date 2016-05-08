@@ -328,7 +328,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "<div class=\"footer__logo\">\n	";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_logo-v01", options) : helperMissing.call(depth0, "view", "icons/ic_logo-v01", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</div>\n<p class=\"footer__copy-right\">COPYRIGHT ® 2015 Centro de Investigação de Saúde Pública. Todos os direitos reservados</p>\n<div class=\"footer__partners\">\n	<a href=\"https://www.ensp.unl.pt\" target=\"_blank\" class=\"footer__partners__ensp\"></a>\n	<div class=\"footer__partners__fct\"></div>\n</div>\n";
+  buffer += "\n</div>\n<p class=\"footer__copy-right\">COPYRIGHT ® 2015 Centro de Investigação em Saúde Pública. Todos os direitos reservados</p>\n<div class=\"footer__partners\">\n	<a href=\"https://www.ensp.unl.pt\" target=\"_blank\" class=\"footer__partners__ensp\"></a>\n	<div class=\"footer__partners__fct\"></div>\n</div>\n";
   return buffer;
   });
 
@@ -340,7 +340,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  return "\n	<h2 class=\"hero-section__claim\">From research<br>to action <span class=\"hero-section__claim__underline\"></span> </h2>\n\n	<div class=\"hero-section__block\">\n		<div class=\"hero-section__block__title\">Centro de Investigação Saúde Pública</div>\n		<div class=\"hero-section__block__text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</div>\n	</div>\n";
+  return "\n	<h2 class=\"hero-section__claim\">From research<br>to action <span class=\"hero-section__claim__underline\"></span> </h2>\n\n	<div class=\"hero-section__block\">\n		<div class=\"hero-section__block__title\">Centro de Investigação Saúde Pública</div>\n		<div class=\"hero-section__block__text\">Primeiro centro de investigação exclusivamente dedicado à Saúde Pública. Tem como missão realizar, desenvolver e promover a investigação em Saúde Pública, tendo em vista a criação de conhecimento que possa ser colocado ao serviço da melhoria da saúde das populações.</div>\n	</div>\n";
   }
 
 function program3(depth0,data) {
@@ -438,11 +438,7 @@ function program3(depth0,data) {
     + "\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " Saber mais</a>\n</div>\n\n<div class=\"home__section__new__image\" style=\"background-image: url(";
-  if (helper = helpers.thumbnail) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.thumbnail); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + ")\"> </div>\n";
+  buffer += " Saber mais</a>\n</div>\n\n\n";
   return buffer;
   });
 

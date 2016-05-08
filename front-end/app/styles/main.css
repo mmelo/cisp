@@ -45,17 +45,17 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
       max-width: 100%;
       padding: 0 32px; } }
 
-.header__container, .hero-section__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .projects-container, .project__detail__wrapper, .sci-board__row, .sci-board__row__column, .sci-board__row__info__see-more, .posts-about__header__menu, .posts-about__header__menu li, .posts-about__sci-comission__header, .posts-about__thematic__header, .posts-about__management__header, .posts-about__contacts__header, .posts-about__contacts__container, .post-list__header, .post-list__new, .post-list__new__content__button, .events-container, .event__detail__wrapper, .post-list__members__effective, .post-list__members__associated, .member__detail__wrapper, .member__detail__article__see-more, .publications-container, .publications-filter, .publications-filter-list, .publication-list, .publication__item {
+.header__container, .hero-section__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .projects-container, .project__detail__wrapper, .sci-board__row, .sci-board__row__column, .sci-board__row__info__see-more, .posts-about__header__menu, .posts-about__header__menu li, .posts-about__sci-comission__header, .posts-about__thematic__header, .posts-about__management__header, .posts-about__contacts__header, .posts-about__contacts__container, .post-list__header, .post-list__new, .post-list__new__content__button, .events-container, .event__detail__wrapper, .post-list__members__effective, .post-list__members__associated, .post-list__member__content, .member__detail__wrapper, .member__detail__article__see-more, .publications-container, .publications-filter, .publications-filter-list, .publication-list, .publication__item {
   display: flex; }
 
-.hero-section__container {
+.hero-section__container, .posts-list--members {
   flex-direction: column; }
 
 @media (max-width: 600px) {
   .posts-list--members {
     justify-content: center; } }
 
-.header__container, .project__detail__wrapper, .event__detail__wrapper {
+.header__container, .project__detail__wrapper, .event__detail__wrapper, .post-list__member__content {
   justify-content: center; }
 
 .hero-section__container, .footer__container, .footer__partners, .post-list__header, .post-list__members__effective, .post-list__members__associated, .publication__item {
@@ -118,6 +118,11 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 a {
   color: inherit;
   text-decoration: none; }
+
+.content a {
+  text-decoration: underline; }
+  .content a:hover {
+    color: #45639F; }
 
 [class$="-btn"] {
   width: 24px;
@@ -233,17 +238,17 @@ body {
         margin-left: 0; } }
   .hero-section__block {
     display: block;
-    float: left;
-    max-width: 300px; }
+    float: left; }
     .hero-section__block__title {
       color: #BFBEBE; }
     .hero-section__block__text {
+      padding-right: 8px;
       color: #fff;
       font-weight: 400;
       line-height: 18px; }
     @media (max-width: 900px) {
       .hero-section__block {
-        margin-top: 30px; } }
+        display: none; } }
     @media (max-width: 600px) {
       .hero-section__block {
         display: none; } }
@@ -277,10 +282,10 @@ body {
   height: 100%; }
   .menu__button {
     display: none;
-    font-size: 22px;
+    font-size: 28px;
     letter-spacing: 2px;
-    width: 88px;
-    height: 36px;
+    width: 108px;
+    height: 42px;
     padding: 6px;
     text-align: center;
     text-decoration: underline;
@@ -350,7 +355,6 @@ body {
     width: 100%;
     margin-bottom: 8px;
     font-size: 34px;
-    text-decoration: underline;
     text-transform: uppercase;
     font-weight: 600; }
   @media (max-width: 900px) {
@@ -1295,8 +1299,9 @@ body {
     .post-list__members__associated {
       width: 100%; }
   .post-list__member {
+    flex: 1;
     margin: 16px;
-    min-width: 20%; }
+    min-width: 150px; }
     .post-list__member--publication {
       width: 100%; }
     .post-list__member--project {
