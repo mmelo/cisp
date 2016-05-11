@@ -90,10 +90,11 @@
 		}
 
 		&__text {
-			padding-right: 8px;
+			padding-right: 10%;
 			color: $white;
 			font-weight: 400;
-			line-height: 18px;
+			font-size: 20px;
+			line-height: 28px;
 		}
 
 		@include breakpoint(medium) {

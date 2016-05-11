@@ -55,6 +55,10 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
   .posts-list--members {
     justify-content: center; } }
 
+@media (max-width: 900px) {
+  .post-list__members__effective .effective-list, .post-list__members__associated .associated-list {
+    justify-content: center; } }
+
 .header__container, .project__detail__wrapper, .event__detail__wrapper, .post-list__member__content {
   justify-content: center; }
 
@@ -78,7 +82,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
     flex-wrap: wrap; } }
 
 @media (max-width: 600px) {
-  .home__section__new, .sci-board__row {
+  .home__section__new, .sci-board__row, .event__detail__wrapper {
     flex-wrap: wrap; } }
 
 .home__section, .footer__container, .posts-list, .projects-container, .posts-about__contacts__container, .post-list__new, .events-container, .post-list__members__effective, .post-list__members__associated, .member__detail__wrapper, .publications-container, .publications-filter, .publications-filter-list, .publication-list {
@@ -242,10 +246,11 @@ body {
     .hero-section__block__title {
       color: #BFBEBE; }
     .hero-section__block__text {
-      padding-right: 8px;
+      padding-right: 10%;
       color: #fff;
       font-weight: 400;
-      line-height: 18px; }
+      font-size: 20px;
+      line-height: 28px; }
     @media (max-width: 900px) {
       .hero-section__block {
         display: none; } }
@@ -562,7 +567,7 @@ body {
   .posts-list .subtitle {
     padding: 16px 0 16px 0;
     text-transform: uppercase; }
-  @media (max-width: 600px) {
+  @media (max-width: 2560px) {
     .posts-list--news {
       padding: 8px; } }
 
@@ -1233,6 +1238,15 @@ body {
         width: 30%; }
       .event__detail__column:last-child {
         width: 70%; } }
+    @media (max-width: 600px) {
+      .event__detail__column {
+        padding: 16px;
+        margin: 0;
+        min-height: 0px; }
+        .event__detail__column:first-child {
+          width: 100%; }
+        .event__detail__column:last-child {
+          width: 100%; } }
   .event__detail .post__thumbnail {
     position: relative;
     min-height: 320px;
@@ -1249,14 +1263,24 @@ body {
     font-size: 32px;
     font-weight: 300; }
   .event__detail__title {
-    margin-bottom: 24px;
-    margin-left: 64px; }
+    margin-bottom: 24px; }
+    @media (max-width: 900px) {
+      .event__detail__title {
+        font-size: 28px;
+        margin-left: 0; } }
+    @media (max-width: 900px) {
+      .event__detail__title {
+        font-size: 28px;
+        margin-left: 0; } }
   .event__detail__when, .event__detail__where {
     margin-left: 64px;
     margin-bottom: 8px; }
     .event__detail__when span, .event__detail__where span {
       font-weight: 600;
       margin-right: 8px; }
+    @media (max-width: 900px) {
+      .event__detail__when, .event__detail__where {
+        margin-left: 0px; } }
   .event__detail .content {
     max-height: 100%;
     overflow: hidden;
@@ -1265,7 +1289,7 @@ body {
     line-height: 24px; }
     @media (max-width: 900px) {
       .event__detail .content {
-        padding-top: 16px; } }
+        padding: 16px; } }
     .event__detail .content p {
       margin-bottom: 8px; }
     .event__detail .content figure {
@@ -1299,13 +1323,12 @@ body {
     .post-list__members__associated {
       width: 100%; }
   .post-list__member {
-    flex: 1;
+    flex: 1 0 250px;
     margin: 16px;
-    min-width: 150px; }
-    .post-list__member--publication {
-      width: 100%; }
-    .post-list__member--project {
-      width: 100%; }
+    max-width: 268px; }
+    .post-list__member--project, .post-list__member--publication {
+      width: 100%;
+      margin: 16px; }
     .post-list__member__thumbnail {
       margin: 0 auto;
       position: relative;
@@ -1314,7 +1337,7 @@ body {
       border-radius: 50%;
       border: 2px solid #45639F;
       background-size: cover;
-      background-position: 50% 50%;
+      background-position: 20% 50%;
       background-repeat: no-repeat; }
     .post-list__member__content {
       padding: 8px 0;
@@ -1326,9 +1349,6 @@ body {
         font-weight: 600;
         font-size: 20px;
         max-width: 190px;
-        overflow-x: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
         margin-left: 0; }
         .post-list__member__content__name p {
           margin-bottom: 8px; }

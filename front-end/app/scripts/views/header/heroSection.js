@@ -20,6 +20,10 @@ define([
 			}
 			if ( data ) {
 				this.data = data;
+
+				//handle special characters of "publicações" word to show on hero section
+				data.catg = data.catg === 'publicacoes' ? 'publicações' : data.catg;
+
 				this.model.set('data', this.data, {silent: true});
 			}
 			this.listenTo(this.model, 'change', this.render);

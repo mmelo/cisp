@@ -11,13 +11,13 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "<div class=\"posts-about__contacts\" id=\"contacts\">\n	<div class=\"posts-about__contacts__header\">\n		<h4 class=\"posts-about__contacts__header__title\">contactos</h4>\n\n		\n	</div>\n\n	<div class=\"posts-about__contacts__container\">\n		<div class=\"posts-about__contacts__container__block\">\n			";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_phone", options) : helperMissing.call(depth0, "view", "icons/ic_phone", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n			<p>+351 123 123 123</p>\n		</div>\n		<div class=\"posts-about__contacts__container__block\">\n			";
+  buffer += "\n			<p>+351 217 512 100</p>\n		</div>\n		<div class=\"posts-about__contacts__container__block\">\n			";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_email", options) : helperMissing.call(depth0, "view", "icons/ic_email", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n			<p>cisp@ensp.unl.pt</p>\n		</div>\n		<div class=\"posts-about__contacts__container__block\">\n			";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_pin", options) : helperMissing.call(depth0, "view", "icons/ic_pin", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n			<p>Escola Nacional de Saúde Pública</p>\n		</div>\n	</div>\n</div>";
+  buffer += "\n			<p>Escola Nacional de Saúde Pública</p>\n		</div>\n	</div>\n</div>\n";
   return buffer;
   });
 
@@ -340,7 +340,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  return "\n	<h2 class=\"hero-section__claim\">From research<br>to action <span class=\"hero-section__claim__underline\"></span> </h2>\n\n	<div class=\"hero-section__block\">\n		<div class=\"hero-section__block__title\">Centro de Investigação Saúde Pública</div>\n		<div class=\"hero-section__block__text\">Primeiro centro de investigação exclusivamente dedicado à Saúde Pública. Tem como missão realizar, desenvolver e promover a investigação em Saúde Pública, tendo em vista a criação de conhecimento que possa ser colocado ao serviço da melhoria da saúde das populações.</div>\n	</div>\n";
+  return "\n	<h2 class=\"hero-section__claim\">From research<br>to action <span class=\"hero-section__claim__underline\"></span> </h2>\n\n	<div class=\"hero-section__block\">\n		<!--<div class=\"hero-section__block__title\">Centro de Investigação Saúde Pública</div>-->\n		<div class=\"hero-section__block__text\">Primeiro centro de investigação exclusivamente dedicado à Saúde Pública.</div>\n	</div>\n";
   }
 
 function program3(depth0,data) {
@@ -391,7 +391,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "<div class=\"menu__container\">\n	<div id=\"menu-button\" class=\"menu__button active\">MENU</div>\n\n	<div id=\"menu-wrapper\" class=\"menu__wrapper\">\n		<div class=\"menu__wrapper__close\" id=\"menu-close\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_close", options) : helperMissing.call(depth0, "view", "icons/ic_close", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</div>\n		<ul>\n			<li><a href=\"#sobre\">Sobre Nós.</a></li>\n			<li><a href=\"#membros\">Membros.</a></li>\n			<li><a href=\"#projectos\">Projectos.</a></li>\n			<li><a href=\"#eventos\">Eventos</a></li>\n			<li><a href=\"#publicacoes\">Publicações.</a></li>\n			<li><a href=\"#noticias\">Notícias.</a></li>\n		</ul>\n	</div>\n</div>\n";
+  buffer += "</div>\n		<ul>\n			<li><a href=\"#sobre\">Sobre Nós</a></li>\n			<li><a href=\"#membros\">Membros</a></li>\n			<li><a href=\"#projectos\">Projetos</a></li>\n			<li><a href=\"#eventos\">Eventos</a></li>\n			<li><a href=\"#publicacoes\">Publicações</a></li>\n			<li><a href=\"#noticias\">Notícias</a></li>\n		</ul>\n	</div>\n</div>\n";
   return buffer;
   });
 
@@ -734,13 +734,13 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing;
 
 
-  buffer += "<h3 class=\"post-list__title\">Membros Efectivos</h3>\n<div id=\"effective-list\">\n	<div id=\"members-effective\" class=\"post-list__members__effective\">";
+  buffer += "<h3 class=\"post-list__title\">Membros Efetivos</h3>\n<div id=\"effective-list\">\n	<div id=\"members-effective\" class=\"post-list__members__effective\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "components/spinner", options) : helperMissing.call(depth0, "view", "components/spinner", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</div>\n</div>\n\n<h3 class=\"post-list__title post-list__title--associated\">Membros Associados</h3>\n<div id=\"members-associated\" class=\"post-list__members__associated\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "components/spinner", options) : helperMissing.call(depth0, "view", "components/spinner", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</div>";
+  buffer += "</div>\n";
   return buffer;
   });
 
@@ -809,9 +809,10 @@ function program1(depth0,data) {
   return "\n<article class=\"member__detail__article\">\n	<p>Sem publicações para apresentar</p>\n</article>\n";
   }
 
-  buffer += "<h2 class=\"member__detail__article__title\">PROJECTOS</h2>\n\n";
+  buffer += "<h2 class=\"member__detail__article__title\">PROJETOS</h2>\n\n";
   stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.length), "===", 0, options) : helperMissing.call(depth0, "ifCond", (depth0 && depth0.length), "===", 0, options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
   return buffer;
   });
 
@@ -958,8 +959,8 @@ function program3(depth0,data) {
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</h2>\n\n	<div class=\"post-list__new__content__text\">";
-  if (helper = helpers.content) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.content); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if (helper = helpers.excerpt) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.excerpt); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</div>\n\n    <a href=\"#noticias/";
   if (helper = helpers.slug) { stack1 = helper.call(depth0, {hash:{},data:data}); }
@@ -1179,15 +1180,7 @@ function program4(depth0,data) {
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\"></a>\n\n<section class=\"post__content\">\n	<time datetime=\"";
-  if (helper = helpers.date) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.date); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "\" class=\"post__content__date\">";
-  if (helper = helpers.prettyDate) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.prettyDate); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</time>\n\n	<a href=\"#\" class=\"post__content__author\">"
+  buffer += "\"></a>\n\n<section class=\"post__content\">\n	\n\n	<a href=\"#\" class=\"post__content__author\">"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.author)),stack1 == null || stack1 === false ? stack1 : stack1.nickname)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</a>\n\n	<div class=\"post__content__title\">";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }

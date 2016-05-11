@@ -17,7 +17,7 @@ define([
 
         id: 'associatedList',
 
-        className: 'posts-list',
+        className: 'posts-list associated-list',
 
         events: {
         },
