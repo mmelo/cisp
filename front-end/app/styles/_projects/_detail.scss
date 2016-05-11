@@ -16,6 +16,10 @@
 		@include _(full-width);
 		@include _(flex);
 		@include _(justify-content-center);
+
+		@include breakpoint(small) {
+			@include _(flex-wrap);
+		}
 	}
 
 	&__column {
@@ -30,6 +34,19 @@
 			}
 			&:last-child {
 				width: 70%;
+			}
+		}
+
+		@include breakpoint(small) {
+			padding: 16px;
+			margin: 0;
+			min-height: 0px;
+
+			&:first-child {
+				width: 100%;
+			}
+			&:last-child {
+				width: 100%;
 			}
 		}
 	}
@@ -63,9 +80,19 @@
 	h1 {
 		@include _(title);
 		margin-bottom: 16px;
+
+		@include breakpoint(medium) {
+			font-size: 28px;
+			margin-left: 0;
+		}
 	}
 	h2 {
 		@include _(title-pages);
+
+		@include breakpoint(medium) {
+			font-size: 28px;
+			margin-left: 0;
+		}
 	}
 
 	.content {
@@ -77,6 +104,10 @@
 
 		@include breakpoint(medium) {
 			padding-top: 16px;
+		}
+
+		@include breakpoint(small) {
+			padding: 16px;
 		}
 	}
 

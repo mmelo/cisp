@@ -82,7 +82,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
     flex-wrap: wrap; } }
 
 @media (max-width: 600px) {
-  .home__section__new, .sci-board__row, .event__detail__wrapper {
+  .home__section__new, .project__detail__wrapper, .sci-board__row, .event__detail__wrapper {
     flex-wrap: wrap; } }
 
 .home__section, .footer__container, .posts-list, .projects-container, .posts-about__contacts__container, .post-list__new, .events-container, .post-list__members__effective, .post-list__members__associated, .member__detail__wrapper, .publications-container, .publications-filter, .publications-filter-list, .publication-list {
@@ -647,6 +647,15 @@ body {
         width: 30%; }
       .project__detail__column:last-child {
         width: 70%; } }
+    @media (max-width: 600px) {
+      .project__detail__column {
+        padding: 16px;
+        margin: 0;
+        min-height: 0px; }
+        .project__detail__column:first-child {
+          width: 100%; }
+        .project__detail__column:last-child {
+          width: 100%; } }
   .project__detail .post__thumbnail {
     position: relative;
     min-height: 320px;
@@ -667,6 +676,14 @@ body {
     margin-left: 64px; }
   .project__detail h1 {
     margin-bottom: 16px; }
+    @media (max-width: 900px) {
+      .project__detail h1 {
+        font-size: 28px;
+        margin-left: 0; } }
+  @media (max-width: 900px) {
+    .project__detail h2 {
+      font-size: 28px;
+      margin-left: 0; } }
   .project__detail .content {
     max-height: 100%;
     overflow: hidden;
@@ -676,6 +693,9 @@ body {
     @media (max-width: 900px) {
       .project__detail .content {
         padding-top: 16px; } }
+    @media (max-width: 600px) {
+      .project__detail .content {
+        padding: 16px; } }
   .project__detail .close {
     position: absolute;
     top: 4px;

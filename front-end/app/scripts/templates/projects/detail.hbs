@@ -2,11 +2,11 @@
 <div class="project__detail__wrapper">
 	<section class="project__detail__column">
 		<div class="post__thumbnail" style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbnail_images.post-thumbnail.url}}{{else}}images/default_thumbnail.png{{/if}})" alt="{{{title}}}">
-			<time datetime="{{date}}" class="post__content__date">{{{prettyDate}}}</time>
+			{{!--<time datetime="{{date}}" class="post__content__date">{{{prettyDate}}}</time>--}}
 		</div>
 
 		<h1>{{{title}}}</h1>
-		<h2>{{author.nickname}}</h2>
+		<h2>{{author.name}}</h2>
 	</section>
 	<section class="project__detail__column">
 
