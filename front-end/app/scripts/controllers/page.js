@@ -131,7 +131,7 @@ define([
 				}).render();
 			});
 		},
-		
+
 		/**
 		*	_heroSection
 		*
@@ -141,7 +141,7 @@ define([
 		*/
 		_heroSection: function (catg) {
 			var lastClass = $('#header').attr('class').split(' ')[1];
-			
+
 			if ( lastClass ) {
 				$('#header').removeClass(lastClass);
 			}
@@ -154,7 +154,7 @@ define([
 			} else {
 				$('#hero-section').removeClass('active');
 			}
-			
+
 			requestAnimationFrame(function () {
 				App.Views.HeroSection = new HeroSectionView({
 					el: '#hero-section',

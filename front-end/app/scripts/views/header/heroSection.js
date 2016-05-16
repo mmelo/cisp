@@ -35,6 +35,12 @@ define([
 			}
 			this.$el.html(this.template(model));
 
+			if ( this.data.catg === 'home' ) {
+				$('#logoHome').addClass('active');
+			} else {
+				$('#logoHome').removeClass('active');
+			}
+
 			return this;
 		}
 	});

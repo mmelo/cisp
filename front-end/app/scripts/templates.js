@@ -357,7 +357,7 @@ function program3(depth0,data) {
   buffer += "<div class=\"hero-section__container\">\n\n	<div id=\"logo\" class=\"hero-section__logo\">\n		";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_logo-v01", options) : helperMissing.call(depth0, "view", "icons/ic_logo-v01", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n		<p>Centro de Investigação em Saúde Publica</p>\n		<p>Public Health Research Center</p>\n	</div>\n\n";
+  buffer += "\n		<p>Centro de Investigação em Saúde Publica</p>\n		<p>Public Health Research Center</p>\n\n		<div class=\"hero-section__logo--ensp\" id=\"logoHome\">\n        </div>\n	</div>\n\n\n\n\n\n";
   stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", "home", options) : helperMissing.call(depth0, "ifCond", ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", "home", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</div>\n";

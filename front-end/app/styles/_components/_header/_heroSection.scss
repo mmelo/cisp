@@ -21,6 +21,7 @@
 
 	&__logo {
 		display: block;
+		position: relative;
 
 		&:hover {
 			cursor: pointer;
@@ -40,6 +41,22 @@
 			font-size: 13px;
 			margin: 2px 0 4px 0;
 			color: white;
+		}
+
+		&--ensp {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 20px;
+			background-image: url(../images/hero/ensp_unl_white.png);
+			background-position: center;
+			background-size: cover;
+			width: 199px;
+			height: 93px;
+
+			.active {
+				display: block;
+			}
 		}
 	}
 

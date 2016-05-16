@@ -201,7 +201,8 @@ body {
     margin-left: auto;
     padding: 32px 0 16px 16px; }
   .hero-section__logo {
-    display: block; }
+    display: block;
+    position: relative; }
     .hero-section__logo:hover {
       cursor: pointer; }
     .hero-section__logo svg {
@@ -214,6 +215,18 @@ body {
       font-size: 13px;
       margin: 2px 0 4px 0;
       color: white; }
+    .hero-section__logo--ensp {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      background-image: url(../images/hero/ensp_unl_white.png);
+      background-position: center;
+      background-size: cover;
+      width: 199px;
+      height: 93px; }
+      .hero-section__logo--ensp .active {
+        display: block; }
   .hero-section__claim {
     position: relative;
     margin-left: 32px;
