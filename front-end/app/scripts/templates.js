@@ -391,7 +391,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "<div class=\"menu__container\">\n	<div id=\"menu-button\" class=\"menu__button active\">MENU</div>\n\n	<div id=\"menu-wrapper\" class=\"menu__wrapper\">\n		<div class=\"menu__wrapper__close\" id=\"menu-close\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_close", options) : helperMissing.call(depth0, "view", "icons/ic_close", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</div>\n		<ul>\n			<li><a href=\"#sobre\">Sobre Nós</a></li>\n			<li><a href=\"#membros\">Membros</a></li>\n			<li><a href=\"#projectos\">Projetos</a></li>\n			<li><a href=\"#eventos\">Eventos</a></li>\n			<li><a href=\"#publicacoes\">Publicações</a></li>\n			<li><a href=\"#noticias\">Notícias</a></li>\n		</ul>\n	</div>\n</div>\n";
+  buffer += "</div>\n		<ul>\n			<li><a href=\"#sobre\">Sobre Nós</a></li>\n			<li><a href=\"#membros\">Membros</a></li>\n			<li><a href=\"#projetos\">Projetos</a></li>\n			<li><a href=\"#eventos\">Eventos</a></li>\n			<li><a href=\"#publicacoes\">Publicações</a></li>\n			<li><a href=\"#noticias\">Notícias</a></li>\n		</ul>\n	</div>\n</div>\n";
   return buffer;
   });
 
@@ -1096,7 +1096,7 @@ function program3(depth0,data) {
   return "images/default_thumbnail.png";
   }
 
-  buffer += "<a href=\"#projectos\" class=\"close\">+</a>\n<div class=\"project__detail__wrapper\">\n	<section class=\"project__detail__column\">\n		<div class=\"post__thumbnail\" style=\"background-image: url(";
+  buffer += "<a href=\"#projetos\" class=\"close\">+</a>\n<div class=\"project__detail__wrapper\">\n	<section class=\"project__detail__column\">\n		<div class=\"post__thumbnail\" style=\"background-image: url(";
   stack1 = helpers['if'].call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.thumbnail_images)),stack1 == null || stack1 === false ? stack1 : stack1['post-thumbnail'])),stack1 == null || stack1 === false ? stack1 : stack1.url), {hash:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += ")\" alt=\"";
@@ -1161,7 +1161,7 @@ function program4(depth0,data) {
   return "images/default_thumbnail.png";
   }
 
-  buffer += "<a href=\"#projectos/";
+  buffer += "<a href=\"#projetos/";
   if (helper = helpers.slug) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.slug); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -1182,11 +1182,11 @@ function program4(depth0,data) {
   if (helper = helpers.excerpt) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.excerpt); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</div>\n\n	<a href=\"#projectos/";
+  buffer += "</div>\n\n	<a href=\"#projetos/";
   if (helper = helpers.slug) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.slug); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\" class=\"post__content__btn\">mais</a>\n\n</section>\n\n<a href=\"#projectos\" class=\"post__category\">"
+    + "\" class=\"post__content__btn\">mais</a>\n\n</section>\n\n<a href=\"#projetos\" class=\"post__category\">"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.categories)),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</a>\n";
   return buffer;

@@ -24,23 +24,25 @@
 	}
 
 	&__logo {
+		flex: 1;
 		margin: 0 24px 8px 24px;
 		width: 260px;
 		svg {
-			width: 260px;
+			width: 160px;
 			height: 60px;
 		}
 
 		@include breakpoint(medium) {
-			width: 100px;
+			width: 130px;
 			svg {
-				width: 100px;
+				width: 130px;
 				height: auto;
 			}
 		}
 	}
 
 	&__copy-right {
+		flex: 1 0 200px;
 		font-size: 12px;
 		margin-bottom: 8px;
 
@@ -56,6 +58,7 @@
 		@include _(flex);
 		@include _(space-between);
 		@include _(align-items-center);
+		flex: 1 0 200px;
 
 		@include breakpoint(x-small) {
 			@include _(flex-wrap);
@@ -76,9 +79,11 @@
 
 		&__ensp {
 			background-image: url(../images/footer/logo_ensp_unl.png);
-			width: 135px;
+			width: 220px;
+			height: 100px;
 			@include breakpoint(medium) {
-				height: 60px;
+				width: 177px;
+				height: 80px;
 				margin: 0 auto;
 			}
 		}

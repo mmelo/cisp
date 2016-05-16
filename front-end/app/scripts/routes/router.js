@@ -151,7 +151,7 @@ define([
 			if ( catg === 'publicacoes' ) {
 				App.Vent.trigger('publications:index');
 			} else
-			if ( catg === 'projectos' ) {
+			if ( catg === 'projetos' ) {
 				App.Vent.trigger('projects:index');
 			}else
 			if ( catg === 'membros' ) {
@@ -174,7 +174,7 @@ define([
 			this._common(catg);
 			this._loading();
 
-			if ( catg === 'projectos' ) {
+			if ( catg === 'projetos' ) {
 				App.Vent.trigger('projects:detail', {
 					slug: slug
 				});
