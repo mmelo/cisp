@@ -227,6 +227,13 @@ body {
       height: 93px; }
       .hero-section__logo--ensp .active {
         display: block; }
+      @media (max-width: 900px) {
+        .hero-section__logo--ensp {
+          position: relative;
+          width: 119px;
+          height: 53px;
+          margin-top: 18px;
+          margin-left: 16px; } }
   .hero-section__claim {
     position: relative;
     margin-left: 32px;
