@@ -10,9 +10,10 @@
 		height: 42px;
 		padding: 6px;
 		text-align: center;
-		text-decoration: underline;
-		background-color: $blue;
-		color: $white;
+		//text-decoration: underline;
+		//background-color: $blue;
+		color: $black;
+		font-weight: 600;
 
 		&:hover {
 			cursor: pointer;
@@ -20,8 +21,7 @@
 	}
 
 	&.active {
-		background-color: black;
-		opacity: 0.8;
+		box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
 	}
 
 	&__container {

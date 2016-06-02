@@ -5,8 +5,8 @@
 	position: absolute;
 	width: 100%;
 	height: $header_height;
-	top: 0;
-	left: 0;
+	top: -1px;
+	left: -1px;
 	//z-index: 2;
 	border: 1px solid $divider-color;
 	background-image: url(../images/hero/01.jpeg);
@@ -47,11 +47,15 @@
 .banner {
 	z-index: 1;
 	position: absolute;
-	top: 0;
+	top: -2px;
 	left: 0;
 	height: 110px;
 	width: 100%;
 
 	background-color: #fff;
 	border-bottom: 2px solid $blue-mariner;
+
+	@include breakpoint(medium) {
+		height: 90px;
+	}
 }

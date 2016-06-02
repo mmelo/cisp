@@ -3,8 +3,7 @@
 	height: 100%;
 
 	&.active {
-		background-color: $hero-blue;
-		opacity: 0.8;
+		box-shadow: inset 0 0 0 1000px rgba(18, 43, 143, 0.7);
 	}
 
 	&__container {
@@ -16,7 +15,7 @@
 		height: 100%;
 		max-width: 600px;
 		margin-left: auto;
-		padding: 32px 0 16px 16px;
+		padding: 24px 0 16px 16px;
 	}
 
 	&__logo {
@@ -37,12 +36,20 @@
 			path {
 				fill: $black;
 			}
+
+			@include breakpoint(medium) {
+				width: 100px;
+				height: 23px;
+			}
 		}
 
 		p {
 			font-size: 13px;
 			margin: 2px 0 4px 0;
 			color: $black;
+			@include breakpoint(medium) {
+				font-size: 9px;
+			}
 		}
 
 		&--ensp {
@@ -53,11 +60,15 @@
 			background-image: url(../images/footer/logo_ensp_unl.png);
 			background-position: center;
 			background-size: cover;
-			width: 199px;
-			height: 93px;
+			width: 178px;
+			height: 80px;
 
-			.active {
+			&.active {
 				display: block;
+
+				@include breakpoint(medium) {
+					display: none;
+				}
 			}
 
 			@include breakpoint(medium) {
