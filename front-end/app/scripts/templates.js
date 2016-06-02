@@ -375,10 +375,10 @@ function program1(depth0,data) {
   return "active";
   }
 
-  buffer += "<div id=\"hero-section\" class=\"hero-section ";
+  buffer += "<div class=\"banner\"></div>\n<div id=\"hero-section\" class=\"hero-section ";
   stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", (depth0 && depth0.home), options) : helperMissing.call(depth0, "ifCond", ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", (depth0 && depth0.home), options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\"></div>\n\n<div id=\"menu\" class=\"menu\"></div>";
+  buffer += "\"></div>\n\n<div id=\"menu\" class=\"menu\"></div>\n";
   return buffer;
   });
 

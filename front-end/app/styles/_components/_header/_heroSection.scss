@@ -23,6 +23,8 @@
 		display: block;
 		position: relative;
 
+		z-index: 999;
+
 		&:hover {
 			cursor: pointer;
 		}
@@ -33,14 +35,14 @@
 
 			rect,
 			path {
-				fill: $white;
+				fill: $black;
 			}
 		}
 
 		p {
 			font-size: 13px;
 			margin: 2px 0 4px 0;
-			color: white;
+			color: $black;
 		}
 
 		&--ensp {
@@ -48,7 +50,7 @@
 			position: absolute;
 			top: 0;
 			right: 20px;
-			background-image: url(../images/hero/ensp_unl_white.png);
+			background-image: url(../images/footer/logo_ensp_unl.png);
 			background-position: center;
 			background-size: cover;
 			width: 199px;
