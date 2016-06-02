@@ -20,7 +20,7 @@ define([
 			'click #logo': '_returnHome',
 			"click #menu-button": '_openMenu'
 		},
-		
+
 		/**
 		*	_returnHome - navigate to home
 		*
@@ -38,8 +38,8 @@ define([
 		*	@function
 		*/
 		_openMenu: function (ev) {
-			App.Views.Header.$('#menu-button').toggleClass('active');
-			App.Views.Header.$('#menu').toggleClass('active');
+			//App.Views.Header.$('#menu-button').toggleClass('active');
+			//App.Views.Header.$('#menu').toggleClass('active');
 			App.Views.Header.$('#menu-wrapper').toggleClass('active');
 		}
 	});

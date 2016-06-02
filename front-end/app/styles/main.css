@@ -48,7 +48,7 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 .header__container, .hero-section__container, .hero-section__claim, .menu__container, .menu__wrapper__close, .home__section, .home__section__new, .home__section__new a, .home__section__publication, .home__section__publication a, .footer__container, .footer__partners, .posts-list, .projects-container, .project__detail__wrapper, .sci-board__row, .sci-board__row__column, .sci-board__row__info__see-more, .posts-about__header__menu, .posts-about__header__menu li, .posts-about__sci-comission__header, .posts-about__thematic__header, .posts-about__management__header, .posts-about__contacts__header, .posts-about__contacts__container, .post-list__header, .post-list__new, .post-list__new__content__button, .events-container, .event__detail__wrapper, .post-list__members__effective, .post-list__members__associated, .post-list__member__content, .member__detail__wrapper, .member__detail__article__see-more, .publications-container, .publications-filter, .publications-filter-list, .publication-list, .publication__item {
   display: flex; }
 
-.hero-section__container, .posts-list--members {
+.hero-section__container, .menu__container, .posts-list--members {
   flex-direction: column; }
 
 @media (max-width: 600px) {
@@ -71,11 +71,14 @@ html, body, header, .post__thumbnail, .post__content__author, .post__content__ti
 .sci-board__row__info__see-more {
   justify-content: flex-start; }
 
-.menu__container, .publications-filter, .publications-filter-list {
+.publications-filter, .publications-filter-list {
   justify-content: flex-end; }
 
 .home__section__new a, .home__section__publication a, .footer__container, .footer__partners, .sci-board__row__column, .sci-board__row__info__see-more, .posts-about__header__menu, .post-list__new__content__button, .member__detail__article__see-more {
   align-items: center; }
+
+.menu__container {
+  align-items: flex-end; }
 
 @media (max-width: 400px) {
   .footer__partners {
@@ -318,7 +321,6 @@ body {
   height: 100%; }
   .menu__button {
     z-index: 2;
-    display: none;
     font-size: 28px;
     letter-spacing: 2px;
     width: 108px;
@@ -330,8 +332,6 @@ body {
     color: #fff; }
     .menu__button:hover {
       cursor: pointer; }
-    .menu__button.active {
-      display: block; }
   .menu.active {
     background-color: black;
     opacity: 0.8; }
@@ -348,7 +348,8 @@ body {
       .menu__container {
         padding: 15px 0 0 0; } }
   .menu__wrapper {
-    display: none; }
+    display: none;
+    margin-top: 50px; }
     .menu__wrapper__close {
       margin-bottom: 64px; }
       .menu__wrapper__close svg {

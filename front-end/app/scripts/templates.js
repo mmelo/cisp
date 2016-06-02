@@ -385,14 +385,10 @@ function program1(depth0,data) {
 this["JST"]["app/scripts/templates/header/menu.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing;
+  
 
 
-  buffer += "<div class=\"menu__container\">\n	<div id=\"menu-button\" class=\"menu__button active\">MENU</div>\n\n	<div id=\"menu-wrapper\" class=\"menu__wrapper\">\n		<div class=\"menu__wrapper__close\" id=\"menu-close\">";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_close", options) : helperMissing.call(depth0, "view", "icons/ic_close", options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</div>\n		<ul>\n			<li><a href=\"#sobre\">Sobre Nós</a></li>\n			<li><a href=\"#membros\">Membros</a></li>\n			<li><a href=\"#projetos\">Projetos</a></li>\n			<li><a href=\"#eventos\">Eventos</a></li>\n			<li><a href=\"#publicacoes\">Publicações</a></li>\n			<li><a href=\"#noticias\">Notícias</a></li>\n		</ul>\n	</div>\n</div>\n";
-  return buffer;
+  return "<div class=\"menu__container\">\n	<div id=\"menu-button\" class=\"menu__button\">MENU</div>\n\n	<div id=\"menu-wrapper\" class=\"menu__wrapper\">\n		<ul>\n			<li><a href=\"#sobre\">Sobre Nós</a></li>\n			<li><a href=\"#membros\">Membros</a></li>\n			<li><a href=\"#projetos\">Projetos</a></li>\n			<li><a href=\"#eventos\">Eventos</a></li>\n			<li><a href=\"#publicacoes\">Publicações</a></li>\n			<li><a href=\"#noticias\">Notícias</a></li>\n		</ul>\n	</div>\n</div>\n";
   });
 
 this["JST"]["app/scripts/templates/home/eventsItem.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
