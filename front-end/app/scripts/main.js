@@ -26,7 +26,7 @@ define([
 		Header: $('#header'),
 		Container: $('#app'),
 		Footer: $('#footer'),
-		BaseUrl: 'http://www.aasilva.com/cisp/back-end/'//EDITA ISTO PARA APONTAR PARA A TUA INSTALAÇÃO DE WP
+		BaseUrl: 'http://www.aasilva.com/cisp/back-end/'//edit this to DB endpoint
 	};
 
 	// Setup DOM manipulation "entry-points"
