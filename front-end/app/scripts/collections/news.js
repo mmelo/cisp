@@ -10,9 +10,11 @@ define([
 	var NewsCollection = Backbone.Collection.extend({
 		url: function () {
 			var url = this.search ? App.BaseUrl + '?json=get_posts&post_type=news&s=' + this.search : App.BaseUrl + '?json=get_posts&post_type=news';
+			// commented because sticky request is not working
 			if ( this.isHome ) {
 				return url + '&post__in=sticky_posts';
 			} else return url + (this.count ? '&count=' + this.count : '') + (this.page ? '&page=' + this.page : '');
+			//return url + (this.count ? '&count=' + this.count : '') + (this.page ? '&page=' + this.page : '');
 		},
 		model: NewsModel,
 

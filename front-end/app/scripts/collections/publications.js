@@ -13,10 +13,12 @@ define([
 			if ( this.author ) {
 				url = App.BaseUrl + ('?json=get_author_posts&post_type=publication&slug=' + this.author.slug);
 			}
+			// commented because sticky request is not working
 			if ( this.isHome ) {
 				return url + '&post__in=sticky_posts';
 			}
 			return url + (this.count ? '&count=' + this.count : '') + (this.page ? '&page=' + this.page : '');
+			//return url + (this.count ? '&count=' + this.count : '') + (this.page ? '&page=' + this.page : '');
 		},
 		model: PublicationModel,
 
