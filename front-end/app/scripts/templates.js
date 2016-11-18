@@ -1212,18 +1212,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/scripts/templates/publications/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
+  var buffer = "";
 
-function program1(depth0,data) {
-  
-  
-  return "\n<div id=\"load-more-posts\" class=\"load-more\">MAIS</div>\n";
-  }
 
-  buffer += "<div class=\"post-list__header__title\"></div>\n<div id=\"publications-filter\" class=\"publications-filter\">\n	\n</div>\n<div id=\"publications-container\" class=\"publications-container\"></div>\n\n";
-  stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.length), "<", (depth0 && depth0.totalPosts), options) : helperMissing.call(depth0, "ifCond", (depth0 && depth0.length), "<", (depth0 && depth0.totalPosts), options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n";
+  buffer += "<div class=\"post-list__header__title\"></div>\n<div id=\"publications-filter\" class=\"publications-filter\">\n	\n</div>\n<div id=\"publications-container\" class=\"publications-container\"></div>\n\n\n<div id=\"load-more-posts\" class=\"load-more\">MAIS</div>\n\n";
   return buffer;
   });
 

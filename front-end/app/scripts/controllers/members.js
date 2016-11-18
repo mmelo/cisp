@@ -12,7 +12,7 @@ define([
 	'views/members/associatedList',
 	'views/members/memberPublications',
 	'views/members/memberProjects',
-	'views/members/detail',
+	'views/members/detail'
 ], function ($, Backbone, MembersCollection, MembersPublicationsCollection, MembersProjectsCollection, MemberModel, MembersIndexView, EffectiveMembersListView, AssociatedMembersListView, MemberPublicationsView, MemberProjectsView, MemberDetailView) {
 	'use strict';
 	var MembersController = Backbone.Router.extend({
@@ -160,7 +160,7 @@ define([
 				collection: App.Collections.MemberPublications
 			});
 			this._renderMemberPublications();
-			
+
 		},
 
 		_renderMemberPublications: function () {

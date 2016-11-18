@@ -26,14 +26,14 @@ define([
 		Header: $('#header'),
 		Container: $('#app'),
 		Footer: $('#footer'),
-		BaseUrl: 'http://www.aasilva.com/cisp/back-end/'//EDITA ISTO PARA APONTAR PARA A TUA INSTALAÇÃO DE WP
-		//BaseUrl: 'http://www.aasilva.com/cisp/back-end/'
+		BaseUrl: 'http://www.aasilva.com/cisp/back-end/'//EDITAR ISTO PARA APONTAR PARA A INSTALAÇÃO DE WP
+		//BaseUrl: 'http://cispbackend.ensp.unl.pt/'
 	};
 
 	// Setup DOM manipulation "entry-points"
 	App.Window = window;
 	App.Document = App.Window.document;
-	App.ContainerHeight = App.Window.innerHeight,
+	App.ContainerHeight = App.Window.innerHeight;
 	App.Body = $(App.Document.body);
 
 	// Setup Backbone Events
